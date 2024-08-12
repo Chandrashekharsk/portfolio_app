@@ -45,7 +45,7 @@ const Navbar = () => {
             if (currentScrollY > lastScrollY && currentScrollY > 50) {
                 // Scrolling down
                 setIsNavbarVisible(false); // Set to invisible
-            } else if (currentScrollY < lastScrollY) {
+            } else if (currentScrollY < lastScrollY || currentScrollY < 51) {
                 // Scrolling up
                 setIsNavbarVisible(true); // Set to visible
             }
@@ -92,7 +92,7 @@ const Navbar = () => {
                             <Link
                                 key={link.id}
                                 to={`/${link.id}`}
-                                className={`${active === link.title ? "text-blue-600" : "text-gray-800"} dark:${active === link.title ? "text-blue-400" : "text-gray-200"} hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300`}
+                                className={`${active === link.title ? "text-green-500 underline" : "text-gray-800"} dark:${active === link.title ? "text-green-500 underline" : "text-gray-200"} hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300`}
                                 onClick={() => setActive(link.title)}
                             >
                                 {link.title}

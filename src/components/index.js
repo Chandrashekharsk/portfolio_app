@@ -1,12 +1,11 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import About from "./pages/About";
 import Home from "./pages/Hero";
-import Contact from "./pages/Contact";
 import Education from "./pages/Education";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 import PageNotFound from "./pages/PageNotFound";
+import Feedbacks from "./pages/Feedbacks";
 
-export { Navbar, PageNotFound, Footer, About,Home, Contact, Education, Projects,Skills, Experience };
+export { Navbar,Feedbacks, PageNotFound, Footer, Home, Education, Projects,Skills, Experience };
