@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navLinks } from './data';
+import { FaSun, FaMoon } from 'react-icons/fa'; // Import icons
 
 const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -25,6 +26,8 @@ const Navbar = () => {
         if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             setIsDarkMode(true);
             document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
         }
 
         // Make the navbar transparent after 3 seconds
@@ -41,13 +44,14 @@ const Navbar = () => {
 
             if (currentScrollY > lastScrollY && currentScrollY > 50) {
                 // Scrolling down
-                setIsNavbarVisible(false);
+                setIsNavbarVisible(false); // Set to invisible
             } else if (currentScrollY < lastScrollY) {
                 // Scrolling up
-                setIsNavbarVisible(true);
+                setIsNavbarVisible(true); // Set to visible
             }
 
-            setLastScrollY(currentScrollY);
+            // Update scrollY position
+            setLastScrollY(currentScrollY); 
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -98,13 +102,9 @@ const Navbar = () => {
                     <div className="flex items-center">
                         <button onClick={toggleTheme} className="text-gray-800 dark:text-gray-200 focus:outline-none">
                             {isDarkMode ? (
-                                <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 118.646 3.646 9.002 9.002 0 0020.354 15.354z"></path>
-                                </svg>
+                                <FaSun className="w-6 h-6 text-yellow-400" /> // Sun icon for dark mode
                             ) : (
-                                <svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v2m0 14v2m8-10h-2M4 12H2m15.364-5.364l-1.414 1.414M7.05 16.95l-1.414 1.414M16.95 16.95l1.414 1.414M7.05 7.05L5.636 5.636"></path>
-                                </svg>
+                                <FaMoon className="w-6 h-6 text-yellow-500" /> // Moon icon for light mode
                             )}
                         </button>
                         <div className="md:hidden ml-4">
