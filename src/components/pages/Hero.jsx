@@ -4,7 +4,7 @@ import { FaDownload } from 'react-icons/fa';
 import './styles/hero.css';
 import  hello1 from "../../assets/hello1.png"
 import fm6 from "../../assets/fm6.jpg"
-import resume from "../../assets/resume.pdf"
+import resume from "../../assets/Resume.pdf"
 
 const Hero = () => {
   return (
