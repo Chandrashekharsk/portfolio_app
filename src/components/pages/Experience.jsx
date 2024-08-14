@@ -28,7 +28,7 @@ const Experience = () => {
               <ul className="mt-4 space-y-2">
                 <li>
                   <span className="text-teal-300 font-semibold">Key Responsibilities: </span>
-                  <span className="text-gray-200">{experience.keyRes}</span>
+                  <span className="text-gray-200">{experience.project}</span>
                 </li>
                 <li>
                   <span className="text-teal-300 font-semibold">Achievements: </span>
