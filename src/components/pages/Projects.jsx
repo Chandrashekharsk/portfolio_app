@@ -34,7 +34,7 @@ const Projects = () => {
               <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
             </div>
             <div className="p-2">
-              <h3 className="text-green-500 font-semibold">Overview:</h3>
+              <h3 className="text-sky-400 font-semibold">Overview:</h3>
               <p className="text-sm mb-4">{project.overview}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologiesUsed.slice(0, 4).map((tech, index) => (
@@ -76,7 +76,7 @@ const Projects = () => {
         ))}
       </motion.div>
       <div className=" mx-auto text-center">
-        <h2 className="text-small font-normal mt-5 text-sky-600 ">more projects are on the way...</h2>
+        <h2 className="text-small font-normal mt-7 text-sky-600 ">more projects are on the way</h2>
       </div>
     </section>
   );

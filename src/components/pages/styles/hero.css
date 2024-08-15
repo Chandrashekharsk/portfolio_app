@@ -28,7 +28,8 @@
   justify-content: space-between;
   height: 100vh;
   padding: 0 10%;
-  background-color: #1e1e1e; /* Dark theme background */
+  /* Dark theme background */
+  /* background-color: #1e1e1e;  */
   color: #ffffff;
 }
 

@@ -91,7 +91,7 @@ export const projects = [
   {
     title: "Portfolio App - REACT",
     image: "/images/portfolio_img.png",
-    visitLink: "https://portfolio-app-mauve-eight.vercel.app/",
+    visitLink: "https://portfolio-p1j8nubsd-chandrashekhars-projects-d80f3903.vercel.app/",
     githubLink: "https://github.com/Chandrashekharsk/portfolio_app",
     technologiesUsed: [
       "react",
@@ -99,12 +99,12 @@ export const projects = [
       "react-icons",
       "framer-motion",
     ],
-    overview: "A modern, responsive portfolio application built with React and Tailwind CSS, featuring smooth animations, form validation, and dynamic routing to showcase my projects and skills. Deployed on Vercel for seamless performance and accessibility.",
+    overview: "This is developed for showcase my develpment skills, built with React, featuring smooth animations, form validation, and dynamic routing to showcase my projects and skills",
   },
   {
     title: "Music School - NEXT.JS",
     image: "/images/musicSchool_img.png",
-    visitLink: "",
+    visitLink: "#",
     githubLink: "https://github.com/Chandrashekharsk/music_school",
     technologiesUsed: [
       "next.js",
@@ -117,7 +117,7 @@ export const projects = [
   {
     title: "Recipe App - MERN",
     image: "/images/recipeApp_img.png",
-    visitLink: "",
+    visitLink: "#",
     githubLink: "https://github.com/Chandrashekharsk/recipe_app",
     technologiesUsed: [
       "react",

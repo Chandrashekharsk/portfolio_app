@@ -9,7 +9,7 @@ import resume from "../../assets/Resume.pdf"
 const Hero = () => {
   return (
     <>
-    <div className="hero-container gap-8">
+    <div className="hero-container bg-gray-900 gap-8">
     <motion.div
         className="hero-image"
         initial={{ opacity: 0, x: 50 }}
@@ -37,7 +37,7 @@ const Hero = () => {
       </motion.div>
     </div>
 
-    <div className="hero-container gap-8">
+    <div className="hero-container bg-gray-900 gap-8">
       <motion.div 
         className="hero-content"
         initial={{ opacity: 0, y: -50 }}

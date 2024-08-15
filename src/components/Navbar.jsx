@@ -77,7 +77,7 @@ const Navbar = () => {
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-                isTransparent ? 'bg-transparent' : 'bg-white dark:bg-gray-900'
+                isTransparent ? 'bg-transparent' : 'bg-black dark:bg-gray-900'
             } ${isNavbarVisible ? 'opacity-100' : 'opacity-0'} shadow-lg`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
