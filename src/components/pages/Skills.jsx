@@ -1,21 +1,6 @@
 // import { react } from "../../assets/index";
 
-const skills = [
-  { name: 'JavaScript', image: '/images/javascript.svg', description: 'Dynamic and versatile programming language.' },
-  { name: 'Java', image: '/images/java.svg', description: 'High-level, object-oriented programming language.' },
-  { name: 'Python', image: '/images/python.svg', description: 'Interpreted, high-level programming language.' },
-  { name: 'HTML', image: '/images/html.svg', description: 'Standard markup language for web pages.' },
-  { name: 'CSS', image: '/images/css.svg', description: 'Style sheet language used for styling web pages.' },
-  { name: 'React', image: "/images/react.svg", description: 'JavaScript library for building user interfaces.' },
-  { name: 'Node.js', image: '/images/nodejs.svg', description: 'JavaScript runtime built on Chrome’s V8 engine.' },
-  { name: 'Express.js', image: '/images/express1.svg', description: 'Minimalist web framework for Node.js.' },
-  { name: 'Next.js', image: '/images/nextjs1.svg', description: 'React framework with hybrid static & server rendering.' },
-  { name: 'MongoDB', image: '/images/mongodb.svg', description: 'NoSQL database for modern applications.' },
-  { name: 'TypeScript', image: '/images/typescript.svg', description: 'Superset of JavaScript with static typing.' },
-  { name: 'GitHub', image: '/images/github.svg', description: 'Platform for version control and collaboration.' },
-  { name: 'Docker', image: '/images/docker.svg', description: 'Platform for developing, shipping, and running applications.' },
-  { name: 'AWS', image: '/images/aws1.svg', description: 'Cloud computing platform offering various services.' },
-];
+import {skills} from "../data.js"
 
 const Skill = () => {
   return (

@@ -1,10 +1,85 @@
+import { projects } from '../data';
+import { motion } from 'framer-motion';
+import './styles/projects.css'; // Import custom CSS for the moving light effect
 
 const Projects = () => {
   return (
-    <div className="container">
+    <section className="px-8 py-24 bg-gray-900 text-gray-200">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-12 dark:text-white">Projects</h2>
+      </div>
+      <motion.div 
+        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="project-card bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden relative"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="moving-light"></div> {/* Moving light effect */}
+            <motion.img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-48 object-cover"
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            />
+            <div className="p-2 pb-1">
+              <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
+            </div>
+            <div className="p-2">
+              <h3 className="text-green-500 font-semibold">Overview:</h3>
+              <p className="text-sm mb-4">{project.overview}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologiesUsed.slice(0, 4).map((tech, index) => (
+                  <span
+                    key={index}
+                    className="bg-gray-700 text-xs px-2 py-1 rounded text-sky-400"
+                  >
+                    {tech}
+                  </span>
+                ))}
+                {project.technologiesUsed.length > 4 && (
+                  <span className="text-xs text-sky-400">+ more</span>
+                )}
+              </div>
+              <div className="flex justify-between items-center">
+                <motion.a
+                  href={project.visitLink}
+                  className="bg-transparent text-white px-4 py-2 rounded-full text-sm hover:bg-green-600 transition-all outline outline-green-700"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  Visit
+                </motion.a>
+                <motion.a
+                  href={project.githubLink}
+                  className="bg-gray-700 outline outline-sky-600 text-white px-4 py-2 rounded-full text-sm hover:bg-sky-700 transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  GitHub
+                </motion.a>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+      <div className=" mx-auto text-center">
+        <h2 className="text-small font-normal mt-5 text-sky-600 ">more projects are on the way...</h2>
+      </div>
+    </section>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Projects
+export default Projects;

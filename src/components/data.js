@@ -69,3 +69,62 @@ export const ExperienceData = [
     professionalGrowth: "Gained hands-on experience in full-stack development and improved problem-solving skills by working on real-world projects. Enhanced my ability to work in a team and deliver results under pressure.",
   }
 ];
+
+export const skills = [
+  { name: 'JavaScript', image: '/images/javascript.svg', description: 'Dynamic and versatile programming language.' },
+  { name: 'Java', image: '/images/java.svg', description: 'High-level, object-oriented programming language.' },
+  { name: 'Python', image: '/images/python.svg', description: 'Interpreted, high-level programming language.' },
+  { name: 'HTML', image: '/images/html.svg', description: 'Standard markup language for web pages.' },
+  { name: 'CSS', image: '/images/css.svg', description: 'Style sheet language used for styling web pages.' },
+  { name: 'React', image: "/images/react.svg", description: 'JavaScript library for building user interfaces.' },
+  { name: 'Node.js', image: '/images/nodejs.svg', description: 'JavaScript runtime built on Chrome’s V8 engine.' },
+  { name: 'Express.js', image: '/images/express1.svg', description: 'Minimalist web framework for Node.js.' },
+  { name: 'Next.js', image: '/images/nextjs1.svg', description: 'React framework with hybrid static & server rendering.' },
+  { name: 'MongoDB', image: '/images/mongodb.svg', description: 'NoSQL database for modern applications.' },
+  { name: 'TypeScript', image: '/images/typescript.svg', description: 'Superset of JavaScript with static typing.' },
+  { name: 'GitHub', image: '/images/github.svg', description: 'Platform for version control and collaboration.' },
+  { name: 'Docker', image: '/images/docker.svg', description: 'Platform for developing, shipping, and running applications.' },
+  { name: 'AWS', image: '/images/aws1.svg', description: 'Cloud computing platform offering various services.' },
+];
+
+export const projects = [
+  {
+    title: "Portfolio App - REACT",
+    image: "/images/portfolio_img.png",
+    visitLink: "https://portfolio-app-mauve-eight.vercel.app/",
+    githubLink: "https://github.com/Chandrashekharsk/portfolio_app",
+    technologiesUsed: [
+      "react",
+      "tailwind",
+      "react-icons",
+      "framer-motion",
+    ],
+    overview: "A modern, responsive portfolio application built with React and Tailwind CSS, featuring smooth animations, form validation, and dynamic routing to showcase my projects and skills. Deployed on Vercel for seamless performance and accessibility.",
+  },
+  {
+    title: "Music School - NEXT.JS",
+    image: "/images/musicSchool_img.png",
+    visitLink: "",
+    githubLink: "https://github.com/Chandrashekharsk/music_school",
+    technologiesUsed: [
+      "next.js",
+      "react",
+      "aceternity",
+      "framer-motion"
+    ],
+    overview: "A mini modern web application developed to showcase the courses offered by a music school. The UI is highly interactive and it highlights the available courses in a visually appealing and user-friendly manner.",
+  },
+  {
+    title: "Recipe App - MERN",
+    image: "/images/recipeApp_img.png",
+    visitLink: "",
+    githubLink: "https://github.com/Chandrashekharsk/recipe_app",
+    technologiesUsed: [
+      "react",
+      "node.js",
+      "mongodb",
+      "jsonwebtoken"
+    ],
+    overview: "Developed a full-stack recipe app, where any user can login and explore already created recipes of other users. Also user can create their own recipe and save recipes ",
+  },
+];

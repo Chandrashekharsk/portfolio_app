@@ -10,7 +10,7 @@ const Feedbacks = () => {
   };
 
   return (
-    <div className="feedbacks-container page-background"> {/* Added page-background class */}
+    <div className="feedbacks-container bg-gray-900"> {/* Added page-background class */}
       <h2 className="feedbacks-title">We Value Your Feedback</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="feedbacks-form">
         <div className="form-group">
