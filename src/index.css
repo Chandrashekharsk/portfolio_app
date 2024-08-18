@@ -1,10 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Global style to apply a dark background */
+Global style to apply a dark background */
 body, html {
-  background-color: #181818; /* Dark background color */
-  color: #ffffff; /* Light text color */
+  /* background-color: #181818; 
+  color: #ffffff; */
   margin: 0;
   padding: 0;
 }

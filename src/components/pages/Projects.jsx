@@ -1,14 +1,21 @@
+import { useSelector } from 'react-redux';
 import { projects } from '../data';
 import { motion } from 'framer-motion';
 import './styles/projects.css'; // Import custom CSS for the moving light effect
 
 const Projects = () => {
+const {theme} = useSelector((state) => state.theme);
+
   return (
-    <section className="px-8 py-24 bg-gray-900 text-gray-200">
+    <section
+      className={`px-8 py-24 ${theme === "dark" ? "bg-gray-900 text-gray-200" : "bg-white text-black"}`}
+    >
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12 dark:text-white">Projects</h2>
+        <h2 className={`text-4xl font-bold mb-12 ${theme === "dark" ? "dark:text-white" : ""}`}>
+          Projects
+        </h2>
       </div>
-      <motion.div 
+      <motion.div
         className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -17,7 +24,9 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="project-card bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden relative"
+            className={`project-card ${
+              theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+            } rounded-lg shadow-lg overflow-hidden relative`}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
@@ -31,28 +40,42 @@ const Projects = () => {
               transition={{ duration: 0.5 }}
             />
             <div className="p-2 pb-1">
-              <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
+              <h2 className={`text-2xl font-bold mb-2 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
+                {project.title}
+              </h2>
             </div>
             <div className="p-2">
-              <h3 className="text-sky-400 font-semibold">Overview:</h3>
-              <p className="text-sm mb-4">{project.overview}</p>
+              <h3 className={`font-semibold ${theme === "dark" ? "text-sky-400" : "text-blue-600"}`}>
+                Overview:
+              </h3>
+              <p className={`text-sm mb-4 ${theme === "dark" ? "text-gray-400" : "text-gray-700"}`}>
+                {project.overview}
+              </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologiesUsed.slice(0, 4).map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-gray-700 text-xs px-2 py-1 rounded text-sky-400"
+                    className={`text-xs px-2 py-1 rounded ${
+                      theme === "dark" ? "bg-gray-700 text-sky-400" : "bg-gray-200 text-blue-600"
+                    }`}
                   >
                     {tech}
                   </span>
                 ))}
                 {project.technologiesUsed.length > 4 && (
-                  <span className="text-xs text-sky-400">+ more</span>
+                  <span className={`text-xs ${theme === "dark" ? "text-sky-400" : "text-blue-600"}`}>
+                    + more
+                  </span>
                 )}
               </div>
               <div className="flex justify-between items-center">
                 <motion.a
                   href={project.visitLink}
-                  className="bg-transparent text-white px-4 py-2 rounded-full text-sm hover:bg-green-600 transition-all outline outline-green-700"
+                  className={`px-4 py-2 rounded-full text-sm transition-all outline ${
+                    theme === "dark"
+                      ? "bg-transparent text-white hover:bg-green-600 outline-green-700"
+                      : "bg-transparent text-black hover:bg-green-400 outline-green-500"
+                  }`}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
@@ -62,7 +85,11 @@ const Projects = () => {
                 </motion.a>
                 <motion.a
                   href={project.githubLink}
-                  className="bg-gray-700 outline outline-sky-600 text-white px-4 py-2 rounded-full text-sm hover:bg-sky-700 transition-all"
+                  className={`px-4 py-2 rounded-full text-sm transition-all outline ${
+                    theme === "dark"
+                      ? "bg-gray-700 text-white hover:bg-sky-700 outline-sky-600"
+                      : "bg-gray-200 text-black hover:bg-blue-600 outline-blue-500"
+                  }`}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
@@ -75,8 +102,10 @@ const Projects = () => {
           </motion.div>
         ))}
       </motion.div>
-      <div className=" mx-auto text-center">
-        <h2 className="text-small font-normal mt-7 text-sky-600 ">more projects are on the way</h2>
+      <div className="mx-auto text-center">
+        <h2 className={`text-small font-normal mt-7 ${theme === "dark" ? "text-sky-600" : "text-blue-600"}`}>
+          more projects are on the way
+        </h2>
       </div>
     </section>
   );
