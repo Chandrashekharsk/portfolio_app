@@ -4,32 +4,33 @@
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
-  padding: 50px 10%; /* Reduced top padding */
+  padding: 40px 8%; /* Reduced padding */
   position: relative;
+  gap: 40px; /* Adjusted gap to control spacing between containers */
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 550px; /* Slightly reduced max-width */
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced margin */
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 25px; /* Reduced margin */
 }
 
 .hero-links {
   display: flex;
-  gap: 20px;
+  gap: 15px; /* Reduced gap between links */
 }
 
 .hero-link {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #00d1b2;
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -42,7 +43,7 @@
 
 .hero-image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 350px; /* Slightly reduced max-width */
   border-radius: 10px;
   object-fit: cover;
   z-index: 1;
@@ -63,14 +64,12 @@
   outline-color: rgb(6, 233, 9);
 }
 
-.dark .resume-button:hover {
+.resume-button:hover {
   background-color: #16a34a;
 }
-.dark .resume-button{
-  color:white;
-}
-.resume-button:hover{
-  background-color: #16a34a;
+
+.dark .resume-button {
+  color: white;
 }
 
 /* Dark Mode Styles */
@@ -80,20 +79,19 @@
 }
 
 .dark .hero-link {
-  color: green; /* Light blue for dark mode links */
+  color: green;
 }
-.hero-link {
-  color: green; /* Light blue for dark mode links */
-}
+
 .hero-link:hover {
-  color: green; /* Light blue for dark mode links */
+  color: green;
 }
+
 .dark .hero-link:hover {
   border-color: green;
 }
 
 .dark .resume-button {
-  outline-color: green; /* Adjust if needed for dark mode */
+  outline-color: green;
 }
 
 /* Responsive Styles */
@@ -101,17 +99,17 @@
   .hero-container {
     flex-direction: column;
     text-align: center;
-    padding: 70px 5% 10px; /* Reduced top and bottom padding */
-    height: auto;
+    padding: 50px 5%; /* Adjusted padding */
+    gap: 30px; /* Reduced gap for smaller screens */
   }
 
   .hero-content {
     max-width: 100%;
-    margin-bottom: 10px; /* Reduced bottom margin */
+    margin-bottom: 20px; /* Adjusted bottom margin */
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .hero-subtitle {
@@ -119,7 +117,7 @@
   }
 
   .hero-image img {
-    width: 80%;
+    width: 85%; /* Adjusted width */
     max-width: none;
     margin: 0 auto;
   }
@@ -141,17 +139,26 @@
   .hero-link {
     font-size: 1rem;
   }
-
   .resume-button {
     padding: 8px 16px;
     font-size: 14px;
   }
 
-  .hero-image img {
+  .hero-image img { 
     width: 100%;
   }
 
   .hero-container {
-    padding: 60px 5% 10px; /* Reduced padding for very small screens */
+    padding: 40px 5% 10px; /* Further reduced padding for very small screens */
   }
+}
+
+/* Specific Styles for Second Container */
+.hero-container:nth-child(2) {
+  padding: 20px 8%; /* Reduced padding to minimize the gap */
+  gap: 20px; /* Reduced gap between content and image */
+}
+
+.hero-container:nth-child(2) .hero-image img {
+  margin-bottom: 0; /* Eliminated bottom margin to reduce space between image and end of page */
 }
