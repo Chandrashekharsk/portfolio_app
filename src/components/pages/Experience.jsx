@@ -12,8 +12,8 @@ const Experience = () => {
       <div className="space-y-12">
         {ExperienceData.map((experience, index) => (
           <div key={index} className="flex flex-col md:flex-row items-start md:items-center">
-            <div className="flex-grow py-0">
-              <h3 className={`text-2xl font-semibold ${theme === "dark" ? "text-teal-400" : "text-teal-600"}`}>{experience.role}</h3>
+            <div className="flex-grow py-2">
+              <h3 className={`text-2xl p-2 font-semibold ${theme === "dark" ? "text-teal-400" : "text-teal-600"}`}>{experience.role}</h3>
               <p className={theme === "dark" ? "text-gray-400" : "text-gray-600"}>
                 <strong>@ </strong>
                 <a
