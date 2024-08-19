@@ -94,7 +94,7 @@ const Navbar = () => {
                             {theme === "dark" ? (
                                 <SunIcon className="w-6 h-6 text-yellow-500" />
                             ) : (
-                                <MoonIcon className="w-6 h-6 text-blue-500" />
+                                <MoonIcon className="w-6 h-6 fill-blue-500 text-xl text-blue-600" />
                             )}
                         </button>
                         <div className="md:hidden ml-4">
