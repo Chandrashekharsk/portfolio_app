@@ -33,7 +33,7 @@ const Navbar = () => {
         }
 
         const timer = setTimeout(() => {
-            // setIsTransparent(true);
+            setIsTransparent(true);
         }, 3000);
 
         return () => clearTimeout(timer);
@@ -55,9 +55,9 @@ const Navbar = () => {
         }
     };
 
-    if (isTransparent && theme === "dark") {
-        return null;
-    }
+    // if (isTransparent && theme === "dark") {
+    //     return null;
+    // }
 
     return (
         <nav
@@ -99,7 +99,15 @@ const Navbar = () => {
                         </button>
                         <div className="md:hidden ml-4">
                             <button onClick={toggleMobileMenu} className="focus:outline-none">
-                                <svg className="w-6 h-6 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg 
+                                    className={`w-6 h-6 ${theme === "dark" ? "text-white" : "text-black"}`} 
+                                    fill="none" 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round" 
+                                    strokeWidth="2" 
+                                    stroke="currentColor" 
+                                    viewBox="0 0 24 24"
+                                >
                                     <path d="M4 6h16M4 12h16M4 18h16"></path>
                                 </svg>
                             </button>

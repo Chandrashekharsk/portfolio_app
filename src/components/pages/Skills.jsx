@@ -5,8 +5,8 @@ const Skill = () => {
   const {theme} = useSelector((state) => state.theme);
 
   return (
-    <section className={`py-16 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className={`py-20 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+      <div className="max-w-7xl py-4 mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-semibold">Skills</h2>
         <p className="mt-4 text-lg">
           Below are some of the technologies I specialize in.
