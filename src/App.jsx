@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Navbar, PageNotFound,Feedbacks, Footer,Home, Education, Projects,Skills, Experience } from "./components/index"
+import { Navbar, Testimonials, PageNotFound,Feedbacks, Footer,Home, Education, Projects,Skills, Experience, SignIn } from "./components/index"
 
 function App() {
 
@@ -15,6 +15,8 @@ function App() {
       <Route path='/skills' element={<Skills/>} />
       <Route  path='/feedbacks' element={<Feedbacks/>} />
       <Route path='/experience' element={<Experience/>} />
+      <Route path='/testimonials' element={<Testimonials/>} />
+      <Route path='/sign-in' element={<SignIn/>} />
       <Route path='/*' element={<PageNotFound/>} />
     </Routes>
     <Footer/>

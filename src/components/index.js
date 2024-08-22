@@ -7,5 +7,7 @@ import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 import PageNotFound from "./pages/PageNotFound";
 import Feedbacks from "./pages/Feedbacks";
+import Testimonials from "./pages/Testimonials";
+import SignIn from "./pages/auth/SignIn";
 
-export { Navbar,Feedbacks, PageNotFound, Footer, Home, Education, Projects,Skills, Experience };
+export { Navbar,Feedbacks, PageNotFound, Footer, Home, Education, Projects,Skills, Experience, Testimonials,SignIn };
