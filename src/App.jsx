@@ -1,8 +1,9 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Navbar, ForgetPassword, SignUP, Testimonials, PageNotFound,Feedbacks, Footer,Home, Education, Projects,Skills, Experience, SignIn } from "./components/index"
+import { Navbar, ForgetPassword, Testimonials, PageNotFound,Feedbacks, Footer,Home, Education, Projects,Skills, Experience, SignIn } from "./components/index"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SignUP from './components/pages/auth/Signup';
 
 function App() {
 
