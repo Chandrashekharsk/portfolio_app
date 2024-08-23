@@ -1,6 +1,8 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Navbar, Testimonials, PageNotFound,Feedbacks, Footer,Home, Education, Projects,Skills, Experience, SignIn } from "./components/index"
+import { Navbar, ForgetPassword, SignUP, Testimonials, PageNotFound,Feedbacks, Footer,Home, Education, Projects,Skills, Experience, SignIn } from "./components/index"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -8,6 +10,7 @@ function App() {
     <>
     <BrowserRouter>
     <Navbar/>
+    <ToastContainer />
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/projects' element={<Projects/>} />
@@ -17,6 +20,8 @@ function App() {
       <Route path='/experience' element={<Experience/>} />
       <Route path='/testimonials' element={<Testimonials/>} />
       <Route path='/sign-in' element={<SignIn/>} />
+      <Route path='/sign-up' element={<SignUP/>} />
+      <Route path='/forget-password' element={<ForgetPassword/>} />
       <Route path='/*' element={<PageNotFound/>} />
     </Routes>
     <Footer/>

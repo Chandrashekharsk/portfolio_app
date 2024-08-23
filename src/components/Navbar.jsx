@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { navLinks } from './data'; // Assuming you have a data.js file with navLinks
 import { useSelector, useDispatch } from 'react-redux';
 import { setTheme } from '../slices/themeSlice'; // Assuming you have a themeSlice.js file for Redux
@@ -7,8 +7,8 @@ import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'; // Import Heroi
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from '../config/firebase-config';
 import { signOut } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
-
+import { toast } from 'react-toastify';
+import logo from "/logo.png"
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -65,6 +65,7 @@ const Navbar = () => {
     const handleLogoutClick = async () => {
         try {
             await signOut(auth); // Sign out the user
+            toast.success("Logged Out Successfully");
             navigate("/"); // Redirect to sign-in page or homepage
         } catch (error) {
             console.error("Error logging out:", error.message);
@@ -99,7 +100,12 @@ const Navbar = () => {
                         </div>
                         {/* Navbar Title */}
                         <Link to="/" className="text-xl font-semibold">
-                            Chandrashekhar Singh Kushwaha
+                            <img 
+                                src={logo} 
+                                alt="logo" 
+                                className="h-10 w-auto object-contain" 
+                                style={{ borderRadius: '5px', filter: theme === "dark" ? "brightness(0.8)" : "none" }}
+                            />
                         </Link>
                     </div>
                     <div className="hidden md:flex flex-grow items-center justify-center space-x-6">
@@ -128,22 +134,11 @@ const Navbar = () => {
                         {
                             !user ? (
                                 <Link to={"/sign-in"} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">
-                                    Login
+                                    Sign In
                                 </Link>
                             ) : (
-                                // <img
-                                //     style={{
-                                //         width: "40px",
-                                //         height: "40px",
-                                //         borderRadius: "{50}%",
-                                //         border: "2px solid #fff"
-                                //     }}
-                                //     src={user?.photoURL || ""}
-                                //     alt="profile"
-                                //     className="profile-picture"
-                                // />
-                                        <button onClick={handleLogoutClick} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">
-                                    Logout
+                                <button onClick={handleLogoutClick} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">
+                                    Sign Out
                                 </button>
                             )
                         }
@@ -153,7 +148,7 @@ const Navbar = () => {
             </div>
             {isMobileMenuOpen && (
                 <div
-                    className={`fixed top-0 left-0 h-screen w-1/3 md:hidden ${theme === "dark" ? "text-white bg-black" : "text-black bg-white"} shadow-lg z-50`}
+                    className={`fixed top-0 left-0 h-screen w-2/3 md:hidden ${theme === "dark" ? "text-white bg-black" : "text-black bg-white"} shadow-lg z-50`}
                 >
                     <div className="flex justify-end p-4">
                         <button onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 dark:text-gray-200">
@@ -190,6 +185,5 @@ const Navbar = () => {
         </nav>
     );
 };
-
 
 export default Navbar;

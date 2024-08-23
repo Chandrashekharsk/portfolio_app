@@ -55,7 +55,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className={`container min-h-[84vh] mx-auto p-16 ${theme === "light" ? "text-black bg-white" : "text-white bg-gray-900"
+      className={`container min-h-[84vh] px-auto p-16 ${theme === "light" ? "text-black bg-white" : "text-white bg-gray-900"
         }`}
     >
       <h2 className="text-3xl font-semibold text-center py-3 mb-8">

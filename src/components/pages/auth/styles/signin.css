@@ -58,7 +58,7 @@ body {
   margin-top: 5px;
 }
 
-.form-submit {
+.google-button, .form-submit {
   width: 100%;
   padding: 12px;
   border: none;
@@ -70,9 +70,10 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.form-submit:hover {
-  background-color: #0056b3;
+.form-submit:hover, .google-button:hover {
+  background-color: #0a4b90;
 }
+
 
 /* Social Button Styles */
 .social-button {
@@ -86,14 +87,9 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.google-button {
-  background-color: #db4437;
-  color: white;
-}
 
-.google-button:hover {
-  background-color: #c23321;
-}
+
+
 
 .github-button {
   background-color: #333;

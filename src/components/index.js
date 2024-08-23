@@ -9,5 +9,21 @@ import PageNotFound from "./pages/PageNotFound";
 import Feedbacks from "./pages/Feedbacks";
 import Testimonials from "./pages/Testimonials";
 import SignIn from "./pages/auth/SignIn";
+import SignUP from "./pages/auth/Signup";
+import ForgetPassword from "./pages/auth/ForgetPassword";
 
-export { Navbar,Feedbacks, PageNotFound, Footer, Home, Education, Projects,Skills, Experience, Testimonials,SignIn };
+export {
+  Navbar,
+  SignUP,
+  ForgetPassword,
+  Feedbacks,
+  PageNotFound,
+  Footer,
+  Home,
+  Education,
+  Projects,
+  Skills,
+  Experience,
+  Testimonials,
+  SignIn,
+};

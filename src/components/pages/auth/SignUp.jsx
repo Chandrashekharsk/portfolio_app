@@ -1,8 +1,7 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth, googleAuthentication } from "../../../config/firebase-config";
-import { signInWithPopup } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, googleAuthentication } from "../../../config/firebase-config.js";
 import * as yup from 'yup';
+import { Link } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
@@ -10,12 +9,12 @@ import "./styles/signin.css"; // Import the CSS file
 import { useSelector, useDispatch } from "react-redux";
 import { setUsername } from "../../../slices/userSlice.js";
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const SignIn = () => {
+const SignUP = () => {
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state.theme);
   const schema = yup.object().shape({
-    username: yup.string().min(2).required("Username is required"),
     email: yup.string().email().required("Email is required"),
     password: yup.string().min(6).required("Password is required"),
   });
@@ -26,64 +25,63 @@ const SignIn = () => {
 
   const navigate = useNavigate();
 
-  const signInWithEmail = async (data) => {
+  const signUpWithEmail = async (data) => {
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, data.email, data.password);
-      console.log("User signed in:", userCredential.user);
-      dispatch(setUsername(data.username));
-      toast.success('Signed In Succssfully', {
-      });
-      navigate("/"); // Redirect after successful sign-in
+      const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password);
+      if (userCredential) {
+        toast.success('Signed Up successfully', {
+        });
+        navigate("/sign-in"); 
+      }
     } catch (error) {
-      console.error("Error signing in:", error.message);
-      toast.error('Wrong Credentials!', {
-      });
+      if (error.code === 'auth/email-already-in-use') {
+        toast.warning('Email already exists, please Sign In!', {
+        });
+        navigate("/sign-in");
+      } else {
+        console.error("Error signing up:", error.message);
+        toast.error('Something went wrong!', {
+        });
+      }
     }
   };
 
   const signInWithGoogle = async () => {
     try {
       const res = await signInWithPopup(auth, googleAuthentication);
-      console.log("Signed In with Google:", res.user);
       const username = res.user.displayName;
       dispatch(setUsername(username));
-      toast.success('Signed In Succssfully', {
+      toast.success('Signed In successfully', {
+        position: toast.POSITION.TOP_RIGHT, // Ensure the position is available
       });
       navigate("/");
     } catch (error) {
       console.error("Error with Google sign-in:", error.message);
       toast.error('Something went wrong!', {
+        position: toast.POSITION.TOP_RIGHT, // Ensure the position is available
       });
     }
   };
 
   const onSubmit = (data) => {
-    signInWithEmail(data);
+    signUpWithEmail(data);
   };
 
   return (
     <div className={`flex min-h-[84vh] justify-center pb-3 pt-7 ${theme === "light" ? "bg-white text-black" : "text-white bg-gray-900"} `}>
       <form onSubmit={handleSubmit(onSubmit)} className={`${theme === "light" ? "bg-gray-200 text-black" : "text-white bg-gray-800"} sign-in-form`}>
-        <h1 className={`sign-in-title ${theme === "light" ? " text-black" : "text-white"}`}>Sign In</h1>
+        <h1 className={`sign-in-title ${theme === "light" ? " text-black" : "text-white"}`}>Sign Up</h1>
         <div className="form-group">
-          <input placeholder="Username" type="text" {...register("username")} className={`form-input ${theme === "light" ? " text-black bg-white" : "text-white bg-black"}`} />
-          <p className="form-error">{errors.username?.message}</p>
-        </div>
-        <div className="form-group">
-          <input placeholder="Email" type="email" {...register("email")} className={`form-input ${theme === "light" ? " text-black bg-white" : "text-white bg-black"}`} />
+          <input placeholder="Email" type="email" {...register("email")} className={`form-input ${theme === "light" ? " text-black bg-white" : "text-white bg-black"}`}/>
           <p className="form-error">{errors.email?.message}</p>
         </div>
         <div className="form-group">
           <input placeholder="Password" type="password" {...register("password")} className={`form-input ${theme === "light" ? " text-black bg-white" : "text-white bg-black"}`} />
           <p className="form-error">{errors.password?.message}</p>
         </div>
-        <input type="submit" value="Sign In" className="form-submit" />
-        <p className="text-center">don't have an account? go to <Link className="text-blue-700 py-1" to={"/sign-up"}>Sign Up</Link></p>
-        <div className="mt-3">
-        <Link to={"/forget-password"} className="text-blue-500  ">forgot password</Link>
-        </div>
-        <p className="text-center"> or</p>
-        
+        <input type="submit" value="Sign Up" className="form-submit" />
+        <p className="text-center">Already have an account? Go to <Link className="text-blue-700 py-1" to={"/sign-in"}>Sign In</Link></p>
+        <p className="text-center pb-1 text-md">or</p>
         <button type="button" onClick={signInWithGoogle} className="social-button google-button">
           Sign In with Google
         </button>
@@ -92,4 +90,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUP;
