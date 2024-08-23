@@ -5,6 +5,7 @@ import { db, auth } from '../../config/firebase-config';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { addDoc, collection } from 'firebase/firestore';
+import { toast } from 'react-toastify';
 
 const Feedbacks = () => {
   const username = useSelector((state) => state.user.value.username);
@@ -18,7 +19,7 @@ const Feedbacks = () => {
     console.log(data);
 
     if(!user?.uid){
-      alert("Please login first to create posts");
+      toast.warning("Please Sign In to create feedback");
       navigate("/sign-in");
       return;
     }

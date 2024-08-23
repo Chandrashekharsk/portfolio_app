@@ -1,17 +1,13 @@
-import { collection, doc, query, deleteDoc, where, getDocs, addDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../config/firebase-config";
 import { useState, useEffect } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../config/firebase-config";
 import { useSelector } from "react-redux";
 
 const Testimonials = () => {
   const [feedbacks, setFeedbacks] = useState([]);
-  const [likes, setLikes] = useState([]);
   const { theme } = useSelector((state) => state.theme);
-  const [user] = useAuthState(auth);
+  // const [user] = useAuthState(auth);
   
-  const likesRef = collection(db, "likes");
   const feedbackRef = collection(db, "testimonials");
 
   const getFeedbacks = async () => {
@@ -24,29 +20,6 @@ const Testimonials = () => {
       }))
     );
   };
-
-
-  // const getLikes = async () => {
-  //   const data = await getLikes(likesRef);
-  //   setLikes(
-  //     data.docs.map((doc) => ({
-  //       ...doc.data(),
-  //       id: doc.id,
-  //     }))
-  //   )
-  //   console.log(likes.length)
-  // }
-
-  const addLike = async()=>{
-    console.log("id: "+id)
-    try {
-      const newDoc = await addDoc(likesRef,{
-        userId: user?.uid,
-      });
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
 
   useEffect(() => {

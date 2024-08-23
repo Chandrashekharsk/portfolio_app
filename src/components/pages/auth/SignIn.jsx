@@ -78,7 +78,7 @@ const SignIn = () => {
           <p className="form-error">{errors.password?.message}</p>
         </div>
         <input type="submit" value="Sign In" className="form-submit" />
-        <p className="text-center">don't have an account? go to <Link className="text-blue-700 py-1" to={"/sign-up"}>Sign Up</Link></p>
+        <p className="text-center">don&apos;t have an account? go to <Link className="text-blue-700 py-1" to={"/sign-up"}>Sign Up</Link></p>
         <div className="mt-3">
         <Link to={"/forget-password"} className="text-blue-500  ">forgot password</Link>
         </div>
