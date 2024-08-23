@@ -10,6 +10,7 @@ import Feedbacks from "./pages/Feedbacks";
 import Testimonials from "./pages/Testimonials";
 import SignIn from "./pages/auth/SignIn";
 import ForgetPassword from "./pages/auth/ForgetPassword";
+import SignUP from "./pages/auth/SignUp";
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   Experience,
   Testimonials,
   SignIn,
+  SignUP,
 };
