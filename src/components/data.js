@@ -136,7 +136,7 @@ export const projects = [
   {
     title: "Portfolio App - REACT",
     image: "/images/portfolio_img.png",
-    visitLink: "https://portfolio-ancc10rsv-chandrashekhars-projects-d80f3903.vercel.app",
+    visitLink: "https://portfolio-230yfo8w7-chandrashekhars-projects-d80f3903.vercel.app/",
     technologiesUsed: [
       "react",
       "tailwind",

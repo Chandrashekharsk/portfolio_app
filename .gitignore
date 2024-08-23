@@ -12,6 +12,9 @@ backend
 dist
 dist-ssr
 *.local
+.env
+build
+.firebase
 
 # Editor directories and files
 .vscode/*
