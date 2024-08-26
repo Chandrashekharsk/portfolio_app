@@ -133,11 +133,11 @@ const Navbar = () => {
                         </button>
                         {
                             !user ? (
-                                <Link to={"/sign-in"} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">
+                                <Link to={"/sign-in"} className="bg-green-600 text-sm text-white px-4 py-2 rounded-md hover:bg-green-500 focus:outline-none">
                                     Sign In
                                 </Link>
                             ) : (
-                                <button onClick={handleLogoutClick} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">
+                                <button onClick={handleLogoutClick} className="bg-green-600 text-sm text-white px-4 py-2 rounded-md hover:bg-green-500 focus:outline-none">
                                     Sign Out
                                 </button>
                             )
