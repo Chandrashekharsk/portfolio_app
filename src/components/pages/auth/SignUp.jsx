@@ -68,7 +68,7 @@ const SignUP = () => {
   };
 
   return (
-    <div className={`flex min-h-[84vh] justify-center pb-3 pt-7 ${theme === "light" ? "bg-white text-black" : "text-white bg-gray-900"} `}>
+    <div className={`flex h-screen justify-center pb-3  ${theme === "light" ? "bg-white text-black" : "text-white bg-gray-900"} `}>
       <form onSubmit={handleSubmit(onSubmit)} className={`${theme === "light" ? "bg-gray-200 text-black" : "text-white bg-gray-800"} sign-in-form`}>
         <h1 className={`sign-in-title ${theme === "light" ? " text-black" : "text-white"}`}>Sign Up</h1>
         <div className="form-group">
