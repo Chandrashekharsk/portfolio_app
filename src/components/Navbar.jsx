@@ -8,7 +8,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from '../config/firebase-config';
 import { signOut } from "firebase/auth";
 import { toast } from 'react-toastify';
-import logo from "/logo.png"
+import logo from "/hadsome_x-logo.png"
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);

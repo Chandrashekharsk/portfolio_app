@@ -26,14 +26,39 @@ const SignIn = () => {
 
   const navigate = useNavigate();
 
+  // function to set username (made readnoly here) in cookies  -> (name, value, hours)
+  function setCookie(name, value, hours) {    
+    let expires = "";
+    if (hours) {
+        const date = new Date();
+        date.setTime(date.getTime() + (1 * 60 * 60 * 1000)); // Convert hours to milliseconds
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function capitalizeFullName(fullName) {
+  // Split the full name into an array of words
+  const words = fullName.split(' ');
+  // Map over each word, capitalizing the first letter and converting the rest to lowercase
+  const capitalizedWords = words.map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+  // Join the array back into a single string with spaces between words
+  return capitalizedWords.join(' ');
+}
+
   const signInWithEmail = async (data) => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, data.email, data.password);
       console.log("User signed in:", userCredential.user);
-      dispatch(setUsername(data.username));
+      let username = data.username;
+      username = capitalizeFullName(username);
+      setCookie("username", username, 1);
+      dispatch(setUsername(username));
       toast.success('Signed In Succssfully', {
       });
-      navigate("/"); // Redirect after successful sign-in
+      navigate("/feedbacks"); // Redirect after successful sign-in
     } catch (error) {
       console.error("Error signing in:", error.message);
       toast.error('Wrong Credentials!', {

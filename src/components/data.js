@@ -132,11 +132,17 @@ export const skills = [
   { name: 'AWS', image: '/images/aws1.svg', description: 'Cloud computing platform offering various services.' },
 ];
 
+
+// Get the full domain (e.g., "localhost:3000" or "www.example.com")
+// const domain = window.location.host;
+// Or you can just get the protocol and domain name (e.g., "http://localhost:3000" or "https://www.example.com")
+const origin = window.location.origin;
+
 export const projects = [
   {
-    title: "Portfolio App - REACT",
+    title: "Portfolio App - React",
     image: "/images/portfolio_img.png",
-    visitLink: "https://portfolio-230yfo8w7-chandrashekhars-projects-d80f3903.vercel.app/",
+    visitLink: `${origin}/`,
     technologiesUsed: [
       "react",
       "tailwind",
@@ -146,9 +152,9 @@ export const projects = [
     overview: "This is developed for showcase my develpment skills, built with React, featuring smooth animations, form validation, and dynamic routing to showcase my projects and skills",
   },
   {
-    title: "Music School - NEXT.JS",
+    title: "Music School - Next.js",
     image: "/images/musicSchool_img.png",
-    visitLink: "",
+    visitLink: `${origin}/not-hosted`,
     githubLink: "https://github.com/Chandrashekharsk/music_school",
     technologiesUsed: [
       "next.js",
@@ -156,12 +162,12 @@ export const projects = [
       "aceternity",
       "framer-motion"
     ],
-    overview: "A mini modern web application developed to showcase the courses offered by a music school. The UI is highly interactive and it highlights the available courses in a visually appealing and user-friendly manner.",
+    overview: "A mini application developed to showcase the courses offered by a music school. The UI is highly interactive and it highlights the available courses in user-friendly manner.",
   },
   {
     title: "Recipe App - MERN",
     image: "/images/recipeApp_img.png",
-    visitLink: "",
+    visitLink: `${origin}/not-hosted`,
     githubLink: "https://github.com/Chandrashekharsk/recipe_app",
     technologiesUsed: [
       "react",

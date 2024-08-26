@@ -68,13 +68,13 @@ const {theme} = useSelector((state) => state.theme);
                   </span>
                 )}
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex pb-3 justify-between items-center">
                 <motion.a
                   href={project.visitLink}
-                  className={`px-4 py-2 rounded-full text-sm transition-all outline ${
+                  className={`px-4 py-2 rounded-full text-xs transition-all outline ${
                     theme === "dark"
-                      ? "bg-transparent text-white hover:bg-green-600 outline-green-700"
-                      : "bg-transparent text-black hover:bg-green-400 outline-green-500"
+                      ? "bg-gray-700 text-white hover:bg-sky-500 outline-sky-400"
+                      : "bg-gray-200 text-black hover:bg-blue-500 outline-blue-400"
                   }`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -85,10 +85,10 @@ const {theme} = useSelector((state) => state.theme);
                 </motion.a>
                 <motion.a
                   href={project.githubLink}
-                  className={`px-4 py-2 rounded-full text-sm transition-all outline ${
+                  className={`px-4 py-2 rounded-full text-xs transition-all outline ${
                     theme === "dark"
-                      ? "bg-gray-700 text-white hover:bg-sky-700 outline-sky-600"
-                      : "bg-gray-200 text-black hover:bg-blue-600 outline-blue-500"
+                      ? "bg-gray-700 text-white hover:bg-sky-500 outline-sky-400"
+                      : "bg-gray-200 text-black hover:bg-blue-500 outline-blue-400"
                   }`}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -11,6 +11,7 @@ import Testimonials from "./pages/Testimonials";
 import SignIn from "./pages/auth/SignIn";
 import ForgetPassword from "./pages/auth/ForgetPassword";
 import SignUP from "./pages/auth/SignUp";
+import YetNotHosted from "./pages/YetNotHosted";
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   Testimonials,
   SignIn,
   SignUP,
+  YetNotHosted,
 };

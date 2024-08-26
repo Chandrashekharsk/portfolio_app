@@ -2,10 +2,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaDownload } from 'react-icons/fa';
 import './styles/hero.css';
-import hello1 from "../../assets/hello1.png";
-import fm6 from "../../assets/fm6.jpg";
-import resume from "../../assets/Resume.pdf";
 import { useSelector } from 'react-redux';
+import {resume, blur, fm6} from "../../assets/index";
 
 const Hero = () => {
   const theme = useSelector((state) => state.theme); // Adjusted to correctly access the theme value
@@ -19,7 +17,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img src={hello1} className="hero-img" alt="Hero" />
+          <img src={blur} className="hero-img" alt="Hero" />
         </motion.div>
         <motion.div
           className="hero-content"

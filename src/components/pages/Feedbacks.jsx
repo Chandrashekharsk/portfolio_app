@@ -1,13 +1,15 @@
 import { useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import './styles/feedbacks.css'; 
+import './styles/feedbacks.css';
 import { db, auth } from '../../config/firebase-config';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { addDoc, collection } from 'firebase/firestore';
 import { toast } from 'react-toastify';
+import { useState } from 'react';
 
 const Feedbacks = () => {
+  const [loading, setLoading] = useState(false);
   const username = useSelector((state) => state.user.value.username);
   const [user] = useAuthState(auth);
   const { theme } = useSelector((state) => state.theme);
@@ -15,21 +17,45 @@ const Feedbacks = () => {
 
   const navigate = useNavigate();
   const testimonialRef = collection(db, "testimonials")
-  const onSubmit = async (data) => {
-    console.log(data);
 
-    if(!user?.uid){
+
+  const onSubmit = async (data) => {
+    setLoading(true);
+    console.log(data);
+    if (!user?.uid) {
       toast.warning("Please Sign In to create feedback");
       navigate("/sign-in");
       return;
     }
-    await addDoc(testimonialRef,{
-      ...data,
-      username: username,
-      userId: user?.uid,
-      comments :[],
-      likes:[]
-    })
+    function getCookie(name) {
+      let nameEQ = name + "=";
+      let ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+    let cookieUsername = getCookie("username");
+    if (cookieUsername) {
+      await addDoc(testimonialRef, {
+        ...data,
+        username: user.displayName || cookieUsername,
+        userId: user?.uid,
+        comments: [],
+        likes: []
+      })
+    } else {
+      await addDoc(testimonialRef, {
+        ...data,
+        username: user.displayName || username,
+        userId: user?.uid,
+        comments: [],
+        likes: []
+      })
+    }
+    setLoading(false);
     navigate("/testimonials");
   };
 
@@ -46,9 +72,15 @@ const Feedbacks = () => {
             />
             {errors.feedback && <span className="text-red-500 text-sm">Feedback is required</span>}
           </div>
+          {
+            loading ?
+            <button type="submit" disabled className={`w-full py-2 px-4 rounded-md font-medium text-white ${theme === 'dark' ? 'bg-green-600' : 'bg-green-500'} hover:bg-green-700`}>
+            ...
+          </button> :
           <button type="submit" className={`w-full py-2 px-4 rounded-md font-medium text-white ${theme === 'dark' ? 'bg-green-600' : 'bg-green-500'} hover:bg-green-700`}>
-            Submit
-          </button>
+          Submit
+        </button>
+          }
         </form>
       </div>
     </div>
