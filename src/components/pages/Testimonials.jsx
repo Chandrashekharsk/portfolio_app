@@ -12,7 +12,8 @@ const Testimonials = () => {
   const feedbackRef = collection(db, "testimonials");
 
   const getFeedbacks = async () => {
-    setLoading(true); // Set loading to true before fetching data
+    console.log("theme: " + theme);
+    setLoading(true);
     try {
       const data = await getDocs(feedbackRef);
       setFeedbacks(
@@ -24,39 +25,43 @@ const Testimonials = () => {
     } catch (error) {
       console.error("Error fetching feedbacks:", error);
     } finally {
-      setLoading(false); // Set loading to false after data is fetched or if an error occurs
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    getFeedbacks(); // Fetch feedbacks when the component mounts
+    getFeedbacks();
   }, []);
 
   return (
     <div
-      className={`container min-h-[81vh] px-auto p-16 ${
+      className={`container min-h-[87vh] px-6 py-16 md:py-20 ${
         theme === "light" ? "text-black bg-white" : "text-white bg-gray-900"
       }`}
     >
-      <h2 className="text-3xl font-semibold text-center py-3 mb-8">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center py-3 mb-8 md:mb-12">
         Testimonials
       </h2>
 
       {loading ? (
-        <Loader /> // Show the loader while data is being fetched
+        <Loader />
       ) : (
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           {feedbacks.map((feedback) => (
             <div
               key={feedback.id}
-              className={`rounded-lg shadow-md p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-xl ${
+              className={`rounded-xl shadow-md p-6 transition-all duration-200 transform hover:shadow-2xl ${
                 theme === "light"
                   ? "bg-gray-200 hover:bg-gray-300"
                   : "bg-gray-800 hover:bg-gray-700"
               }`}
             >
               <div className="text-center">
-                <h3 className="text-xl font-bold pb-2 mb-2">
+                <h3
+                  className={`text-xl font-bold pb-2 mb-4 border-b ${
+                    theme === "light" ? "border-gray-300" : "border-gray-600"
+                  }`}
+                >
                   {feedback.username}
                 </h3>
                 <p

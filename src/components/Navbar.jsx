@@ -76,7 +76,7 @@ const Navbar = () => {
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-100 
                 ${isTransparent ? 'bg-transparent' : ""} 
-                ${theme === "dark" ? "bg-black text-gray-100" : "bg-gray-200 text-black"}
+                ${theme === "dark" ? "bg-black text-white" : "bg-gray-200 text-black"}
                 ${isNavbarVisible ? 'opacity-100' : 'opacity-0'} shadow-lg`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

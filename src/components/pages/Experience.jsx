@@ -6,7 +6,7 @@ const Experience = () => {
   const { theme } = useSelector((state) => state.theme);
 
   return (
-    <div className={`py-11 p-4 rounded-lg shadow-lg ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+    <div className={`py-11 p-4 lg:min-h-[87vh] rounded-lg shadow-lg ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
       <h2 className={`pt-14 mb-6 md:mb-4 lg:mb-1 text-4xl font-bold sm:mb-8 text-center ${theme === "dark" ? "text-white" : "text-black"}`}>
         Experience
       </h2>

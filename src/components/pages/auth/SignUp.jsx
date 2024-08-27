@@ -74,7 +74,7 @@ const SignUP = () => {
       {/* Go Back Button */}
       <button
         type="button"
-        onClick={() => navigate("/")}
+        onClick={() => navigate(-1)}
         className="back-button p-2  rounded-full text-xl"
       >
         <FontAwesomeIcon icon={faArrowLeft} />
