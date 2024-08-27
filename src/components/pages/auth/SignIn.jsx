@@ -1,15 +1,14 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleAuthentication } from "../../../config/firebase-config";
-import { signInWithPopup } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
-import * as yup from 'yup';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from "@hookform/resolvers/yup";
 import { useSelector, useDispatch } from "react-redux";
 import { setUsername } from "../../../slices/userSlice.js";
 import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import * as yup from 'yup';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from "@hookform/resolvers/yup";
 import "./styles/signin.css"; // Import the CSS file
 
 const SignIn = () => {
@@ -26,6 +25,23 @@ const SignIn = () => {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
+
+  function capitalizeFullName(fullName) {
+    return fullName
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+  }
+
+  function setCookie(name, value, hours) {
+    let expires = "";
+    if (hours) {
+      const date = new Date();
+      date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
 
   const signInWithEmail = async (data) => {
     try {
@@ -61,45 +77,44 @@ const SignIn = () => {
   };
 
   return (
-    <div className={`flex h-screen justify-center pb-3 ${theme === "light" ? "bg-white text-black" : "text-white bg-gray-900"}`}>
-
+    <div className={`flex h-screen justify-center p-4 pt-0 ${theme === "light" ? "bg-white text-black" : "text-white bg-black"}`}>
       {/* Go Back Button */}
       <button
-          type="button"
-          onClick={() => navigate(-1)}
-          className="absolute rounded-full  pl-64  pt-16 top-3 left-3 text-xl"
-        >
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
+        type="button"
+        onClick={() => navigate("/")}
+        className="back-button p-2  rounded-full text-xl"
+      >
+        <FontAwesomeIcon icon={faArrowLeft} />
+      </button>
 
-      <form onSubmit={handleSubmit(onSubmit)} className={`${theme === "light" ? "bg-gray-200 text-black" : "text-white bg-gray-800"} sign-in-form relative`}>
-        <h1 className={`sign-in-title ${theme === "light" ? " text-black" : "text-white"}`}>Sign In</h1>
-        
+      <form onSubmit={handleSubmit(onSubmit)} className={`${theme === "light" ? "bg-white text-black" : "text-white bg-gray-900"} sign-in-form relative w-full max-w-md p-6`}>
+        <h1 className={`sign-in-title ${theme === "light" ? "text-black" : "text-white"}`}>Sign In</h1>
+
         <div className="form-group">
-          <input placeholder="Username" type="text" {...register("username")} className={`form-input ${theme === "light" ? " text-black bg-white" : "text-white bg-black"}`} />
+          <input placeholder="Username" type="text" {...register("username")} className={`form-input ${theme === "light" ? "text-black bg-white" : "text-white bg-black"}`} />
           <p className="form-error">{errors.username?.message}</p>
         </div>
-        
+
         <div className="form-group">
-          <input placeholder="Email" type="email" {...register("email")} className={`form-input ${theme === "light" ? " text-black bg-white" : "text-white bg-black"}`} />
+          <input placeholder="Email" type="email" {...register("email")} className={`form-input ${theme === "light" ? "text-black bg-white" : "text-white bg-black"}`} />
           <p className="form-error">{errors.email?.message}</p>
         </div>
-        
+
         <div className="form-group">
-          <input placeholder="Password" type="password" {...register("password")} className={`form-input ${theme === "light" ? " text-black bg-white" : "text-white bg-black"}`} />
+          <input placeholder="Password" type="password" {...register("password")} className={`form-input ${theme === "light" ? "text-black bg-white" : "text-white bg-black"}`} />
           <p className="form-error">{errors.password?.message}</p>
         </div>
-        
+
         <input type="submit" value="Sign In" className="form-submit" />
 
-        <p className="text-center">don&apos;t have an account? go to <Link className="text-blue-700 py-1" to={"/sign-up"}>Sign Up</Link></p>
-        
+        <p className="text-center">Don't have an account? Go to <Link className="text-blue-700 py-1" to={"/sign-up"}>Sign Up</Link></p>
+
         <div className="mt-3">
-          <Link to={"/forget-password"} className="text-blue-500">forgot password</Link>
+          <Link to={"/forget-password"} className="text-blue-500">Forgot Password</Link>
         </div>
-        
+
         <p className="text-center">or</p>
-        
+
         <button type="button" onClick={signInWithGoogle} className="social-button google-button">
           Sign In with Google
         </button>

@@ -34,7 +34,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className={`container min-h-[84vh] px-auto p-16 ${
+      className={`container min-h-[81vh] px-auto p-16 ${
         theme === "light" ? "text-black bg-white" : "text-white bg-gray-900"
       }`}
     >
@@ -49,8 +49,10 @@ const Testimonials = () => {
           {feedbacks.map((feedback) => (
             <div
               key={feedback.id}
-              className={`rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${
-                theme === "light" ? "bg-gray-200" : "bg-gray-800"
+              className={`rounded-lg shadow-md p-6 transition-transform duration-300 transform hover:-translate-y-2 hover:shadow-xl ${
+                theme === "light"
+                  ? "bg-gray-200 hover:bg-gray-300"
+                  : "bg-gray-800 hover:bg-gray-700"
               }`}
             >
               <div className="text-center">

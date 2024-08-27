@@ -99,3 +99,40 @@ body {
 .github-button:hover {
   background-color: #24292e;
 }
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* .back-button:hover {
+  transform: scale(1.1);
+} */
+
+@media (min-width: 768px) {
+  .back-button {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .back-button {
+    top: 16px;
+    left: 16px;
+    top: 3px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .back-button {
+    top: 24px;
+    left: 32px;
+  }
+}

@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleAuthentication } from "../../../config/firebase-config.js";
 import * as yup from 'yup';
@@ -54,7 +56,7 @@ const SignUP = () => {
       toast.success('Signed In successfully', {
         position: toast.POSITION.TOP_RIGHT, // Ensure the position is available
       });
-      navigate("/");
+      navigate(-1);
     } catch (error) {
       console.error("Error with Google sign-in:", error.message);
       toast.error('Something went wrong!', {
@@ -68,8 +70,16 @@ const SignUP = () => {
   };
 
   return (
-    <div className={`flex h-screen justify-center pb-3  ${theme === "light" ? "bg-white text-black" : "text-white bg-gray-900"} `}>
-      <form onSubmit={handleSubmit(onSubmit)} className={`${theme === "light" ? "bg-gray-200 text-black" : "text-white bg-gray-800"} sign-in-form`}>
+    <div className={`flex h-screen justify-center  p-4  pt-0 ${theme === "light" ? "bg-white text-black" : "text-white bg-black"} `}>
+      {/* Go Back Button */}
+      <button
+        type="button"
+        onClick={() => navigate("/")}
+        className="back-button p-2  rounded-full text-xl"
+      >
+        <FontAwesomeIcon icon={faArrowLeft} />
+      </button>
+      <form onSubmit={handleSubmit(onSubmit)} className={`${theme === "light" ? "bg-white text-black" : "text-white bg-gray-900"} sign-in-form`}>
         <h1 className={`sign-in-title ${theme === "light" ? " text-black" : "text-white"}`}>Sign Up</h1>
         <div className="form-group">
           <input placeholder="Email" type="email" {...register("email")} className={`form-input ${theme === "light" ? " text-black bg-white" : "text-white bg-black"}`}/>
