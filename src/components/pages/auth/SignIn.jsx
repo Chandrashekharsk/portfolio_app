@@ -107,7 +107,7 @@ const SignIn = () => {
 
         <input type="submit" value="Sign In" className="form-submit" />
 
-        <p className="text-center">Don't have an account? Go to <Link className="text-blue-700 py-1" to={"/sign-up"}>Sign Up</Link></p>
+        <p className="text-center">Don&apos;t have an account? Go to <Link className="text-blue-700 py-1" to={"/sign-up"}>Sign Up</Link></p>
 
         <div className="mt-3">
           <Link to={"/forget-password"} className="text-blue-500">Forgot Password</Link>
