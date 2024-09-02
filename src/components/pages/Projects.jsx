@@ -34,7 +34,7 @@ const {theme} = useSelector((state) => state.theme);
             <motion.img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 rounded-sm object-cover"
               initial={{ opacity: 0.8 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}

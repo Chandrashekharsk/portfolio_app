@@ -99,11 +99,13 @@ const Navbar = () => {
                             </button>
                         </div>
                         {/* Navbar Title */}
-                        <Link to="/" className="text-xl font-semibold">
-                            <img 
-                                src={logo} 
-                                alt="logo" 
-                                className="h-10 w-auto object-contain" 
+                        <Link to="/" className="text-xl font-semibold"
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} // Scroll to top
+                        >
+                            <img
+                                src={logo}
+                                alt="logo"
+                                className="h-10 w-auto object-contain "
                                 style={{ borderRadius: '5px', filter: theme === "dark" ? "brightness(0.8)" : "none" }}
                             />
                         </Link>
@@ -114,8 +116,8 @@ const Navbar = () => {
                                 key={link.id}
                                 to={`/${link.id}`}
                                 className={`${active === link.title
-                                        ? "text-green-500 underline dark:text-green-500"
-                                        : ""
+                                    ? "text-green-500 underline dark:text-green-500"
+                                    : ""
                                     } hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300`}
                                 onClick={() => setActive(link.title)}
                             >

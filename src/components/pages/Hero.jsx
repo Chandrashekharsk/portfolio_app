@@ -25,7 +25,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="hero-title">Thanks For Visiting</h1>
+          <h1 className="hero-title">Welcome to Portfolio</h1>
           <p className="hero-subtitle">
             Hi, This is Chandrashekhar Singh Kushwaha. I am a passionate Full-Stack Developer specializing in the MERN stack (MongoDB, Express, React, Node.js). With a strong foundation in both frontend and backend development, I have successfully delivered complex web applications. My expertise includes cloud deployment, particularly with Cloudflare Pages, and hands-on experience with modern web technologies like React and Node.js.
           </p>

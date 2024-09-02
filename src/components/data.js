@@ -89,11 +89,11 @@ export const eduData = [
   },
   {
     id:"college",
-    title:"B.Tech In Computer Science and Engineering",
+    title:"B.Tech In Computer Science ",
     institute: "Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal",
-    marks: "6.58 CGPA",
+    marks: "Pursuing",
     eduBoard: "RGPV University",
-    completionStatus: "PURSUING (EXPECTED 2026)",
+    completionStatus: "EXPECTED 2026",
     link: "https://www.rgpv.ac.in/",
     linkTitle: "Visit Institite"
   },
@@ -101,7 +101,7 @@ export const eduData = [
 
 export const ExperienceData = [
   {
-    role: "Software Developer Intern",
+    role: "Jr. Software Developer Intern",
     image: "https://docs.google.com/document/d/1hseTPG0kx7L560saP6rY1J7RaysNjpp8UzAYtqLO3mM/edit?pli=1", // Use a company logo URL instead of a personal email link for a cleaner look.
     companyName: "Leopardruns Innovation & Technology",
     location: "Bhopal, M.P.",
@@ -152,19 +152,6 @@ export const projects = [
     overview: "This is developed for showcase my develpment skills, built with React, featuring smooth animations, form validation, and dynamic routing to showcase my projects and skills",
   },
   {
-    title: "Music School - Next.js",
-    image: "/images/musicSchool_img.png",
-    visitLink: `${origin}/not-hosted`,
-    githubLink: "https://github.com/Chandrashekharsk/music_school",
-    technologiesUsed: [
-      "next.js",
-      "react",
-      "aceternity",
-      "framer-motion"
-    ],
-    overview: "A mini application developed to showcase the courses offered by a music school. The UI is highly interactive and it highlights the available courses in user-friendly manner.",
-  },
-  {
     title: "Recipe App - MERN",
     image: "/images/recipeApp_img.png",
     visitLink: `${origin}/not-hosted`,
@@ -176,6 +163,19 @@ export const projects = [
       "jsonwebtoken"
     ],
     overview: "Developed a full-stack recipe app, where any user can login and explore already created recipes of other users. Also user can create their own recipe and save recipes ",
+  },
+  {
+    title: "Music School - Next.js",
+    image: "/images/musicSchool_img.png",
+    visitLink: `${origin}/not-hosted`,
+    githubLink: "https://github.com/Chandrashekharsk/music_school",
+    technologiesUsed: [
+      "next.js",
+      "react",
+      "aceternity",
+      "framer-motion"
+    ],
+    overview: "A mini application developed to showcase the courses offered by a music school. The UI is highly interactive and it highlights the available courses in user-friendly manner.",
   },
 ];
 

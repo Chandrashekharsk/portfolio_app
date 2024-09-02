@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { ExperienceData } from '../data';
-import pdf from "../../assets/Chandrashekharsk.pdf";
+import pdf from "../../assets/CompletionLetter.pdf";
 
 const Experience = () => {
   const { theme } = useSelector((state) => state.theme);
@@ -68,8 +68,8 @@ const Experience = () => {
                 width="100%"
                 height="auto"
                 title="Resume PDF"
-                className="rounded-lg shadow-md"
-                style={{ minHeight: "400px", maxHeight: "600px" }}
+                className=" shadow-md"
+                style={{ minHeight: "219px", maxHeight: "600px" }}
                 allowFullScreen
               />
             </div>
