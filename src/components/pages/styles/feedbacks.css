@@ -1,9 +1,8 @@
 .feedbacks-container {
-  padding: 50px 20px;
+  /* padding: 50px 20px; */
   background-color: #181818; /* Dark background */
   color: #ffffff;
   max-width: 600px;
-  margin: 80px auto 0 auto; /* Adjusted margin to avoid navbar overlap */
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }

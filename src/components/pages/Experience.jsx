@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
 import { ExperienceData } from '../data';
-import pdf from "../../assets/CompletionLetter.pdf";
+import {completionLetter} from "../../assets/index";
 
 const Experience = () => {
   const { theme } = useSelector((state) => state.theme);
 
   return (
-    <div className={`py-11 p-4 lg:min-h-[87vh] rounded-lg shadow-lg ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+    <div className={`py-11 p-4 lg:min-h-[87vh] shadow-lg ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
       <h2 className={`pt-14 mb-6 md:mb-4 lg:mb-1 text-4xl font-bold sm:mb-8 text-center ${theme === "dark" ? "text-white" : "text-black"}`}>
         Experience
       </h2>
@@ -63,14 +63,14 @@ const Experience = () => {
             </div>
 
             <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mt-4 md:mt-0">
-              <iframe
-                src={pdf}
+              <img
+                src={completionLetter}
+                alt="Certificate"
                 width="100%"
                 height="auto"
-                title="Resume PDF"
-                className=" shadow-md"
+                className=" shadow-lg"
                 style={{ minHeight: "219px", maxHeight: "600px" }}
-                allowFullScreen
+                
               />
             </div>
           </div>

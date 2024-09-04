@@ -35,7 +35,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className={`container min-h-[87vh] px-6 py-16 md:py-20 ${
+      className={` min-h-[87vh] px-6 py-16 md:py-20 ${
         theme === "light" ? "text-black bg-white" : "text-white bg-gray-900"
       }`}
     >
