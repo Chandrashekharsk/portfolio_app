@@ -65,7 +65,7 @@ const SignIn = () => {
       const username = res.user.displayName;
       dispatch(setUsername(username));
       toast.success('Signed In Successfully', {});
-      navigate("/");
+      navigate("/feedbacks");
     } catch (error) {
       console.error("Error with Google sign-in:", error.message);
       toast.error('Something went wrong!', {});

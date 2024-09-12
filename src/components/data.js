@@ -140,32 +140,59 @@ const origin = window.location.origin;
 
 export const projects = [
   {
-    title: "Portfolio App - React",
+    title: "Fiestagram",
+    image:"/images/fiestagram_img.png",
+    visitLink:"https://y-steel-iota.vercel.app/",
+    githubLink: "https://github.com/Chandrashekharsk/fiestagram",
+    technologiesUsed: [
+      "next.js",
+      "prisma",
+      "clerk",
+      "mysql",
+      "cloudinary",
+    ],
+    overview: "This is a simplified Next.js application inspired by Instagram, offering basic social media functionalities like posting images and interacting with content. It's designed as a lightweight version with potential for future enhancements and complexity."
+  },
+  {
+    title: "Portfolio ",
     image: "/images/portfolio_img.png",
     visitLink: `${origin}/`,
+    githubLink: "https://github.com/Chandrashekharsk/portfolio_app",
+    technologiesUsed: [
+      "react",
+      "redux-toolkit",
+      "framer-motion",
+      "firebase",
+    ],
+    overview: "This fully functional dynamic app, built with React and Firebase, designed to showcase my portfolio. It provides a seamless user experience with real-time data updates, secure authentication, and easy content management through Firebase."
+  },
+  {
+    title: "Password Generator",
+    image: "/images/password-generator-img.png",
+    visitLink: `https://password-generator-beta-lyart.vercel.app/`,
+    githubLink: "https://github.com/Chandrashekharsk/password-generator",
     technologiesUsed: [
       "react",
       "tailwind",
-      "react-icons",
-      "framer-motion",
+      "vite",
     ],
-    overview: "This is developed for showcase my develpment skills, built with React, featuring smooth animations, form validation, and dynamic routing to showcase my projects and skills",
+    overview: "The Password Generator is a simple and intuitive tool that allows users to create secure passwords by selecting the desired length, and including options for numbers and special characters, enhancing online security. It offers a user-friendly interface to quickly generate strong, customizable passwords for various needs.",
   },
   {
-    title: "Recipe App - MERN",
+    title: "Recipe App",
     image: "/images/recipeApp_img.png",
     visitLink: `${origin}/not-hosted`,
     githubLink: "https://github.com/Chandrashekharsk/recipe_app",
     technologiesUsed: [
       "react",
       "node.js",
+      "express.js",
       "mongodb",
-      "jsonwebtoken"
     ],
     overview: "Developed a full-stack recipe app, where any user can login and explore already created recipes of other users. Also user can create their own recipe and save recipes ",
   },
   {
-    title: "Music School - Next.js",
+    title: "Music School ",
     image: "/images/musicSchool_img.png",
     visitLink: `${origin}/not-hosted`,
     githubLink: "https://github.com/Chandrashekharsk/music_school",
@@ -177,6 +204,7 @@ export const projects = [
     ],
     overview: "A mini application developed to showcase the courses offered by a music school. The UI is highly interactive and it highlights the available courses in user-friendly manner.",
   },
+  
 ];
 
 

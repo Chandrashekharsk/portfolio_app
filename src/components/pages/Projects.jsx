@@ -52,7 +52,7 @@ const {theme} = useSelector((state) => state.theme);
                 {project.overview}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologiesUsed.slice(0, 4).map((tech, index) => (
+                {project.technologiesUsed.slice(0, 5).map((tech, index) => (
                   <span
                     key={index}
                     className={`text-xs px-2 py-1 rounded ${
@@ -62,7 +62,7 @@ const {theme} = useSelector((state) => state.theme);
                     {tech}
                   </span>
                 ))}
-                {project.technologiesUsed.length > 4 && (
+                {project.technologiesUsed.length > 5 && (
                   <span className={`text-xs ${theme === "dark" ? "text-sky-400" : "text-blue-600"}`}>
                     + more
                   </span>
