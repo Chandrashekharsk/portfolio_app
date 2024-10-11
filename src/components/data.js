@@ -139,20 +139,7 @@ export const skills = [
 const origin = window.location.origin;
 
 export const projects = [
-  {
-    title: "Fiestagram",
-    image:"/images/fiestagram_img.png",
-    visitLink:"https://y-steel-iota.vercel.app/",
-    githubLink: "https://github.com/Chandrashekharsk/fiestagram",
-    technologiesUsed: [
-      "next.js",
-      "prisma",
-      "clerk",
-      "mysql",
-      "cloudinary",
-    ],
-    overview: "This is a simplified Next.js application inspired by Instagram, offering basic social media functionalities like posting images and interacting with content. It's designed as a lightweight version with potential for future enhancements and complexity."
-  },
+  
   {
     title: "Portfolio ",
     image: "/images/portfolio_img.png",
@@ -181,7 +168,7 @@ export const projects = [
   {
     title: "Recipe App",
     image: "/images/recipeApp_img.png",
-    visitLink: `${origin}/not-hosted`,
+    visitLink: `https://recipes-mernapp.vercel.app/`,
     githubLink: "https://github.com/Chandrashekharsk/recipe_app",
     technologiesUsed: [
       "react",
@@ -204,7 +191,20 @@ export const projects = [
     ],
     overview: "A mini application developed to showcase the courses offered by a music school. The UI is highly interactive and it highlights the available courses in user-friendly manner.",
   },
-  
+  {
+    title: "Fiestagram",
+    image:"/images/fiestagram_img.png",
+    visitLink:"https://y-steel-iota.vercel.app/",
+    githubLink: "https://github.com/Chandrashekharsk/fiestagram",
+    technologiesUsed: [
+      "next.js",
+      "prisma",
+      "clerk",
+      "mysql",
+      "cloudinary",
+    ],
+    overview: "This is a simplified Next.js application inspired by Instagram, offering basic social media functionalities like posting images and interacting with content. It's designed as a lightweight version with potential for future enhancements and complexity."
+  },
 ];
 
 
