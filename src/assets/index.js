@@ -6,8 +6,7 @@ import fm4 from "./fm4.jpg"
 import fm5 from "./fm5.jpg"
 import fm6 from "./fm6.jpg"
 import hello1 from "./hello1.png"
-import resume from "./my_resume.pdf"
 import blur from "./blur2.jpg"
 import completionLetter from "./CompletionLetter.jpg"
 
-export {react, fm1, fm2, fm3, fm4, fm5, fm6, hello1, blur, resume, completionLetter}
+export {react, fm1, fm2, fm3, fm4, fm5, fm6, hello1, blur, completionLetter}

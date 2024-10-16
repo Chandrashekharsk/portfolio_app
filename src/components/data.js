@@ -139,7 +139,32 @@ export const skills = [
 const origin = window.location.origin;
 
 export const projects = [
-  
+  {
+    title: "Netflix Clone",
+    image: "/images/netflix_clone.png",
+    visitLink: `https://netflix-clone-psi-tawny.vercel.app/`,
+    githubLink: "https://github.com/Chandrashekharsk/netflix_clone",
+    technologiesUsed: [
+      "react",
+      "redux toolkit",
+      "node.js",
+      "mongodb",
+    ],
+    overview: "I developed a full-stack Netflix clone using the MERN (MongoDB, Express.js, React.js, Node.js) stack. The application replicates core features like user authentication, video streaming, and content browsing. With a responsive front-end built in React, seamless data handling through Express and Node.js, and MongoDB for managing user and content data, this project delivers an immersive streaming experience similar to Netflix",
+  },
+  {
+    title: "Khana khazana",
+    image: "/images/recipeApp_img.png",
+    visitLink: `https://recipes-mernapp.vercel.app/`,
+    githubLink: "https://github.com/Chandrashekharsk/recipe_app",
+    technologiesUsed: [
+      "react",
+      "node.js",
+      "express.js",
+      "mongodb",
+    ],
+    overview: "Developed a full-stack recipe app, where any user can login and explore already created recipes of other users. Also user can create their own recipe and save recipes ",
+  },
   {
     title: "Portfolio ",
     image: "/images/portfolio_img.png",
@@ -164,19 +189,6 @@ export const projects = [
       "vite",
     ],
     overview: "The Password Generator is a simple and intuitive tool that allows users to create secure passwords by selecting the desired length, and including options for numbers and special characters, enhancing online security. It offers a user-friendly interface to quickly generate strong, customizable passwords for various needs.",
-  },
-  {
-    title: "Recipe App",
-    image: "/images/recipeApp_img.png",
-    visitLink: `https://recipes-mernapp.vercel.app/`,
-    githubLink: "https://github.com/Chandrashekharsk/recipe_app",
-    technologiesUsed: [
-      "react",
-      "node.js",
-      "express.js",
-      "mongodb",
-    ],
-    overview: "Developed a full-stack recipe app, where any user can login and explore already created recipes of other users. Also user can create their own recipe and save recipes ",
   },
   {
     title: "Music School ",

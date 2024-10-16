@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaDownload } from 'react-icons/fa';
 import './styles/hero.css';
 import { useSelector } from 'react-redux';
-import {resume, blur, fm6} from "../../assets/index";
+import { blur, fm6} from "../../assets/index";
+import resume  from '/resume.pdf';
 
 const Hero = () => {
   const theme = useSelector((state) => state.theme); // Adjusted to correctly access the theme value
