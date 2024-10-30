@@ -33,15 +33,15 @@ const App = () => {
 
 const ConditionalWrapper = ({ children }) => {
   const location = useLocation();
-  const isNavFooterHidden = ['/not-hosted', '/page-not-found','/sign-up','/sign-in'].includes(location.pathname);
+  const publicPath = ['/not-hosted', '/page-not-found','/sign-up','/sign-in'].includes(location.pathname);
 
   return (
     <>
-      {!isNavFooterHidden && 
+      {!publicPath && 
       <Navbar />
       }
       {children}
-      {!isNavFooterHidden && 
+      {!publicPath && 
       <Footer />
       }
     </>

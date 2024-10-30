@@ -52,14 +52,14 @@ const Hero = () => {
           <p className="hero-subtitle">
           My development approach is rooted in a deep understanding of software design principles, competitive programming, and cybersecurity practices. I excel in fast-paced environments, leveraging problem-solving skills to tackle challenging projects, from creating interactive dark-themed portfolios to deploying secure web applications. My commitment to continuous learning drives me to deliver innovative solutions that align with business needs.
           </p>
-          {/* <div className="hero-links font-semibold">
+          <div className="hero-links font-semibold">
             <Link to="/projects" className="hero-link">Projects</Link>
             <Link to="/skills" className="hero-link">Skills</Link>
             <a href="https://github.com/Chandrashekharsk" target="_blank" rel="noopener noreferrer" className="hero-link">GitHub</a>
             <a href={resume} download className="dark resume-button">
               <FaDownload />
             </a>
-          </div> */}
+          </div>
         </motion.div>
         <motion.div
           className="hero-image"

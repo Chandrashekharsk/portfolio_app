@@ -21,7 +21,7 @@ const Card = () => {
               </li>
             </ul>
             <button className="align-middle font-bold text-center uppercase transition-all text-xs py-2 px-4 rounded-full border border-green-400 hover:bg-green-600 hover:text-white block w-full mt-6">
-              <a href={edu.link} target="_blank" rel="noopener noreferrer"> 
+              <a href={edu.link}  rel="noopener noreferrer"> 
                 {edu.linkTitle}
               </a>
             </button>
