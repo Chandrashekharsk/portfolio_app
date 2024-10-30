@@ -6,6 +6,7 @@ import {
 } from "./components/index";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Achievements from './components/pages/Achievements';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
+          <Route path='/achievements' element={<Achievements />} />
           <Route path='/education' element={<Education />} />
           <Route path='/skills' element={<Skills />} />
           <Route path='/feedbacks' element={<Feedbacks />} />

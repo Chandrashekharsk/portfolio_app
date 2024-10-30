@@ -41,12 +41,16 @@ export const footerElems2 = [
 
 export const navLinks = [
   {
+    id: "projects",
+    title: "Projects"
+  },
+  {
     id: "skills",
     title: "Skills"
   },
   {
-    id: "projects",
-    title: "Projects"
+    id:"achievements",
+    title: "Achievements"
   },
   {
     id: "experience",
@@ -132,6 +136,26 @@ export const skills = [
   { name: 'Docker', image: '/images/docker.svg', description: 'Platform for developing, shipping, and running applications.' },
   { name: 'AWS', image: '/images/aws1.svg', description: 'Cloud computing platform offering various services.' },
 ];
+
+export const AchievementsData = [
+  {
+    title: "Coding Marathon Winner",
+    image: "/images/coding_marathon_win.jpg", // Replace with a valid URL for the certificate image or Geeks of Gurukul logo
+    organization: "Geeks of Gurukul",
+    location: "MGI Bhopal, Madhya Pradesh",
+    date: "19-10-2024",
+    description: "Earned the Weekly Marathon Merit Certificate at Geeks of Gurukul's offline classes at MGI Bhopal, recognizing exceptional performance in weekly coding tests.",
+    achievements: [
+      "Awarded for outstanding performance in weekly tests.",
+      "Demonstrated strong dedication and skills.",
+      "Consistently met the high standards set by the training program."
+    ],
+    skillsUtilized: "Problem-solving, Competitive Programming, Time Management, DSA (Data Structures and Algorithms)",
+    impact: "Showcased commitment and excellence, reinforcing skills essential for competitive programming and coding challenges.",
+    professionalGrowth: "Enhanced problem-solving abilities, gained recognition in a competitive environment, and built resilience through rigorous testing.",
+  }
+];
+
 
 
 
