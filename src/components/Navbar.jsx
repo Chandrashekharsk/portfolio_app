@@ -13,7 +13,7 @@ import logo from "/hadsome_x-logo.png"
 const Navbar = () => {
     const [user] = useAuthState(auth);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [active, setActive] = useState("");
+    const [active, setActive] = useState();
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
     const [isTransparent, setIsTransparent] = useState(false);
 
@@ -27,7 +27,7 @@ const Navbar = () => {
         const activeLink = navLinks.find(link => link.id === currentPath);
         if (activeLink) {
             setActive(activeLink.title);
-        }
+        }else{setActive("/")}
 
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
