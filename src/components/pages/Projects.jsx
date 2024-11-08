@@ -118,7 +118,8 @@ const ProjectDetails = ({ projects, projectRefs }) => {
             </div>
           </div>
           <div className="flex items-center space-x-8 mb-4">
-            <a
+            {project.visitLink?
+            (<a
               href={project.visitLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -127,7 +128,9 @@ const ProjectDetails = ({ projects, projectRefs }) => {
               }`}
             >
               Live Link <FaExternalLinkAlt className="ml-2" />
-            </a>
+            </a>):
+            (<h1>Not Hosted</h1>)
+            }
             <a
               href={project.githubLink}
               target="_blank"

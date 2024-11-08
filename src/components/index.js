@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Home from "./pages/Hero";
+import Home from "./pages/Home";
 import Education from "./pages/Education";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";

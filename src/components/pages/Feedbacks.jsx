@@ -62,9 +62,9 @@ const Feedbacks = () => {
   return (
     <div className={` min-h-[78vh] sm:min-h-[85] md:min-h-[86vh] px-auto 
         
-      ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} flex items-center justify-center pt-8`}
+      ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'} flex items-center justify-center pt-8`}
       >
-      <div className={`feedbacks-container p-4 max-w-md w-full ${theme === 'dark' ? 'bg-gray-800 text-gray-200' : 'bg-white text-gray-800'} rounded-lg shadow-lg`}>
+      <div className={`feedbacks-container p-4 max-w-md w-full ${theme === 'dark' ? 'bg-gray-800 text-gray-200' : 'bg-gray-100 text-gray-800'} rounded-lg shadow-lg`}>
         <h2 className={`text-xl text-center font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>We Value Your Feedback</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div className="form-group">

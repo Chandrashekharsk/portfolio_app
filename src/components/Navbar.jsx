@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 import logo from "/hadsome_x-logo.png"
 
 const Navbar = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [active, setActive] = useState("");
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);

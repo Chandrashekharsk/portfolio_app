@@ -5,7 +5,7 @@ const Education = () => {
 const {theme} = useSelector((state) => state.theme);
 
   return (
-    <section className={`lg:min-h[87vh] px-8 py-24 ${theme === "dark" ? "bg-gray-900 text-gray-200" : "bg-gray-100 text-gray-800"}`}>
+    <section className={`lg:min-h[87vh] px-8 py-24 ${theme === "dark" ? "bg-gray-900 text-gray-200" : "bg-white text-gray-800"}`}>
       <div className="pb-0 container mx-auto text-center">
         <h2 className={`text-4xl font-bold  ${theme === "dark" ? "text-white" : "text-black"}`}>Education</h2>
       </div>

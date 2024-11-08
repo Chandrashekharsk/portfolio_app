@@ -32,13 +32,6 @@ export const footerElems = [
   },
 ]
 
-export const footerElems2 = [
-  {
-    name:"feedback",
-    route:"feedbacks"
-  },
-]
-
 export const navLinks = [
   {
     id: "projects",
@@ -157,14 +150,27 @@ export const AchievementsData = [
 ];
 
 
-
-
 // Get the full domain (e.g., "localhost:3000" or "www.example.com")
 // const domain = window.location.host;
 // Or you can just get the protocol and domain name (e.g., "http://localhost:3000" or "https://www.example.com")
 const origin = window.location.origin;
 
 export const projects = [
+  {
+    title: "Smart Food",
+    image: "/images/smart_food.png",
+    visitLink: `https://smart-food-eight.vercel.app/`,
+    githubLink: "https://github.com/Chandrashekharsk/smart_food",
+    technologiesUsed: [
+      "react",
+      "react-icons",
+      "material-ui",
+      "express",
+      "nodejs",
+      "mongoose"
+    ],
+    overview: "Smart Food is a full-stack MERN recipe exploration and creation platform that lets users register, log in, and interact with a wide range of recipes. Key features include the ability to create, update, and delete recipe posts, edit profile details and pictures, and like or bookmark recipes. Users can also explore recipes based on keywords—such as ingredients, recipe name, or creator’s username—through an intuitive search function. The platform provides an organized and user-friendly interface for recipe discovery, featuring favorites, profile management, and a responsive design. (NOTE: before visit this project, make sure you have not enable block cookies in your browser )."
+  },
   {
     title: "Daily News",
     image: "/images/dailyNews_img.png",
@@ -176,21 +182,21 @@ export const projects = [
       "react-top-loading-bar",
       "react-infinite-scroll-component",
     ],
-    overview: "Khana Khazana is a full-stack recipe-sharing application that allows users to explore a variety of recipes uploaded by other users. Registered users can create, save, and share their own unique recipes, with full authentication and user profile management. The app features a responsive UI with a rich experience for discovering, browsing, and managing recipes. It is built using the MERN stack to support seamless interactions and efficient data storage for a dynamic user experience."
+    overview: "Daily News is a professional news app that provides real-time news updates across various categories. The app allows users to browse through news articles, view detailed information on selected topics, and stay informed with breaking news. Features include category-based news filtering, bookmarking articles for later reading, and a sleek, responsive design that ensures accessibility across devices. The platform is designed to be both informative and user-friendly."
   },
-  {
-    title: "Khana Khazana",
-    image: "/images/recipeApp_img.png",
-    visitLink: `https://recipes-mernapp.vercel.app/`,
-    githubLink: "https://github.com/Chandrashekharsk/recipe_app",
-    technologiesUsed: [
-      "react",
-      "node.js",
-      "express.js",
-      "mongodb",
-    ],
-    overview: "Khana Khazana is a full-stack recipe-sharing application that allows users to explore a variety of recipes uploaded by other users. Registered users can create, save, and share their own unique recipes, with full authentication and user profile management. The app features a responsive UI with a rich experience for discovering, browsing, and managing recipes. It is built using the MERN stack to support seamless interactions and efficient data storage for a dynamic user experience."
-  },
+  // {
+  //   title: "Khana Khazana",
+  //   image: "/images/recipeApp_img.png",
+  //   visitLink: `https://recipes-mernapp.vercel.app/`,
+  //   githubLink: "https://github.com/Chandrashekharsk/recipe_app",
+  //   technologiesUsed: [
+  //     "react",
+  //     "node.js",
+  //     "express.js",
+  //     "mongodb",
+  //   ],
+  //   overview: "Khana Khazana is a full-stack recipe-sharing application that allows users to explore a variety of recipes uploaded by other users. Registered users can create, save, and share their own unique recipes, with full authentication and user profile management. The app features a responsive UI with a rich experience for discovering, browsing, and managing recipes. It is built using the MERN stack to support seamless interactions and efficient data storage for a dynamic user experience."
+  // },
   {
     title: "Brainwave AI",
     image: "/images/brainWave_ai.png",
@@ -218,19 +224,6 @@ export const projects = [
     overview: "This project is a web-based clone of the iPhone landing page, replicating Apple's signature design aesthetic and interactive elements. Built with React and Three.js, it emphasizes clean design, smooth animations, and a user-friendly layout. Error monitoring with Sentry ensures robust error tracking and performance monitoring, enhancing stability and usability, creating a near-authentic experience similar to the Apple website."
   },
   {
-    title: "Netflix Clone",
-    image: "/images/netflix_clone.png",
-    visitLink: `https://netflix-clone-psi-tawny.vercel.app/`,
-    githubLink: "https://github.com/Chandrashekharsk/netflix_clone",
-    technologiesUsed: [
-      "react",
-      "redux toolkit",
-      "node.js",
-      "mongodb",
-    ],
-    overview: "This full-stack Netflix clone was created using the MERN stack, emulating core streaming features like user authentication, video streaming, and content browsing. The app's front-end is built with React and Redux Toolkit for state management, ensuring a smooth, responsive experience. MongoDB and Node.js support data storage and handling for users and media, providing a seamless, immersive streaming experience on par with commercial platforms."
-  },
-  {
     title: "Portfolio",
     image: "/images/portfolio_img.png",
     visitLink: `${origin}/`,
@@ -256,9 +249,23 @@ export const projects = [
     overview: "The Password Generator app is a straightforward tool that enables users to generate secure, customizable passwords. Users can specify password length and include numbers or special characters for increased security. Built with React and styled using Tailwind, the app provides a fast, intuitive interface for generating unique, strong passwords, catering to various security needs while prioritizing user simplicity and usability."
   },
   {
+    title: "Netflix Clone",
+    image: "/images/netflix_clone.png",
+    visitLink: `https://netflix-clone-psi-tawny.vercel.app/`,
+    githubLink: "https://github.com/Chandrashekharsk/netflix_clone",
+    technologiesUsed: [
+      "react",
+      "redux toolkit",
+      "node.js",
+      "mongodb",
+    ],
+    overview: "This full-stack Netflix clone was created using the MERN stack, emulating core streaming features like user authentication, video streaming, and content browsing. The app's front-end is built with React and Redux Toolkit for state management, ensuring a smooth, responsive experience. MongoDB and Node.js support data storage and handling for users and media, providing a seamless, immersive streaming experience on par with commercial platforms."
+  },
+  {
     title: "Music School",
     image: "/images/musicSchool_img.png",
-    visitLink: `${origin}/not-hosted`,
+    // visitLink: `${origin}/not-hosted`,
+    visitLink: ``,
     githubLink: "https://github.com/Chandrashekharsk/music_school",
     technologiesUsed: [
       "next.js",
@@ -268,20 +275,21 @@ export const projects = [
     ],
     overview: "The Music School app is a vibrant, interactive web application designed to promote the offerings of a music school. Developed with Next.js and Framer Motion for fluid animations, the platform features a responsive, visually engaging UI that showcases available courses and enables prospective students to learn more about the school's offerings. This project prioritizes usability with clean design and captivating animations to provide an exceptional browsing experience."
   },
-  {
-    title: "Fiestagram",
-    image:"/images/fiestagram_img.png",
-    visitLink:"https://y-steel-iota.vercel.app/",
-    githubLink: "https://github.com/Chandrashekharsk/fiestagram",
-    technologiesUsed: [
-      "next.js",
-      "prisma",
-      "clerk",
-      "mysql",
-      "cloudinary",
-    ],
-    overview: "Fiestagram is a social media application inspired by Instagram, built with Next.js and Prisma, offering essential features like posting images and user interaction. It leverages Clerk for secure authentication, MySQL for data storage, and Cloudinary for media handling. Designed as a minimalistic, lightweight alternative, Fiestagram demonstrates social media functionalities with a focus on performance, simplicity, and potential scalability for future development."
-  },
+
+  // {
+  //   title: "Fiestagram",
+  //   image:"/images/fiestagram_img.png",
+  //   visitLink:"https://y-steel-iota.vercel.app/",
+  //   githubLink: "https://github.com/Chandrashekharsk/fiestagram",
+  //   technologiesUsed: [
+  //     "next.js",
+  //     "prisma",
+  //     "clerk",
+  //     "mysql",
+  //     "cloudinary",
+  //   ],
+  //   overview: "Fiestagram is a social media application inspired by Instagram, built with Next.js and Prisma, offering essential features like posting images and user interaction. It leverages Clerk for secure authentication, MySQL for data storage, and Cloudinary for media handling. Designed as a minimalistic, lightweight alternative, Fiestagram demonstrates social media functionalities with a focus on performance, simplicity, and potential scalability for future development."
+  // },
 ];
 
 
