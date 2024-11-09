@@ -8,12 +8,13 @@ import { projects } from '../data';
 import resume  from '/resume.pdf';
 import { Avatar } from '@mui/material';
 import { Stack } from 'react-bootstrap';
+import "./styles/home.css"
 
 const Home = () => {
   const { theme } = useSelector((state) => state.theme);
 
   return (
-    <div className={`min-h-screen ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}>
+    <div className={`min-h-screen overflow-x-hidden  ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}>
 {/* Hero Section */}
 <section className={`shadow-md ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}>
   <div className="container mx-auto px-5 py-20 flex flex-col-reverse items-center md:flex-row md:items-start">
