@@ -286,7 +286,7 @@ export const projects = [
   },
   {
     title: "IPhone Web Clone",
-    image: "/images/iphoneWeb_clone.png",
+    image: "/images/iphoneweb_clone.png",
     visitLink: `https://iphone-web-clone-dun.vercel.app/`,
     githubLink: "https://github.com/Chandrashekharsk/iphoneWeb_clone",
     technologiesUsed: ["react", "sentry", "three.js", "react-dom"],
