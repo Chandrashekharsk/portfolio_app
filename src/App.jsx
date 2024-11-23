@@ -7,6 +7,7 @@ import {
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Achievements from './components/pages/Achievements';
+import ResumePage from './components/pages/ResumePage';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/sign-in' element={<SignIn />} />
           <Route path='/sign-up' element={<SignUP />} />
           <Route path='/forget-password' element={<ForgetPassword />} />
+          <Route path='/resume' element={<ResumePage />} />
           <Route path='/not-hosted' element={<YetNotHosted />} />
           <Route path='/*' element={<PageNotFound />} />
         </Routes>

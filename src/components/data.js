@@ -41,6 +41,10 @@ export const footerElems = [
 
 export const navLinks = [
   {
+    id:"resume",
+    title:"Resume"
+  },
+  {
     id: "projects",
     title: "Projects",
   },

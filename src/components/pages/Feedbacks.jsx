@@ -60,7 +60,7 @@ const Feedbacks = () => {
   };
 
   return (
-    <div className={` min-h-[78vh] sm:min-h-[85] md:min-h-[86vh] px-auto 
+    <div className={` h-[85vh] md:h-screen
         
       ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'} flex items-center justify-center pt-8`}
       >
