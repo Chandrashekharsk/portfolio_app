@@ -232,6 +232,22 @@ const origin = window.location.origin;
 
 export const projects = [
   {
+    title: "Fiestagram",
+    image: "/images/fiestagram_img.png",
+    visitLink: `https://fiestagram.vercel.app`,
+    githubLink: "https://github.com/Chandrashekharsk/fiestagram",
+    technologiesUsed: [
+      "react",
+      "shadcn",
+      "redux",
+      "cloudinary",
+      "nodejs",
+      "mongodb",
+    ],
+    overview:
+      "Fiestagram is a dynamic Instagram clone designed for social sharing and engagement. The platform allows users to register, log in, and manage their profiles securely. Key features include the ability to create and upload posts with images and captions, engage with others by liking their posts, and explore a visually appealing feed of shared content. With a responsive design, Fiestagram ensures a seamless user experience across all devices, from mobile to desktop. Hosted with a robust backend and frontend infrastructure, Fiestagram is the perfect platform to foster creativity and community interaction through multimedia content sharing.",
+  },
+  {
     title: "Smart Food",
     image: "/images/smart_food.png",
     visitLink: `https://smart-food-eight.vercel.app`,
@@ -245,7 +261,7 @@ export const projects = [
       "mongoose",
     ],
     overview:
-      "Smart Food is a full-stack MERN recipe exploration and creation platform that lets users register, log in, and interact with a wide range of recipes. Key features include the ability to create, update, and delete recipe posts, edit profile details and pictures, and like or bookmark recipes. Users can also explore recipes based on keywords—such as ingredients, recipe name, or creator’s username—through an intuitive search function. The platform provides an organized and user-friendly interface for recipe discovery, featuring favorites, profile management, and a responsive design. (NOTE: before visit this project, make sure you have not enable block cookies in your browser ).",
+      "Smart Food is a full-stack MERN recipe exploration and creation platform that lets users register, log in, and interact with a wide range of recipes. Key features include the ability to create, update, and delete recipe posts, edit profile details and pictures, and like or bookmark recipes. Users can also explore recipes based on keywords—such as ingredients, recipe name, or creator’s username—through an intuitive search function. The platform provides an organized and user-friendly interface for recipe discovery, featuring favorites, profile management, and a responsive design.",
   },
   {
     title: "Daily News",
