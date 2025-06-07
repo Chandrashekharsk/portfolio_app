@@ -40,7 +40,7 @@ const Testimonials = () => {
       }`}
     >
       <h2 className="text-3xl md:text-4xl font-semibold text-center py-3 mb-8 md:mb-12">
-        Testimonials
+        Visitors Feedback
       </h2>
 
       {loading ? (

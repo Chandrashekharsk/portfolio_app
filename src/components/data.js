@@ -162,8 +162,6 @@ export const skills = {
   ]
 };
 
-
-
 export const AchievementsData = [
   {
     title: "Hackathon Success",
@@ -171,11 +169,11 @@ export const AchievementsData = [
     organization: "College (part of MATRIM-2025)",
     location: "Bhopal, M.P.",
     date: "15-04-2025", 
-    description: "Won the Code-craft Hackathon organized by college during MATRIM-2025 for showcasing innovative coding solutions under pressure.",
+    description: "Won the Code-craft Hackathon organized by college during MATRIM-2025 for showcasing innovative coding solutions under pressure and limited time.",
     achievements: [
-      "Won the Codecraft Hackathon among multiple participants.",
-      "Demonstrated real-time problem-solving and collaboration.",
-      "Developed a working project prototype within limited time."
+      "Won the Codecraft Hackathon among 1200+ participants.",
+      "Developed a working project prototype within limited time.",
+      "Engineered an end-to-end E-Waste Management System for real-time monitoring and sustainable disposal of electronic waste."
     ],
     skillsUtilized: "Teamwork, Competitive Programming, Real-Time Development, Rapid Prototyping",
     impact: "Displayed ability to think under pressure and build practical solutions with limited resources.",
@@ -185,7 +183,7 @@ export const AchievementsData = [
     title: "LeetCode Problem Solver",
     image: "/images/leetcode.png", // You can later add a LeetCode certificate or logo here
     organization: "LeetCode",
-    location: "Remote",
+    location: "LeetCode Platform",
     date: "08-06-2025", 
     description: "Solved over 150+ coding problems on LeetCode, showcasing consistent practice and problem-solving dedication.",
     achievements: [
