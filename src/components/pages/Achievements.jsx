@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import { AchievementsData } from '../data'; // Assuming this is where you've stored AchievementData
-import { completionLetter } from "../../assets/index";
 
 const Achievements = () => {
   const { theme } = useSelector((state) => state.theme);
@@ -62,7 +61,9 @@ const Achievements = () => {
               </ul>
             </div>
 
-            <div className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 xl:w-[29%] mt-4 md:mt-0">
+            <div 
+            className="w-full md:w-1/2 lg:w-1/3 xl:w-[29%] mt-4 md:mt-0 object-cover transition-transform duration-500 ease-in-out group-hover:scale-125 group-hover:cursor-zoom-in" >
+
               <img
                 src={achievement.image} 
                 alt="Achievement Certificate"

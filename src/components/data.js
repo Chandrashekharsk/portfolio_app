@@ -99,7 +99,7 @@ export const eduData = [
     id: "college",
     title: "B.Tech In Computer Science ",
     institute: "Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal",
-    marks: "Pursuing",
+    marks: "7 CGPA",
     eduBoard: "RGPV University",
     completionStatus: "EXPECTED 2026",
     link: "https://www.rgpv.ac.in/",
@@ -129,105 +129,76 @@ export const ExperienceData = [
   },
 ];
 
-export const skills = [
-  {
-    name: "JavaScript",
-    image: "/images/javascript.svg",
-    description: "Dynamic and versatile programming language.",
-  },
-  {
-    name: "Java",
-    image: "/images/java.svg",
-    description: "High-level, object-oriented programming language.",
-  },
-  {
-    name: "Python",
-    image: "/images/python.svg",
-    description: "Interpreted, high-level programming language.",
-  },
-  {
-    name: "HTML",
-    image: "/images/html.svg",
-    description: "Standard markup language for web pages.",
-  },
-  {
-    name: "CSS",
-    image: "/images/css.svg",
-    description: "Style sheet language used for styling web pages.",
-  },
-  {
-    name: "React",
-    image: "/images/react.svg",
-    description: "JavaScript library for building user interfaces.",
-  },
-  {
-    name: "Node.js",
-    image: "/images/nodejs.svg",
-    description: "JavaScript runtime built on Chrome’s V8 engine.",
-  },
-  {
-    name: "Express.js",
-    image: "/images/express1.svg",
-    description: "Minimalist web framework for Node.js.",
-  },
-  {
-    name: "Next.js",
-    image: "/images/nextjs1.svg",
-    description: "React framework with hybrid static & server rendering.",
-  },
-  {
-    name: "MongoDB",
-    image: "/images/mongodb.svg",
-    description: "NoSQL database for modern applications.",
-  },
-  {
-    name: "TypeScript",
-    image: "/images/typescript.svg",
-    description: "Superset of JavaScript with static typing.",
-  },
-  {
-    name: "GitHub",
-    image: "/images/github.svg",
-    description: "Platform for version control and collaboration.",
-  },
-  {
-    name: "Docker",
-    image: "/images/docker.svg",
-    description: "Platform for developing, shipping, and running applications.",
-  },
-  {
-    name: "AWS",
-    image: "/images/aws1.svg",
-    description: "Cloud computing platform offering various services.",
-  },
-];
+export const skills = {
+  "Programming Languages": [
+    { name: "C/C++", image: "/images/cpp.svg" },
+    { name: "Java", image: "/images/java.svg" },
+    { name: "Python", image: "/images/python.svg" },
+    { name: "TypeScript", image: "/images/typescript.svg" },
+    { name: "JavaScript", image: "/images/javascript.svg" },
+  ],
+  "Scripting & Markup Languages": [
+    { name: "HTML", image: "/images/html.svg" },
+    { name: "CSS", image: "/images/css.svg" },
+    { name: "SQL", image: "/images/sql.svg" },
+  ],
+  "Frontend Development": [
+    { name: "React", image: "/images/react.svg" },
+    { name: "Next.js", image: "/images/nextjs1.svg" },
+  ],
+  "Backend Development": [
+    { name: "Node.js", image: "/images/nodejs.svg" },
+    { name: "Express.js", image: "/images/express1.svg" },
+    { name: "Spring Boot", image: "/images/springboot.svg" },
+  ],
+  "Databases": [
+    { name: "MongoDB", image: "/images/mongodb.svg" },
+    { name: "MySQL", image: "/images/mysql.svg" },
+  ],
+  "DevOps & Tools": [
+    { name: "Docker", image: "/images/docker.svg" },
+    { name: "Postman", image: "/images/postman.svg" },
+    { name: "GitHub", image: "/images/github.svg" },
+  ]
+};
+
+
 
 export const AchievementsData = [
   {
-    title: "Coding Marathon Winner",
-    image: "/images/coding_marathon_win.jpg", // Replace with a valid URL for the certificate image or Geeks of Gurukul logo
-    organization: "Geeks of Gurukul",
-    location: "MGI Bhopal, Madhya Pradesh",
-    date: "19-10-2024",
-    description:
-      "Earned the Weekly Marathon Merit Certificate at Geeks of Gurukul's offline classes at MGI Bhopal, recognizing exceptional performance in weekly coding tests.",
+    title: "Hackathon Success",
+    image: "/images/hackathon_cert.jpg",
+    organization: "College (part of MATRIM-2025)",
+    location: "Bhopal, M.P.",
+    date: "15-04-2025", 
+    description: "Won the Code-craft Hackathon organized by college during MATRIM-2025 for showcasing innovative coding solutions under pressure.",
     achievements: [
-      "Awarded for outstanding performance in weekly tests.",
-      "Demonstrated strong dedication and skills.",
-      "Consistently met the high standards set by the training program.",
+      "Won the Codecraft Hackathon among multiple participants.",
+      "Demonstrated real-time problem-solving and collaboration.",
+      "Developed a working project prototype within limited time."
     ],
-    skillsUtilized:
-      "Problem-solving, Competitive Programming, Time Management, DSA (Data Structures and Algorithms)",
-    impact:
-      "Showcased commitment and excellence, reinforcing skills essential for competitive programming and coding challenges.",
-    professionalGrowth:
-      "Enhanced problem-solving abilities, gained recognition in a competitive environment, and built resilience through rigorous testing.",
+    skillsUtilized: "Teamwork, Competitive Programming, Real-Time Development, Rapid Prototyping",
+    impact: "Displayed ability to think under pressure and build practical solutions with limited resources.",
+    professionalGrowth: "Improved collaborative and time-bound coding skills, boosting innovation and confidence."
   },
-];
+  {
+    title: "LeetCode Problem Solver",
+    image: "/images/leetcode.png", // You can later add a LeetCode certificate or logo here
+    organization: "LeetCode",
+    location: "Remote",
+    date: "08-06-2025", 
+    description: "Solved over 150+ coding problems on LeetCode, showcasing consistent practice and problem-solving dedication.",
+    achievements: [
+      "Solved 150+ coding problems on LeetCode.",
+      "Improved algorithmic thinking and optimization skills.",
+      "Developed strong consistency in daily problem-solving habits."
+    ],
+    skillsUtilized: "Problem-Solving, Algorithms, DSA (Data Structures and Algorithms), Time Complexity Optimization",
+    impact: "Built a solid foundation in data structures and algorithms, improving coding speed and accuracy.",
+    professionalGrowth: "Enhanced preparation for technical interviews, refined logic-building, and boosted confidence in competitive coding."
+  }
+]
 
-// Get the full domain (e.g., "localhost:3000" or "www.example.com")
-// const domain = window.location.host;
-// Or you can just get the protocol and domain name (e.g., "http://localhost:3000" or "https://www.example.com")
 const origin = window.location.origin;
 
 export const projects = [
@@ -247,6 +218,37 @@ export const projects = [
     overview:
       "Fiestagram is a dynamic Instagram clone designed for social sharing and engagement. The platform allows users to register, log in, and manage their profiles securely. Key features include the ability to create and upload posts with images and captions, engage with others by liking their posts, and explore a visually appealing feed of shared content. With a responsive design, Fiestagram ensures a seamless user experience across all devices, from mobile to desktop. Hosted with a robust backend and frontend infrastructure, Fiestagram is the perfect platform to foster creativity and community interaction through multimedia content sharing.",
   },
+  {
+  title: "AI Summarizer",
+  image: "/images/ai_summarizer.png",
+  visitLink: "",
+  githubLink: "https://github.com/Chandrashekharsk/ai_chrome_extension",
+  technologiesUsed: [
+    "chrome-extension", "springboot", "gemini-api"
+  ],
+  overview: "AI Summarizer is a utility Chrome Extension designed to help users quickly summarize selected text from any webpage. It uses a Spring Boot backend integrated with Google's Gemini API to generate concise summaries, improving reading efficiency and offering persistent access to summarized content."
+},
+{
+  title: "Spring Chat",
+  image: "/images/spring_chat.png",
+  visitLink: "",
+  githubLink: "https://github.com/Chandrashekharsk/ChatSpring",
+  technologiesUsed: [
+    "springboot", "react", "websockets"
+  ],
+  overview: "Spring Chat is a real-time communication platform enabling users to create and join chat rooms for instant messaging. Built with Spring Boot and React, it leverages WebSockets to offer seamless, low-latency communication in a responsive and user-friendly UI."
+},
+{
+  title: "BitLinks",
+  image: "/images/bitlinks.png",
+  visitLink: "https://bit-links-a-free-url-shortner.vercel.app",
+  githubLink: "https://github.com/Chandrashekharsk/BitLinks---A-free-URL-shortner",
+  technologiesUsed: [
+    "nextjs", "nodejs"
+  ],
+  overview: "BitLinks is a full-stack URL shortener that supports creating and managing over 2,000+ links. It allows users to generate short URLs with custom aliases and includes features for tracking redirects and improving page SEO. Built using Next.js for fast rendering and Node.js for backend logic."
+},
+
   {
     title: "Smart Food",
     image: "/images/smart_food.png",
@@ -277,19 +279,6 @@ export const projects = [
     overview:
       "Daily News is a professional news app that provides real-time news updates across various categories. The app allows users to browse through news articles, view detailed information on selected topics, and stay informed with breaking news. Features include category-based news filtering, bookmarking articles for later reading, and a sleek, responsive design that ensures accessibility across devices. The platform is designed to be both informative and user-friendly.",
   },
-  // {
-  //   title: "Khana Khazana",
-  //   image: "/images/recipeApp_img.png",
-  //   visitLink: `https://recipes-mernapp.vercel.app/`,
-  //   githubLink: "https://github.com/Chandrashekharsk/recipe_app",
-  //   technologiesUsed: [
-  //     "react",
-  //     "node.js",
-  //     "express.js",
-  //     "mongodb",
-  //   ],
-  //   overview: "Khana Khazana is a full-stack recipe-sharing application that allows users to explore a variety of recipes uploaded by other users. Registered users can create, save, and share their own unique recipes, with full authentication and user profile management. The app features a responsive UI with a rich experience for discovering, browsing, and managing recipes. It is built using the MERN stack to support seamless interactions and efficient data storage for a dynamic user experience."
-  // },
   {
     title: "Brainwave AI",
     image: "/images/brainWave_ai.png",
@@ -350,19 +339,4 @@ export const projects = [
     overview:
       "The Music School app is a vibrant, interactive web application designed to promote the offerings of a music school. Developed with Next.js and Framer Motion for fluid animations, the platform features a responsive, visually engaging UI that showcases available courses and enables prospective students to learn more about the school's offerings. This project prioritizes usability with clean design and captivating animations to provide an exceptional browsing experience.",
   },
-
-  // {
-  //   title: "Fiestagram",
-  //   image:"/images/fiestagram_img.png",
-  //   visitLink:"https://y-steel-iota.vercel.app/",
-  //   githubLink: "https://github.com/Chandrashekharsk/fiestagram",
-  //   technologiesUsed: [
-  //     "next.js",
-  //     "prisma",
-  //     "clerk",
-  //     "mysql",
-  //     "cloudinary",
-  //   ],
-  //   overview: "Fiestagram is a social media application inspired by Instagram, built with Next.js and Prisma, offering essential features like posting images and user interaction. It leverages Clerk for secure authentication, MySQL for data storage, and Cloudinary for media handling. Designed as a minimalistic, lightweight alternative, Fiestagram demonstrates social media functionalities with a focus on performance, simplicity, and potential scalability for future development."
-  // },
 ];

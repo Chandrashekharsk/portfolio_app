@@ -1,152 +1,214 @@
 import { FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
-import { skills } from '../data';
 import { blur } from "../../assets/index";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { projects } from '../data';
-import resume  from '/resume.pdf';
+import resume from '/resume.pdf';
 import { Avatar } from '@mui/material';
-import { Stack } from 'react-bootstrap';
 import "./styles/home.css"
+import { skills as categorizedSkills } from "../data";
+import { flattenSkills } from '../../../utils/flattenSkills';
+
+const skills = flattenSkills(categorizedSkills);
+
 
 const Home = () => {
   const { theme } = useSelector((state) => state.theme);
 
   return (
     <div className={`min-h-screen overflow-x-hidden  ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}>
-{/* Hero Section */}
-<section className={`shadow-md ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}>
-  <div className="container mx-auto px-5 py-20 flex flex-col-reverse items-center md:flex-row md:items-start">
-    <div className="w-full md:w-1/2 text-center md:text-left">
-      <h1 className={`text-3xl md:text-5xl font-bold mb-4 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
-        Hi, I'm <span className="text-blue-500">Chandrashekhar Singh Kushwaha</span>
-      </h1>
-      <p className={`mb-6 ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
-        Full-Stack Developer with expertise in building dynamic and scalable web applications. Experienced in frontend and backend technologies and databases as well. Ensuring high-quality, user-focused digital experiences. I am skilled in Data Structures and Algorithms.
-      </p>
-      <div className="flex flex-wrap justify-center md:justify-start gap-3">
-        <Link to="/projects" className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">
-          View Projects <FiArrowRight className="ml-2" />
-        </Link>
-        <a href="#contact" className={`flex items-center px-4 py-2 rounded-full outline outline-blue-500 ${theme === "dark" ? "bg-gray-700 text-gray-200 hover:bg-gray-600" : "bg-transparent text-gray-800 hover:bg-gray-200"} transition`}>
-          Contact Me
-        </a>
-        <a href={resume} download className={`flex items-center px-4 py-2 rounded-full outline outline-blue-500 ${theme === "dark" ? "bg-gray-700 text-gray-200 hover:bg-gray-600" : "bg-transparent  text-gray-800 hover:bg-gray-200"} transition`}>
-          Download Resume
-        </a>
-      </div>
-    </div>
-    <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
-      <img src={blur} alt="Chandrashekhar Singh Kushwaha" className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover shadow-lg" />
-    </div>
-  </div>
-</section>
+      {/* Hero Section */}
+      <section className={`relative z-10 shadow-md ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}>
+        <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-12">
 
+          {/* Left Text Section */}
+          <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
+            <motion.h1
+              className={`text-4xl md:text-5xl font-extrabold leading-tight ${theme === "dark" ? "text-white" : "text-gray-900"}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className={`text-4xl md:text-5xl font-extrabold leading-tight ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+                Hi, I&apos;m <span className="text-blue-500">Chandrashekhar Singh Kushwaha</span>
+              </h1>
+            </motion.h1>
 
+            <motion.p
+              className={`text-lg ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <p className={`text-lg mt-4 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+                A passionate <strong>Full-Stack Developer</strong> with a focus on crafting fast, scalable, and user-centric web applications.
+                I specialize in building robust solutions using <strong>Spring Boot, React, Next.js, Node.js, Express.js, MySQL, and MongoDB</strong>.
+                With a strong foundation in <strong>Data Structures & Algorithms</strong>, I blend performance with creativity to deliver exceptional digital experiences.
+              </p>
 
-{/* About Section */}
-<section id="about" className="container mx-auto px-8 py-20">
-  <h2 className="text-3xl font-bold text-center mb-10">About Me</h2>
-  <div className="flex flex-col md:flex-row items-center md:space-x-10">
-    <div className="md:w-1/3 md:mr-12 mb-6 md:mb-0">
-    <Stack>
-      <Avatar
-        src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fHdlYiUyMGFwcGxpY2F0aW9ufGVufDB8fDB8fHww"
-        alt="About Me"
-        className="rounded-lg shadow-lg"
-        sx = {{ width: 284, height: 284 }} 
-        variant="dot"
-      />
-      </Stack>
-      
-    </div>
-    <div className="md:w-2/3">
-      <p className={`mb-4 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-        I’m a FULL-Stack Developer specializing in creating responsive web applications. With a solid background in React, Node.js, and databases like MongoDB and PostgreSQL, I deliver impactful digital solutions. I’m committed to continuous learning and enjoy coding challenges, tech blogging, and exploring new technologies.
-      </p>
-      <Link to="/projects" className="flex items-center text-blue-500 hover:underline">
-        Check out my work <FiArrowRight className="ml-2" />
-      </Link>
-    </div>
-  </div>
-</section>
+            </motion.p>
 
+            <motion.div
+              className="flex flex-wrap justify-center md:justify-start gap-3"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <Link to="/projects" className="flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+                View Projects <FiArrowRight className="ml-2" />
+              </Link>
+              <a href="#contact" className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}>
+                Contact Me
+              </a>
+              <a href={resume} download className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}>
+                Download Resume
+              </a>
+            </motion.div>
+          </div>
 
-{/* Project Section with Card Layout */}
-<section id="projects" className={`pt-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}>
-  <div className="container mx-auto px-5">
-    <h2 className={`text-3xl font-bold text-center mb-10 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
-      Projects
-    </h2>
-    
-    <motion.div
-      className="flex gap-8 py-4"
-      style={{
-        display: "flex",
-        willChange: "transform",
-      }}
-      animate={{
-        x: ["-100%", "0%"],
-      }}
-      transition={{
-        duration: 20, 
-        ease: "linear", 
-        repeat: Infinity,
-      }}
-    >
-      {/* Display projects as cards */}
-      {projects.map((project, index) => (
-        <div key={index} className="flex-shrink-0 w-72 bg-white shadow-lg rounded-lg p-4 overflow-hidden" style={{ backgroundColor: theme === "dark" ? "#2d3748" : "#ffffff" }}>
-          <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-md mb-3" />
-          <h3 className={`text-xl font-semibold mb-2 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
-            {project.title}
-          </h3>
-          <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`} style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
-            {project.overview}
-          </p>
+          {/* Right Image Section */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <motion.img
+              src={blur}
+              alt="Chandrashekhar Singh Kushwaha"
+              className="rounded-full w-52 h-52 md:w-64 md:h-64 object-cover shadow-2xl border-2 border-green-500"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            />
+          </div>
         </div>
-      ))}
-    </motion.div>
-  </div>
-</section>
+      </section>
 
 
 
 
-{/* Skills Section with Smooth Circular Animation */}
-<section id="skills" className={`py-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}>
-  <div className="container mx-auto px-5 overflow-hidden">
-    <h2 className={`text-3xl font-bold text-center mb-10 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
-      Skills
-    </h2>
-    
-    <motion.div
-      className="flex gap-8 py-4"
-      style={{
-        display: "flex",
-        whiteSpace: "nowrap",
-        willChange: "transform",
-      }}
-      animate={{
-        x: ["0%", "-100%"],
-      }}
-      transition={{
-        duration: 15, 
-        ease: "linear", 
-        repeat: Infinity,
-      }}
-    >
-      {/* Each skill item repeats seamlessly without any visual breaks */}
-      {skills.map((skill, index) => (
-        <div key={index} className="flex-shrink-0 w-32 h-32 flex flex-col items-center">
-          <img src={skill.image} alt={skill.name} className="w-12 h-12 mb-2" />
-          <p className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>{skill.name}</p>
+      {/* About Section */}
+      <section id="about" className={`py-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}>
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+
+          <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+
+            {/* Text Block */}
+            <motion.div
+              className="md:w-2/3 text-center md:text-left"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <p className={`text-lg mb-4 leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+                I&apos;m a third-year Computer Science student and a dedicated Full-Stack Developer. My expertise spans the MERN stack, with solid command over modern libraries and frameworks like <strong>Redux, Framer Motion, Prisma, Tailwind CSS</strong>, and more.
+              </p>
+              <p className={`text-md mb-4 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
+                Over the years, I&apos;ve built multiple scalable applications—ranging from <strong>social media platforms</strong> like <em>Fiestagram</em> to <strong>food delivery apps</strong> and <strong>AI-driven utilities</strong>. I&apos;m also actively engaged in <strong>competitive programming</strong> and regularly contribute to open-source projects.
+              </p>
+
+              <p className={`text-md ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
+                Beyond development, I’m passionate about <strong>cybersecurity, machine learning, cloud computing, and system design</strong>. My goal is to become a well-rounded software engineer who can design, develop, and deploy intelligent, secure, and scalable systems.
+              </p>
+              <Link to="/projects" className="inline-flex items-center mt-4 text-blue-500 hover:underline">
+                See my work <FiArrowRight className="ml-2" />
+              </Link>
+            </motion.div>
+
+            {/* Avatar Block */}
+            <motion.div
+              className="md:w-1/3 flex justify-center"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Avatar
+                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=60"
+                alt="Chandrashekhar Avatar"
+                className="rounded-lg shadow-lg border-2 border-green-500"
+                sx={{ width: 284, height: 284 }}
+              />
+            </motion.div>
+          </div>
         </div>
-      ))}
-    </motion.div>
-  </div>
-</section>
+      </section>
+
+
+
+      {/* Project Section with Card Layout */}
+      <section id="projects" className={`pt-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}>
+        <div className="container mx-auto px-5">
+          <h2 className={`text-3xl font-bold text-center mb-10 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
+            Projects
+          </h2>
+
+          <motion.div
+            className="flex gap-8 py-4"
+            style={{
+              display: "flex",
+              willChange: "transform",
+            }}
+            animate={{
+              x: ["-100%", "0%"],
+            }}
+            transition={{
+              duration: 20,
+              ease: "linear",
+              repeat: Infinity,
+            }}
+          >
+            {/* Display projects as cards */}
+            {projects.map((project, index) => (
+              <div key={index} className="flex-shrink-0 w-72 bg-white shadow-lg rounded-lg p-4 overflow-hidden" style={{ backgroundColor: theme === "dark" ? "#2d3748" : "#ffffff" }}>
+                <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-md mb-3" />
+                <h3 className={`text-xl font-semibold mb-2 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
+                  {project.title}
+                </h3>
+                <p className={`text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`} style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                  {project.overview}
+                </p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+
+
+
+      {/* Skills Section with Smooth Circular Animation */}
+      <section id="skills" className={`py-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}>
+        <div className="container mx-auto px-5 overflow-hidden">
+          <h2 className={`text-3xl font-bold text-center mb-10 ${theme === "dark" ? "text-white" : "text-gray-800"}`}>
+            Skills
+          </h2>
+
+          <motion.div
+            className="flex gap-8 py-4"
+            style={{
+              display: "flex",
+              whiteSpace: "nowrap",
+              willChange: "transform",
+            }}
+            animate={{
+              x: ["0%", "-100%"],
+            }}
+            transition={{
+              duration: 15,
+              ease: "linear",
+              repeat: Infinity,
+            }}
+          >
+            {/* Each skill item repeats seamlessly without any visual breaks */}
+            {skills.map((skill, index) => (
+              <div key={index} className="flex-shrink-0 w-32 h-32 flex flex-col items-center">
+                <img src={skill.image} alt={skill.name} className="w-12 h-12 mb-2" />
+                <p className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>{skill.name}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
 
 

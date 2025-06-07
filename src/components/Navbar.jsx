@@ -8,7 +8,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from '../config/firebase-config';
 import { signOut } from "firebase/auth";
 import { toast } from 'react-toastify';
-import logo from "/hadsome_x-logo.png"
+import logo from "/logo.png";
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
@@ -105,7 +105,8 @@ const Navbar = () => {
                             <img
                                 src={logo}
                                 alt="logo"
-                                className="h-10 w-auto object-contain "
+                                // className="rounded-full w-48 h-10 md:w-64 md:h-64 object-cover shadow-lg "
+                                className="h-10 w-auto object-contain rounded-full"
                                 style={{ borderRadius: '5px', filter: theme === "dark" ? "brightness(0.8)" : "none" }}
                             />
                         </Link>
