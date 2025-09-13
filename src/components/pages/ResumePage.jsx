@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
@@ -10,12 +10,6 @@ const ResumePage = () => {
   const { theme } = useSelector((state) => state.theme);
   const pdfRef = useRef();
 
-  const handleDownload = () => {
-    if (pdfRef.current) {
-      pdfRef.current.save();
-    }
-  };
-
   const bgClass = theme === "dark" ? "bg-gray-800" : "bg-white";
   const textClass = theme === "dark" ? "text-gray-200" : "text-gray-600";
   const headerClass = theme === "dark" ? "text-gray-100" : "text-gray-800";
@@ -25,14 +19,6 @@ const ResumePage = () => {
 
   return (
     <div className={`${theme === "dark" ? "bg-gray-900" : "bg-gray-100"} mt-5 py-6 px-4`}>
-      {/* <button
-        onClick={handleDownload}
-        className={`fixed bottom-5 right-7 ${theme === "dark" ? "bg-green-700" : "bg-green-600"
-          } text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-800 transition flex items-center gap-2`}
-      >
-        <FaDownload />
-        <span className="hidden md:block">Download Resume</span>
-      </button> */}
 
       <button
         className={`fixed bottom-16 right-10 ${theme === "dark" ? "bg-blue-700" : "bg-blue-600"

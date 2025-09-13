@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { projects } from '../data';
 import resume from '/resume.pdf';
-import { Avatar } from '@mui/material';
+// import { Avatar } from '@mui/material';
 import "./styles/home.css"
 import { skills as categorizedSkills } from "../data";
 import { flattenSkills } from '../../../utils/flattenSkills';
@@ -58,8 +58,8 @@ const Home = () => {
               <Link to="/projects" className="flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
                 View Projects <FiArrowRight className="ml-2" />
               </Link>
-              <a href="#contact" className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}>
-                Contact Me
+              <a target="_blank" href="https://www.linkedin.com/in/chandrashekharsk/" className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}>
+                LinkedIn Profile
               </a>
               <a href={resume} download className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}>
                 Download Resume
@@ -81,19 +81,14 @@ const Home = () => {
         </div>
       </section>
 
-
-
-
       {/* About Section */}
       <section id="about" className={`py-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}>
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
-
           <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-
             {/* Text Block */}
             <motion.div
-              className="md:w-2/3 text-center md:text-left"
+              // className="md:w-2/3 text-center md:text-left"
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
@@ -109,13 +104,13 @@ const Home = () => {
               <p className={`text-md ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
                 Beyond development, I’m passionate about <strong>cybersecurity, machine learning, cloud computing, and system design</strong>. My goal is to become a well-rounded software engineer who can design, develop, and deploy intelligent, secure, and scalable systems.
               </p>
-              <Link to="/projects" className="inline-flex items-center mt-4 text-blue-500 hover:underline">
-                See my work <FiArrowRight className="ml-2" />
-              </Link>
+              <a target='_blank' href="https://github.com/Chandrashekharsk" className="inline-flex items-center mt-4 text-blue-500 hover:underline">
+                Visit GitHub Profile <FiArrowRight className="ml-2" />
+              </a>
             </motion.div>
 
             {/* Avatar Block */}
-            <motion.div
+            {/* <motion.div
               className="md:w-1/3 flex justify-center"
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -128,7 +123,7 @@ const Home = () => {
                 className="rounded-lg shadow-lg border-2 border-green-500"
                 sx={{ width: 284, height: 284 }}
               />
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>

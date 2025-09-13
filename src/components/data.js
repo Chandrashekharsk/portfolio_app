@@ -130,32 +130,26 @@ export const ExperienceData = [
 ];
 
 export const skills = {
-  "Programming Languages": [
-    { name: "C/C++", image: "/images/cpp.svg" },
+  "Languages": [
     { name: "Java", image: "/images/java.svg" },
-    { name: "Python", image: "/images/python.svg" },
-    { name: "TypeScript", image: "/images/typescript.svg" },
+    { name: "C/C++", image: "/images/cpp.svg" },
     { name: "JavaScript", image: "/images/javascript.svg" },
-  ],
-  "Scripting & Markup Languages": [
     { name: "HTML", image: "/images/html.svg" },
     { name: "CSS", image: "/images/css.svg" },
     { name: "SQL", image: "/images/sql.svg" },
   ],
-  "Frontend Development": [
+  "Development": [
+    { name: "Spring Boot", image: "/images/springboot.svg" },
     { name: "React", image: "/images/react.svg" },
     { name: "Next.js", image: "/images/nextjs1.svg" },
-  ],
-  "Backend Development": [
     { name: "Node.js", image: "/images/nodejs.svg" },
     { name: "Express.js", image: "/images/express1.svg" },
-    { name: "Spring Boot", image: "/images/springboot.svg" },
   ],
   "Databases": [
     { name: "MongoDB", image: "/images/mongodb.svg" },
     { name: "MySQL", image: "/images/mysql.svg" },
   ],
-  "DevOps & Tools": [
+  "Others": [
     { name: "Docker", image: "/images/docker.svg" },
     { name: "Postman", image: "/images/postman.svg" },
     { name: "GitHub", image: "/images/github.svg" },
@@ -184,10 +178,10 @@ export const AchievementsData = [
     image: "/images/leetcode.png", // You can later add a LeetCode certificate or logo here
     organization: "LeetCode",
     location: "LeetCode Platform",
-    date: "08-06-2025", 
-    description: "Solved over 150+ coding problems on LeetCode, showcasing consistent practice and problem-solving dedication.",
+    date: "15-09-2025", 
+    description: "Solved over 200+ coding problems on LeetCode, showcasing consistent practice and problem-solving dedication.",
     achievements: [
-      "Solved 150+ coding problems on LeetCode.",
+      "Developed a strong understanding in Java language, Data Structures and algorithms with practice. ",
       "Improved algorithmic thinking and optimization skills.",
       "Developed strong consistency in daily problem-solving habits."
     ],

@@ -68,7 +68,7 @@ const Feedbacks = () => {
         <h2 className={`text-xl text-center font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>We Value Your Feedback</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div className="form-group">
-            <textarea rows='5' placeholder='write your feedback...'
+            <textarea rows='5' placeholder='Type your message...'
               id="feedback"
               {...register('feedback', { required: true })}
               className={`mt-1 block w-full px-3 py-2 border rounded-md shadow-sm ${theme === 'dark' ? 'bg-gray-700 text-gray-200 border-gray-600' : 'bg-gray-100 text-gray-900 border-gray-300'} ${errors.feedback ? 'border-red-500' : ''}`}
