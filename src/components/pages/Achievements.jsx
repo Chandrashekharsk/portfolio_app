@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { AchievementsData } from '../data'; // Assuming this is where you've stored AchievementData
+import { AchievementsData } from '../data';
 
 const Achievements = () => {
   const { theme } = useSelector((state) => state.theme);

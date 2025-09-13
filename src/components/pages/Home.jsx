@@ -42,9 +42,10 @@ const Home = () => {
               transition={{ delay: 0.2 }}
             >
               <p className={`text-lg mt-4 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-                A passionate <strong>Full-Stack Developer</strong> with a focus on crafting fast, scalable, and user-centric web applications.
-                I specialize in building robust solutions using <strong>Spring Boot, React, Next.js, Node.js, Express.js, MySQL, and MongoDB</strong>.
-                With a strong foundation in <strong>Data Structures & Algorithms</strong>, I blend performance with creativity to deliver exceptional digital experiences.
+                A passionate <strong>Java Developer</strong> and <strong>Software Engineer</strong> with a focus on building reliable, scalable, and user-friendly applications.
+                I specialize in <strong>Java, Spring Boot, Hibernate, MySQL, and REST APIs</strong>, while also having strong experience with &nbsp;
+                <strong>React, Next.js, Node.js, and MongoDB</strong>.
+                With a solid foundation in <strong>Data Structures & Algorithms</strong>, I combine performance and clean code to deliver efficient solutions.
               </p>
 
             </motion.p>
@@ -95,35 +96,25 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <p className={`text-lg mb-4 leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-                I&apos;m a third-year Computer Science student and a dedicated Full-Stack Developer. My expertise spans the MERN stack, with solid command over modern libraries and frameworks like <strong>Redux, Framer Motion, Prisma, Tailwind CSS</strong>, and more.
+                I&apos;m a 4th year Computer Science student and a dedicated <strong>Java Developer</strong>.
+                My expertise lies in <strong>Spring Boot, Java-based backend systems, and RESTful services</strong>,
+                while also being skilled in frontend frameworks like <strong>React</strong> and styling with <strong>Tailwind CSS</strong>.
               </p>
+
               <p className={`text-md mb-4 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
-                Over the years, I&apos;ve built multiple scalable applications—ranging from <strong>social media platforms</strong> like <em>Fiestagram</em> to <strong>food delivery apps</strong> and <strong>AI-driven utilities</strong>. I&apos;m also actively engaged in <strong>competitive programming</strong> and regularly contribute to open-source projects.
+                I&apos;ve worked on multiple projects such as <strong>enterprise-level web apps</strong>, <strong>social platforms</strong> like <em>Fiestagram</em>,
+                and <strong>food delivery systems</strong>, integrating Java backends with modern frontends.
+                Alongside development, I actively practice <strong>competitive programming</strong> to strengthen my problem-solving mindset.
               </p>
 
               <p className={`text-md ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
-                Beyond development, I’m passionate about <strong>cybersecurity, machine learning, cloud computing, and system design</strong>. My goal is to become a well-rounded software engineer who can design, develop, and deploy intelligent, secure, and scalable systems.
+                Beyond Java development, I’m deeply interested in <strong>system design, cloud deployment, cybersecurity, and AI-driven solutions</strong>.
+                My career goal is to become a well-rounded software engineer capable of designing and deploying secure, scalable, and intelligent systems.
               </p>
               <a target='_blank' href="https://github.com/Chandrashekharsk" className="inline-flex items-center mt-4 text-blue-500 hover:underline">
                 Visit GitHub Profile <FiArrowRight className="ml-2" />
               </a>
             </motion.div>
-
-            {/* Avatar Block */}
-            {/* <motion.div
-              className="md:w-1/3 flex justify-center"
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <Avatar
-                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=60"
-                alt="Chandrashekhar Avatar"
-                className="rounded-lg shadow-lg border-2 border-green-500"
-                sx={{ width: 284, height: 284 }}
-              />
-            </motion.div> */}
           </div>
         </div>
       </section>

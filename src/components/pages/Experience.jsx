@@ -40,7 +40,7 @@ const Experience = () => {
 
               <ul className="mt-4 space-y-2">
                 <li>
-                  <span className={`${theme === "dark" ? "text-teal-300" : "text-teal-500"} font-semibold`}>Key Responsibilities: </span>
+                  <span className={`${theme === "dark" ? "text-teal-300" : "text-teal-500"} font-semibold`}>Project: </span>
                   <span className={theme === "dark" ? "text-gray-200" : "text-gray-800"}>{experience.project}</span>
                 </li>
                 <li>

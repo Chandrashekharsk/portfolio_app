@@ -41,8 +41,8 @@ export const footerElems = [
 
 export const navLinks = [
   {
-    id:"resume",
-    title:"Resume"
+    id: "resume",
+    title: "Resume",
   },
   {
     id: "projects",
@@ -110,27 +110,25 @@ export const eduData = [
 export const ExperienceData = [
   {
     role: "Jr. Software Developer Intern",
-    image:
-      "https://docs.google.com/document/d/1hseTPG0kx7L560saP6rY1J7RaysNjpp8UzAYtqLO3mM/edit?pli=1", // Use a company logo URL instead of a personal email link for a cleaner look.
+    image: "https://leopardruns.com/logo.png", // replace with actual company logo if available
     companyName: "Leopardruns Innovation & Technology",
     location: "Bhopal, M.P.",
     companyLink: "https://leopardruns.com",
     timePeriod: "45 days",
     project:
-      "Developed and optimized my portfolio web applications, enhancing performance and user experience. Collaborated with the development team to implement new features and fix bugs.",
+      "Worked on a MERN Stack e-commerce project, focusing on frontend customization and backend optimization.",
     achievements:
-      "Successfully delivered a key project within tight deadlines, improving the efficiency of a core application by 20%.",
-    skillUtilize:
-      "JavaScript, React, Node.js, Express.js, MongoDB, Git, and version control practices.",
+      "Created reusable React components and customized multiple pages, improving development speed and UI consistency. Optimized existing APIs and developed new REST APIs for better performance and scalability.",
+    skillUtilize: "React, JavaScript, Node.js, Express.js, MongoDB, Git.",
     contribution:
-      "Contributed to both frontend and backend development, implementing responsive design and RESTful APIs. Played a critical role in debugging and testing code to ensure seamless functionality.",
+      "Designed and implemented reusable UI components, integrated APIs, and enhanced backend performance by refactoring existing endpoints.",
     professionalGrowth:
-      "Gained hands-on experience in full-stack development and improved problem-solving skills by working on real-world projects. Enhanced my ability to work in a team and deliver results under pressure.",
+      "Gained practical experience in full-stack development and strengthened problem-solving skills by working on real-world projects.",
   },
 ];
 
 export const skills = {
-  "Languages": [
+  Languages: [
     { name: "Java", image: "/images/java.svg" },
     { name: "C/C++", image: "/images/cpp.svg" },
     { name: "JavaScript", image: "/images/javascript.svg" },
@@ -138,22 +136,22 @@ export const skills = {
     { name: "CSS", image: "/images/css.svg" },
     { name: "SQL", image: "/images/sql.svg" },
   ],
-  "Development": [
+  Development: [
     { name: "Spring Boot", image: "/images/springboot.svg" },
     { name: "React", image: "/images/react.svg" },
     { name: "Next.js", image: "/images/nextjs1.svg" },
     { name: "Node.js", image: "/images/nodejs.svg" },
     { name: "Express.js", image: "/images/express1.svg" },
   ],
-  "Databases": [
+  Databases: [
     { name: "MongoDB", image: "/images/mongodb.svg" },
     { name: "MySQL", image: "/images/mysql.svg" },
   ],
-  "Others": [
+  Others: [
     { name: "Docker", image: "/images/docker.svg" },
     { name: "Postman", image: "/images/postman.svg" },
     { name: "GitHub", image: "/images/github.svg" },
-  ]
+  ],
 };
 
 export const AchievementsData = [
@@ -162,36 +160,97 @@ export const AchievementsData = [
     image: "/images/hackathon_cert.jpg",
     organization: "College (part of MATRIM-2025)",
     location: "Bhopal, M.P.",
-    date: "15-04-2025", 
-    description: "Won the Code-craft Hackathon organized by college during MATRIM-2025 for showcasing innovative coding solutions under pressure and limited time.",
+    date: "15-04-2025",
+    description:
+      "Won the Code-craft Hackathon organized by college during MATRIM-2025 for showcasing innovative coding solutions under pressure and limited time.",
     achievements: [
       "Won the Codecraft Hackathon among 1200+ participants.",
       "Developed a working project prototype within limited time.",
-      "Engineered an end-to-end E-Waste Management System for real-time monitoring and sustainable disposal of electronic waste."
+      "Engineered an end-to-end E-Waste Management System for real-time monitoring and sustainable disposal of electronic waste.",
     ],
-    skillsUtilized: "Teamwork, Competitive Programming, Real-Time Development, Rapid Prototyping",
-    impact: "Displayed ability to think under pressure and build practical solutions with limited resources.",
-    professionalGrowth: "Improved collaborative and time-bound coding skills, boosting innovation and confidence."
+    skillsUtilized:
+      "Teamwork, Competitive Programming, Real-Time Development, Rapid Prototyping",
+    impact:
+      "Displayed ability to think under pressure and build practical solutions with limited resources.",
+    professionalGrowth:
+      "Improved collaborative and time-bound coding skills, boosting innovation and confidence.",
+  },
+  {
+    title: "Introducing Spring Boot",
+    image: "/images/springBoot.jpg",
+    organization: "IBM SkillsBuild",
+    location: "Online",
+    date: "28 Jul 2025",
+    description: "Completion of the Introducing Spring Boot course.",
+    achievements: ["Completed a 2-hour and 30-minute course introducing Spring Boot[cite: 24, 27, 28]."],
+    skillsUtilized: "Spring Boot, Java Frameworks",
+    impact:
+      "Gained an introduction to the Spring Boot framework.",
+    professionalGrowth: "Acquired a new skill in a popular Java framework.",
   },
   {
     title: "LeetCode Problem Solver",
     image: "/images/leetcode.png", // You can later add a LeetCode certificate or logo here
     organization: "LeetCode",
     location: "LeetCode Platform",
-    date: "15-09-2025", 
-    description: "Solved over 200+ coding problems on LeetCode, showcasing consistent practice and problem-solving dedication.",
+    date: "15-09-2025",
+    description:
+      "Solved over 200+ coding problems on LeetCode, showcasing consistent practice.",
     achievements: [
       "Developed a strong understanding in Java language, Data Structures and algorithms with practice. ",
       "Improved algorithmic thinking and optimization skills.",
-      "Developed strong consistency in daily problem-solving habits."
+      "Developed strong consistency in daily problem-solving habits.",
     ],
-    skillsUtilized: "Problem-Solving, Algorithms, DSA (Data Structures and Algorithms), Time Complexity Optimization",
-    impact: "Built a solid foundation in data structures and algorithms, improving coding speed and accuracy.",
-    professionalGrowth: "Enhanced preparation for technical interviews, refined logic-building, and boosted confidence in competitive coding."
-  }
-]
+    skillsUtilized:
+      "Problem-Solving, Algorithms, DSA (Data Structures and Algorithms), Time Complexity Optimization",
+    impact:
+      "Built a solid foundation in data structures and algorithms, improving coding speed and accuracy.",
+    professionalGrowth:
+      "Enhanced preparation for technical interviews, refined logic-building, and boosted confidence in competitive coding.",
+  },
+  {
+    title: "Learn Java",
+    image: "/images/learnJava.jpg",
+    organization: "IBM SkillsBuild",
+    location: "Online",
+    date: "28 Jul 2025",
+    description: "Completion of the Learn Java course.",
+    achievements: ["Completed a 25-hour course on learning Java[cite: 5, 8, 9]."],
+    skillsUtilized: "Java, Programming Fundamentals",
+    impact:
+      "Gained foundational knowledge in Java programming.",
+    professionalGrowth: "Expanded programming language skills.",
+  },
+  {
+    title: "Full-stack web developers and back-end developers",
+    image: "/images/fullStack.jpg",
+    organization: "IBM SkillsBuild",
+    location: "Online (Coursera)",
+    date: "28 Jul 2025",
+    description: "Completion of the Full-stack web developers and back-end developers course on Coursera.",
+    achievements: ["Completed a 12-hour course on full-stack and back-end web development[cite: 15, 18, 19]."],
+    skillsUtilized: "Full-stack Development, Back-end Development",
+    impact:
+      "Learned key concepts in full-stack and back-end development.",
+    professionalGrowth: "Advanced web development knowledge.",
+  },
+  
+  {
+    title: "Fundamentals of Web apps",
+    image: "/images/fullStackFundamental.jpg",
+    organization: "IBM SkillsBuild",
+    location: "Online",
+    date: "28 Jul 2025",
+    description: "Completion of the Fundamentals of Web apps course.",
+    achievements: ["Completed a 3-hour course on the fundamentals of web applications[cite: 34, 37, 38]."],
+    skillsUtilized: "Web Development, Web Applications",
+    impact:
+      "Strengthened understanding of core web application principles.",
+    professionalGrowth: "Solidified foundational knowledge for web development.",
+  },
+];
 
-const origin = window.location.origin;
+// const origin = window.location.origin;
 
 export const projects = [
   {
@@ -211,35 +270,43 @@ export const projects = [
       "Fiestagram is a dynamic Instagram clone designed for social sharing and engagement. The platform allows users to register, log in, and manage their profiles securely. Key features include the ability to create and upload posts with images and captions, engage with others by liking their posts, and explore a visually appealing feed of shared content. With a responsive design, Fiestagram ensures a seamless user experience across all devices, from mobile to desktop. Hosted with a robust backend and frontend infrastructure, Fiestagram is the perfect platform to foster creativity and community interaction through multimedia content sharing.",
   },
   {
-  title: "AI Summarizer",
-  image: "/images/ai_summarizer.png",
-  visitLink: "",
-  githubLink: "https://github.com/Chandrashekharsk/ai_chrome_extension",
-  technologiesUsed: [
-    "chrome-extension", "springboot", "gemini-api"
-  ],
-  overview: "AI Summarizer is a utility Chrome Extension designed to help users quickly summarize selected text from any webpage. It uses a Spring Boot backend integrated with Google's Gemini API to generate concise summaries, improving reading efficiency and offering persistent access to summarized content."
-},
-{
-  title: "Spring Chat",
-  image: "/images/spring_chat.png",
-  visitLink: "",
-  githubLink: "https://github.com/Chandrashekharsk/ChatSpring",
-  technologiesUsed: [
-    "springboot", "react", "websockets"
-  ],
-  overview: "Spring Chat is a real-time communication platform enabling users to create and join chat rooms for instant messaging. Built with Spring Boot and React, it leverages WebSockets to offer seamless, low-latency communication in a responsive and user-friendly UI."
-},
-{
-  title: "BitLinks",
-  image: "/images/bitlinks.png",
-  visitLink: "https://bit-links-a-free-url-shortner.vercel.app",
-  githubLink: "https://github.com/Chandrashekharsk/BitLinks---A-free-URL-shortner",
-  technologiesUsed: [
-    "nextjs", "nodejs"
-  ],
-  overview: "BitLinks is a full-stack URL shortener that supports creating and managing over 2,000+ links. It allows users to generate short URLs with custom aliases and includes features for tracking redirects and improving page SEO. Built using Next.js for fast rendering and Node.js for backend logic."
-},
+    title: "AI Summarizer",
+    image: "/images/ai_summarizer.png",
+    visitLink: "",
+    githubLink: "https://github.com/Chandrashekharsk/ai_chrome_extension",
+    technologiesUsed: ["chrome-extension", "springboot", "gemini-api"],
+    overview:
+      "AI Summarizer is a utility Chrome Extension designed to help users quickly summarize selected text from any webpage. It uses a Spring Boot backend integrated with Google's Gemini API to generate concise summaries, improving reading efficiency and offering persistent access to summarized content.",
+  },
+  {
+    title: "Spring Chat",
+    image: "/images/spring_chat.png",
+    visitLink: "",
+    githubLink: "https://github.com/Chandrashekharsk/ChatSpring",
+    technologiesUsed: ["springboot", "react", "websockets"],
+    overview:
+      "Spring Chat is a real-time communication platform enabling users to create and join chat rooms for instant messaging. Built with Spring Boot and React, it leverages WebSockets to offer seamless, low-latency communication in a responsive and user-friendly UI.",
+  },
+  {
+    title: "BitLinks",
+    image: "/images/bitlinks.png",
+    visitLink: "https://bit-links-a-free-url-shortner.vercel.app",
+    githubLink:
+      "https://github.com/Chandrashekharsk/BitLinks---A-free-URL-shortner",
+    technologiesUsed: ["nextjs", "nodejs"],
+    overview:
+      "BitLinks is a full-stack URL shortener that supports creating and managing over 2,000+ links. It allows users to generate short URLs with custom aliases and includes features for tracking redirects and improving page SEO. Built using Next.js for fast rendering and Node.js for backend logic.",
+  },
+  {
+    title: "Visualizer",
+    image: "/images/visualizer.png",
+    visitLink: "https://visualizer-virid.vercel.app",
+    githubLink:
+      "https://github.com/Chandrashekharsk/visualizer",
+    technologiesUsed: ["nextjs", "mongodb"],
+    overview:
+      "Visualizer is a data visualization platform that seeds company profile data from a JSON file into MongoDB and displays it through interactive charts. It showcases business insights using bar charts, pie charts, and pillar charts for clear comparisons and analytics. Built with Next.js for smooth rendering and MongoDB for scalable data storage.",
+  },
 
   {
     title: "Smart Food",
@@ -295,15 +362,6 @@ export const projects = [
       "This project is a web-based clone of the iPhone landing page, replicating Apple's signature design aesthetic and interactive elements. Built with React and Three.js, it emphasizes clean design, smooth animations, and a user-friendly layout. Error monitoring with Sentry ensures robust error tracking and performance monitoring, enhancing stability and usability, creating a near-authentic experience similar to the Apple website.",
   },
   {
-    title: "Portfolio",
-    image: "/images/portfolio_img.png",
-    visitLink: `${origin}/`,
-    githubLink: "https://github.com/Chandrashekharsk/portfolio_app",
-    technologiesUsed: ["react", "redux-toolkit", "framer-motion", "firebase"],
-    overview:
-      "This dynamic portfolio app was developed with React, showcasing a responsive, interactive platform for my personal and professional projects. Powered by Firebase for authentication and data management, it features real-time data updates, secure user authentication, and seamless content organization. With Framer Motion, the app includes visually captivating animations that make navigating the portfolio enjoyable and engaging.",
-  },
-  {
     title: "Password Generator",
     image: "/images/password-generator-img.png",
     visitLink: `https://password-generator-beta-lyart.vercel.app/`,
@@ -311,15 +369,6 @@ export const projects = [
     technologiesUsed: ["react", "tailwind", "vite"],
     overview:
       "The Password Generator app is a straightforward tool that enables users to generate secure, customizable passwords. Users can specify password length and include numbers or special characters for increased security. Built with React and styled using Tailwind, the app provides a fast, intuitive interface for generating unique, strong passwords, catering to various security needs while prioritizing user simplicity and usability.",
-  },
-  {
-    title: "Netflix Clone",
-    image: "/images/netflix_clone.png",
-    visitLink: `https://netflix-clone-psi-tawny.vercel.app/`,
-    githubLink: "https://github.com/Chandrashekharsk/netflix_clone",
-    technologiesUsed: ["react", "redux toolkit", "node.js", "mongodb"],
-    overview:
-      "This full-stack Netflix clone was created using the MERN stack, emulating core streaming features like user authentication, video streaming, and content browsing. The app's front-end is built with React and Redux Toolkit for state management, ensuring a smooth, responsive experience. MongoDB and Node.js support data storage and handling for users and media, providing a seamless, immersive streaming experience on par with commercial platforms.",
   },
   {
     title: "Music School",
