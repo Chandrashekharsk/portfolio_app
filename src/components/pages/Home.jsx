@@ -62,7 +62,7 @@ const Home = () => {
               <a target="_blank" href="https://www.linkedin.com/in/chandrashekharsk/" className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}>
                 LinkedIn Profile
               </a>
-              <a href={resume} download className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}>
+              <a href="https://drive.google.com/file/d/1zwtylbAwbZV3V23Z0JP-zsQhL1A60QGY/view?usp=drive_link" download className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}>
                 Download Resume
               </a>
             </motion.div>

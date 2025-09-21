@@ -25,7 +25,7 @@ const ResumePage = () => {
         className={`fixed bottom-16 right-10 ${theme === "dark" ? "bg-blue-700" : "bg-blue-600"} 
           text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition flex items-center gap-2`}
       >
-        <a href="https://drive.google.com/file/d/1THu0kZ0ymf-bjOTrVLmQEPY02GfuepfH/view" target="_blank" rel="noreferrer">
+        <a href="https://drive.google.com/drive/u/0/folders/1qgwnIhVyry_GbmT3RZC48P7Z6VFs3cmxhttps://drive.google.com/file/d/1zwtylbAwbZV3V23Z0JP-zsQhL1A60QGY/view?usp=drive_link" target="_blank" rel="noreferrer">
           <IoEye />
         </a>
       </button>
