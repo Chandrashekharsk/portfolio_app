@@ -77,7 +77,7 @@ export const navLinks = [
 export const eduData = [
   {
     id: "x",
-    title: "Class X",
+    title: "Class X - Secondary",
     institute: "Govt.Gyanodaya Vidhyalaya S.C. Excellence H.S. School, Rewa",
     marks: "94.75 %",
     eduBoard: "Madhya Pradesh Board of Secondary Education",
@@ -87,7 +87,7 @@ export const eduData = [
   },
   {
     id: "xii",
-    title: "Class XII",
+    title: "Class XII - Higher Secondary",
     institute: "Govt.Gyanodaya Vidhyalaya S.C. Excellence H.S. School, Rewa",
     marks: "81.00 %",
     eduBoard: "Madhya Pradesh Board of Secondary Education",
@@ -97,9 +97,9 @@ export const eduData = [
   },
   {
     id: "college",
-    title: "B.Tech In Computer Science ",
+    title: "B.Tech - Computer Science Engineering",
     institute: "Rajiv Gandhi Proudyogiki Vishwavidyalaya University",
-    marks: "7.2 CGPA",
+    marks: "7.3 CGPA",
     eduBoard: "Rajiv Gandhi Proudyogiki Vishwavidyalaya University, Bhopal",
     completionStatus: "EXPECTED 2026",
     link: "https://www.rgpv.ac.in",
@@ -195,7 +195,7 @@ export const AchievementsData = [
     location: "LeetCode Platform",
     date: "15-09-2025",
     description:
-      "Solved over 200+ coding problems on LeetCode, showcasing consistent practice.",
+      "Solved over 250+ coding problems on LeetCode.",
     achievements: [
       "Developed a strong understanding in Java language, Data Structures and algorithms with practice. ",
       "Improved algorithmic thinking and optimization skills.",
