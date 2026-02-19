@@ -26,7 +26,7 @@ const ResumePage = () => {
           text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition flex items-center gap-2`}
       >
         <a
-          href="https://drive.google.com/file/d/1ujHxZ5vqgDxx0GRikppGxUH7Q90fkShB/view?usp=sharing"
+          href="https://drive.google.com/file/d/1qWbpYSauH-YFIXBq16_kvfxo_cYcz6pf/view"
           target="_blank"
           rel="noreferrer"
         >
@@ -37,10 +37,10 @@ const ResumePage = () => {
       <PDFExport paperSize="Legal" margin={[20, 15, 20, 15]} scale={0.7} ref={pdfRef}>
         <div className={`${bgClass} p-6 rounded-lg shadow-lg max-w-2xl mx-auto`}>
 
-          {/* Header Section */}
+          {/* Header */}
           <header className="text-center mb-4">
             <h1 className={`${headerClass} text-2xl font-bold mb-2`}>
-              Chandrashekhar Singh Kushwaha
+              CHANDRASHEKHAR SINGH KUSHWAHA
             </h1>
             <div className={`flex flex-wrap justify-center gap-3 ${textClass} text-sm`}>
               <div className="flex items-center gap-2">
@@ -74,118 +74,118 @@ const ResumePage = () => {
           <section className="mb-4">
             <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Summary</h2>
             <p className={`text-sm ${textClass}`}>
-              Motivated and skilled software developer with strong problem-solving abilities, hands-on project experience,
-              and a passion for building scalable, real-world applications.
+              Motivated Software Developer with hands-on experience building scalable full-stack 
+              applications using MongoDB, Express.js, React, and Node.js. Seeking opportunities 
+              to contribute to high-impact projects while improving system design, performance 
+              optimization, and backend architecture skills.
             </p>
           </section>
 
-          {/* Experience */}
+          {/* Internship */}
           <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Experience</h2>
-            <div>
+            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Internship</h2>
+
+            <div className="mb-3">
               <h3 className={`text-base font-semibold ${headerClass}`}>
-                Jr. Software Developer Intern – Leopardruns Innovation & Technology
+                Full Stack Developer Intern – CodewebX (45 Days)
               </h3>
-              <p className={`text-sm ${textClass}`}>Bhopal, M.P. | E-commerce Project</p>
               <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-                <li>Developed and optimized 5+ reusable React components, enhancing UI performance.</li>
-                <li>Refactored API calls, reducing data fetch time by 30% and improving app efficiency.</li>
-                <li>Implemented Redux state management, making the app more scalable.</li>
+                <li>Developed scalable MERN stack applications with reusable React components.</li>
+                <li>Designed REST APIs using Node.js & Express with JWT authentication and Firebase integration.</li>
+                <li>Improved performance through query optimization and structured backend architecture.</li>
               </ul>
             </div>
-          </section>
 
-          {/* Key Achievements */}
-          <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Key Achievements</h2>
-            <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-              <li>Solved 250+ questions on LeetCode.</li>
-              <li>Won the Codecraft Hackathon organized by college (MATRIM-2025).</li>
-            </ul>
+            <div>
+              <h3 className={`text-base font-semibold ${headerClass}`}>
+                Jr. Software Developer Intern – Leopardruns Innovation & Technology (45 Days)
+              </h3>
+              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
+                <li>Developed and optimized 5+ reusable React components.</li>
+                <li>Reduced API fetch time by 30% via refactoring.</li>
+                <li>Implemented Redux state management for scalability.</li>
+              </ul>
+            </div>
           </section>
 
           {/* Projects */}
           <section className="mb-4">
             <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Projects</h2>
-            <div className="space-y-3">
-              {[
-                {
-                  title: "Fiestagram – Social Media Application",
-                  desc: "A social media application with real-time chat, posts, and Firebase authentication.",
-                  points: [
-                    "Implemented real-time chat and post-sharing with likes & comments, reducing delays by 50%.",
-                    "Secured authentication for 1,000+ users using Firebase Auth.",
-                    "Integrated Cloudinary for image storage and optimization."
-                  ]
-                },
-                {
-                  title: "AI Summarizer – Chrome Extension",
-                  desc: "Webpage text summarization tool powered by Spring Boot and Gemini API.",
-                  points: [
-                    "Improved summary speed by 60% and enabled persistent summary access.",
-                    "Enhanced reading experience by simplifying long content instantly."
-                  ]
-                },
-                {
-                  title: "Smart Food – Recipe Showcase App",
-                  desc: "A MERN full-stack recipe app for creating, updating, and bookmarking recipes.",
-                  points: [
-                    "Implemented authentication, recipe management, and profile editing.",
-                    "Added like and bookmark features for enhanced user engagement."
-                  ]
-                },
-                {
-                  title: "BitLinks – Free URL Shortener",
-                  desc: "Full-stack URL shortener app with analytics and custom aliases.",
-                  points: [
-                    "Handled 2,000+ shortened links using Next.js and Node.js.",
-                    "Improved SEO and reduced redirect latency."
-                  ]
-                }
-              ].map(({ title, desc, points }) => (
-                <div className={`${sectionClass} p-4 rounded-lg shadow`} key={title}>
-                  <h3 className={`text-base font-semibold ${headerClass}`}>{title}</h3>
-                  <p className={`text-sm ${textClass}`}>{desc}</p>
-                  <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-                    {points.map((p) => <li key={p}>{p}</li>)}
-                  </ul>
-                </div>
-              ))}
+
+            <div className={`${sectionClass} p-4 rounded-lg shadow mb-3`}>
+              <h3 className={`text-base font-semibold ${headerClass}`}>
+                Civic Reporting System – Smart Complaint Platform
+              </h3>
+              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
+                <li>Built complaint submission & tracking system for civic issues.</li>
+                <li>Automated department assignment & priority classification.</li>
+                <li>Implemented real-time tracking via unique report IDs.</li>
+              </ul>
+            </div>
+
+            <div className={`${sectionClass} p-4 rounded-lg shadow mb-3`}>
+              <h3 className={`text-base font-semibold ${headerClass}`}>
+                Fiestagram – Social Media Application
+              </h3>
+              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
+                <li>Implemented real-time chat and post interactions.</li>
+                <li>Secured 1,000+ users with Firebase Auth.</li>
+                <li>Integrated Cloudinary for optimized image storage.</li>
+              </ul>
+            </div>
+
+            <div className={`${sectionClass} p-4 rounded-lg shadow`}>
+              <h3 className={`text-base font-semibold ${headerClass}`}>
+                BitLinks – Free URL Shortener
+              </h3>
+              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
+                <li>Handled 2,000+ shortened links with custom aliases.</li>
+                <li>Built using Next.js & Node.js improving SEO and performance.</li>
+              </ul>
             </div>
           </section>
 
           {/* Skills */}
           <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Technical Skills</h2>
+            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Skills</h2>
             <p className={`text-sm ${textClass}`}>
-              Java, C/C++, HTML, CSS, JavaScript, SQL, Data Structures & Algorithms, OOP, Spring Boot, React, Next.js,
-              Node.js, Express.js, MySQL, MongoDB, REST APIs, GitHub, Postman, SEO, Docker, WebSockets
+              C++, JavaScript, Java, HTML, CSS, TypeScript, OOP, Data Structures & Algorithms, 
+              SQL, React, Next.js, Node.js, Express.js, Spring Boot, MySQL, MongoDB, REST APIs, 
+              GitHub, Postman, Docker
             </p>
           </section>
 
-          {/* Education */}
+          {/* Achievements */}
           <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Education</h2>
+            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Achievements</h2>
+            <ul className={`list-disc ml-4 text-sm ${textClass}`}>
+              <li>Won Codecraft Hackathon organized by college.</li>
+              <li>Solved 250+ LeetCode problems.</li>
+            </ul>
+          </section>
 
-            {/* Chronological Order */}
-            <div>
-              <h3 className={`text-base font-semibold ${headerClass}`}>Secondary Education (X)</h3>
-              <p className={`text-sm ${textClass}`}>
-                Govt. Gyanodaya Vidhyalaya S.C. Excellence H.S. School, Rewa, M.P. | 94.75% (2019–2020)
-              </p>
-            </div>
-            <div>
-              <h3 className={`text-base font-semibold ${headerClass}`}>Higher Secondary Education (XII)</h3>
-              <p className={`text-sm ${textClass}`}>
-                Govt. Gyanodaya Vidhyalaya S.C. Excellence H.S. School, Rewa, M.P. | 81% (2021–2022)
-              </p>
-            </div>
-            <div>
-              <h3 className={`text-base font-semibold ${headerClass}`}>B.Tech in Computer Science & Engineering</h3>
-              <p className={`text-sm ${textClass}`}>
-                Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal, M.P. | 7.3 CGPA (2022–2026)
-              </p>
-            </div>
+          {/* Certification */}
+          <section className="mb-4">
+            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Certifications</h2>
+            <ul className={`list-disc ml-4 text-sm ${textClass}`}>
+              <li>Smart India Hackathon 2025 – Internal Hackathon Certificate</li>
+              <li>Full-Stack Web Development & Backend Development – Coursera</li>
+              <li>Spring Boot – IBM</li>
+            </ul>
+          </section>
+
+          {/* Education */}
+          <section>
+            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Education</h2>
+            <p className={`text-sm ${textClass}`}>
+              B.Tech – Computer Science Engineering, RGPV Bhopal (2022–2026) | 7.3 CGPA
+            </p>
+            <p className={`text-sm ${textClass}`}>
+              XII – MP Board | 81% (2021–2022)
+            </p>
+            <p className={`text-sm ${textClass}`}>
+              X – MP Board | 94.75% (2019–2020)
+            </p>
           </section>
 
         </div>

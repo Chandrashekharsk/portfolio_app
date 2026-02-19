@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { SiLeetcode } from "react-icons/si";
 
+
 const Footer = () => {
     const { theme } = useSelector((state) => state.theme);
 
@@ -60,7 +61,7 @@ const Footer = () => {
                     </a>
                     {/* WhatsApp Icon */}
                     <a
-                        href="https://wa.me/+918103892672" // Replace with your WhatsApp number in international format
+                        href="https://wa.me/+918103892672" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`hover:text-primary transition-colors duration-300 ${theme === "dark" ? "text-gray-300 hover:text-white" : "text-gray-700 hover:text-black"}`}

@@ -109,8 +109,26 @@ export const eduData = [
 
 export const ExperienceData = [
   {
+    role: "Full Stack Developer Intern",
+    image: "/images/cwx.png",
+    companyName: "CodewebX",
+    location: "Bhopal, M.P.",
+    companyLink: "https://codewebx-two.vercel.app", 
+    timePeriod: "45 days",
+    project:
+      "Contributed to MERN Stack-based production projects including GoNeer (water service e-commerce platform) and Hello 11 (car renting & riding application), focusing on scalable frontend architecture and secure backend development.",
+    achievements:
+      "Developed modular React components and structured frontend architecture for maintainability. Designed and integrated RESTful APIs with JWT authentication and Firebase integration, while optimizing MongoDB queries for improved performance.",
+    skillUtilize:
+      "React, JavaScript, Node.js, Express.js, MongoDB, JWT, Firebase, REST APIs, Git.",
+    contribution:
+      "Implemented authentication workflows, built and integrated backend APIs, structured database models, and improved application performance through query optimization and clean backend architecture practices.",
+    professionalGrowth:
+      "Strengthened full-stack system design skills, improved understanding of scalable application architecture, and gained hands-on experience working on real-world production-level MERN projects.",
+  },
+  {
     role: "Jr. Software Developer Intern",
-    image: "https://leopardruns.com/logo.png", // replace with actual company logo if available
+    image: "/images/CompletionLetter.jpg", // replace with actual company logo if available
     companyName: "Leopardruns Innovation & Technology",
     location: "Bhopal, M.P.",
     companyLink: "https://leopardruns.com",
@@ -129,23 +147,25 @@ export const ExperienceData = [
 
 export const skills = {
   Languages: [
-    { name: "Java", image: "/images/java.svg" },
     { name: "C/C++", image: "/images/cpp.svg" },
+    { name: "Java", image: "/images/java.svg" },
     { name: "JavaScript", image: "/images/javascript.svg" },
+    { name: "TypScript", image: "/images/typescript.svg" },
     { name: "HTML", image: "/images/html.svg" },
     { name: "CSS", image: "/images/css.svg" },
     { name: "SQL", image: "/images/sql.svg" },
   ],
   Development: [
-    { name: "Spring Boot", image: "/images/springboot.svg" },
     { name: "React", image: "/images/react.svg" },
     { name: "Next.js", image: "/images/nextjs1.svg" },
     { name: "Node.js", image: "/images/nodejs.svg" },
     { name: "Express.js", image: "/images/express1.svg" },
+    { name: "Spring Boot", image: "/images/springboot.svg" },
   ],
   Databases: [
     { name: "MongoDB", image: "/images/mongodb.svg" },
     { name: "MySQL", image: "/images/mysql.svg" },
+    { name: "PostgreSQL", image: "/images/postgresql.svg" },
   ],
   Others: [
     { name: "Docker", image: "/images/docker.svg" },
@@ -182,10 +202,11 @@ export const AchievementsData = [
     location: "Online",
     date: "28 Jul 2025",
     description: "Completion of the Introducing Spring Boot course.",
-    achievements: ["Completed a 2-hour and 30-minute course introducing Spring Boot[cite: 24, 27, 28]."],
+    achievements: [
+      "Completed a 2-hour and 30-minute course introducing Spring Boot[cite: 24, 27, 28].",
+    ],
     skillsUtilized: "Spring Boot, Java Frameworks",
-    impact:
-      "Gained an introduction to the Spring Boot framework.",
+    impact: "Gained an introduction to the Spring Boot framework.",
     professionalGrowth: "Acquired a new skill in a popular Java framework.",
   },
   {
@@ -194,8 +215,7 @@ export const AchievementsData = [
     organization: "LeetCode",
     location: "LeetCode Platform",
     date: "15-09-2025",
-    description:
-      "Solved over 250+ coding problems on LeetCode.",
+    description: "Solved over 250+ coding problems on LeetCode.",
     achievements: [
       "Developed a strong understanding in Java language, Data Structures and algorithms with practice. ",
       "Improved algorithmic thinking and optimization skills.",
@@ -215,10 +235,11 @@ export const AchievementsData = [
     location: "Online",
     date: "28 Jul 2025",
     description: "Completion of the Learn Java course.",
-    achievements: ["Completed a 25-hour course on learning Java[cite: 5, 8, 9]."],
+    achievements: [
+      "Completed a 25-hour course on learning Java[cite: 5, 8, 9].",
+    ],
     skillsUtilized: "Java, Programming Fundamentals",
-    impact:
-      "Gained foundational knowledge in Java programming.",
+    impact: "Gained foundational knowledge in Java programming.",
     professionalGrowth: "Expanded programming language skills.",
   },
   {
@@ -227,14 +248,16 @@ export const AchievementsData = [
     organization: "IBM SkillsBuild",
     location: "Online (Coursera)",
     date: "28 Jul 2025",
-    description: "Completion of the Full-stack web developers and back-end developers course on Coursera.",
-    achievements: ["Completed a 12-hour course on full-stack and back-end web development[cite: 15, 18, 19]."],
+    description:
+      "Completion of the Full-stack web developers and back-end developers course on Coursera.",
+    achievements: [
+      "Completed a 12-hour course on full-stack and back-end web development[cite: 15, 18, 19].",
+    ],
     skillsUtilized: "Full-stack Development, Back-end Development",
-    impact:
-      "Learned key concepts in full-stack and back-end development.",
+    impact: "Learned key concepts in full-stack and back-end development.",
     professionalGrowth: "Advanced web development knowledge.",
   },
-  
+
   {
     title: "Fundamentals of Web apps",
     image: "/images/fullStackFundamental.jpg",
@@ -242,17 +265,37 @@ export const AchievementsData = [
     location: "Online",
     date: "28 Jul 2025",
     description: "Completion of the Fundamentals of Web apps course.",
-    achievements: ["Completed a 3-hour course on the fundamentals of web applications[cite: 34, 37, 38]."],
+    achievements: [
+      "Completed a 3-hour course on the fundamentals of web applications[cite: 34, 37, 38].",
+    ],
     skillsUtilized: "Web Development, Web Applications",
-    impact:
-      "Strengthened understanding of core web application principles.",
-    professionalGrowth: "Solidified foundational knowledge for web development.",
+    impact: "Strengthened understanding of core web application principles.",
+    professionalGrowth:
+      "Solidified foundational knowledge for web development.",
   },
 ];
 
 // const origin = window.location.origin;
 
 export const projects = [
+  {
+    title: "Civic Reporting System",
+    image: "/images/civic-reporting-sys.png",
+    // visitLink: `https://fiestagram.vercel.app`,
+    visitLink: ``,
+    githubLink: "https://github.com/Chandrashekharsk/Civic-Reporting-Sys",
+    technologiesUsed: [
+      "react",
+      "shadcn",
+      "redux",
+      "cloudinary",
+      "nodejs",
+      "express.js",
+      "mongodb",
+    ],
+    overview:
+      "The Civic Reporting System is a smart web-based platform designed to streamline the reporting and resolution of public infrastructure issues. The system enables citizens to securely register, submit complaints such as potholes, broken streetlights, water leakage, and other civic problems, and receive a unique report ID for real-time tracking. Through an intelligent backend workflow, reported issues are automatically categorized by risk level (High, Medium, Low) and directly assigned to the appropriate government department for faster resolution. With a responsive and user-friendly interface, the platform ensures seamless access across devices while promoting transparency, accountability, and efficient communication between citizens and authorities.",
+  },
   {
     title: "Fiestagram",
     image: "/images/fiestagram_img.png",
@@ -301,8 +344,7 @@ export const projects = [
     title: "Visualizer",
     image: "/images/visualizer.png",
     visitLink: "https://visualizer-virid.vercel.app",
-    githubLink:
-      "https://github.com/Chandrashekharsk/visualizer",
+    githubLink: "https://github.com/Chandrashekharsk/visualizer",
     technologiesUsed: ["nextjs", "mongodb"],
     overview:
       "Visualizer is a data visualization platform that seeds company profile data from a JSON file into MongoDB and displays it through interactive charts. It showcases business insights using bar charts, pie charts, and pillar charts for clear comparisons and analytics. Built with Next.js for smooth rendering and MongoDB for scalable data storage.",
