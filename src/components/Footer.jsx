@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { SiLeetcode } from "react-icons/si";
+import { IoDocumentLock } from "react-icons/io5";
 
 
 const Footer = () => {
@@ -67,6 +68,14 @@ const Footer = () => {
                         className={`hover:text-primary transition-colors duration-300 ${theme === "dark" ? "text-gray-300 hover:text-white" : "text-gray-700 hover:text-black"}`}
                     >
                         <FaWhatsapp className="w-6 h-6" />
+                    </a>
+                    <a
+                        href="https://drive.google.com/file/d/1TjKHTC3mf65rj7_GRMajLVFs0YYxTzmY/view" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`hover:text-primary transition-colors duration-300 ${theme === "dark" ? "text-gray-300 hover:text-white" : "text-gray-700 hover:text-black"}`}
+                    >
+                        <IoDocumentLock className="w-6 h-6" />
                     </a>
                 </div>
             </div>

@@ -1,43 +1,4 @@
-import {
-  FaLinkedin,
-  FaDiscord,
-  FaTwitter,
-  FaEnvelope,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa";
-export const footerElems = [
-  {
-    icon: FaLinkedin,
-    color: "blue",
-    link: "https://www.linkedin.com/in/chandrashekhar-singh-kushwaha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm",
-  },
-  {
-    icon: FaDiscord,
-    color: "purple",
-    link: "https://discord.com/invite/FXKmpmDh",
-  },
-  {
-    icon: FaTwitter,
-    color: "blue",
-    link: "https://twitter.com/cs9981625252",
-  },
-  {
-    icon: FaEnvelope,
-    color: "red",
-    link: "mailto:cs9981625252@gmail.com",
-  },
-  {
-    icon: FaGithub,
-    color: "gray",
-    link: "https://github.com/Chandrashekharsk",
-  },
-  {
-    icon: FaInstagram,
-    color: "pink",
-    link: "https://www.instagram.com/chandrashekharsk_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-  },
-];
+
 
 export const navLinks = [
   {
