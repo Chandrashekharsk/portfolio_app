@@ -218,10 +218,10 @@ const Home = () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://ichandrashekhar.vercel.app"
+        href="https://github.com/chandrashekharsk"
         className="inline-flex items-center mt-4 text-blue-500 hover:underline"
       >
-        Visit My Portfolio <FiArrowRight className="ml-2" />
+        Visit Github Profile<FiArrowRight className="ml-2" />
       </a>
     </motion.div>
   </div>
