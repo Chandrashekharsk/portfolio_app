@@ -48,43 +48,36 @@ const Home = () => {
 
   return (
     <div
-      className={`min-h-screen overflow-x-hidden  ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}
+      className={`min-h-screen overflow-x-hidden ${theme === "dark" ? "bg-slate-950 text-white" : "bg-slate-50 text-slate-900"}`}
     >
       {/* Hero Section */}
       <section
-        className={`relative z-10 shadow-md ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}
+        className={`relative z-10 overflow-hidden border-b ${theme === "dark" ? "border-slate-800 bg-slate-950" : "border-slate-200 bg-white"}`}
       >
-        <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-12">
+        <div className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-cyan-400/5 blur-3xl" />
+        <div className="container mx-auto px-5 sm:px-6 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-16">
           {/* Left Text Section */}
           <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
             <motion.h1
-              className={`text-4xl md:text-5xl font-extrabold leading-tight ${theme === "dark" ? "text-white" : "text-gray-900"}`}
+              className={`text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight ${theme === "dark" ? "text-white" : "text-slate-950"}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1
-                className={`text-4xl md:text-5xl font-extrabold leading-tight ${theme === "dark" ? "text-white" : "text-gray-900"}`}
-              >
-                Hi, I&apos;m{" "}
-                <span className="text-blue-500">
+              Hi, I&apos;m{" "}
+                <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
                   Chandrashekhar Singh Kushwaha
                 </span>
-              </h1>
             </motion.h1>
 
             <motion.p
-              className={`text-lg ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
+              className={`text-base sm:text-lg leading-8 ${theme === "dark" ? "text-slate-300" : "text-slate-600"}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <p
-                className={`text-lg mt-4 ${
-                  theme === "dark" ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                A <strong>Java Full Stack Developer</strong> specializing in{" "}
+              A <strong>Java Full Stack Developer</strong> specializing in{" "}
                 <strong>
                   Java, Spring Boot, JPA, Hibernate, REST APIs, and MySQL
                 </strong>
@@ -96,32 +89,31 @@ const Home = () => {
                 <strong>OOP, DSA, SQL, and backend development</strong>,
                  focused
                 on building scalable, maintainable, and efficient applications.
-              </p>
             </motion.p>
 
             <motion.div
-              className="flex flex-wrap justify-center md:justify-start gap-3"
+              className="flex flex-wrap justify-center md:justify-start gap-3 pt-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
               <Link
                 to="/projects"
-                className="flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+                className="group flex items-center px-5 py-3 bg-blue-600 text-white rounded-full shadow-lg shadow-blue-600/20 hover:bg-blue-700 hover:-translate-y-0.5 transition-all duration-300"
               >
                 View Projects <FiArrowRight className="ml-2" />
               </Link>
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/chandrashekharsk/"
-                className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}
+                className={`flex items-center px-5 py-3 rounded-full border border-blue-500/60 ${theme === "dark" ? "text-white hover:bg-blue-500/10" : "text-blue-700 hover:bg-blue-50"} transition-all duration-300 hover:-translate-y-0.5`}
               >
                 LinkedIn Profile
               </a>
               <a
                 href="https://drive.google.com/file/d/1k8njR0_k-Vsr5UdQcz2-1k4szHYXvg24/view"
                 download
-                className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}
+                className={`flex items-center px-5 py-3 rounded-full border border-blue-500/60 ${theme === "dark" ? "text-white hover:bg-blue-500/10" : "text-blue-700 hover:bg-blue-50"} transition-all duration-300 hover:-translate-y-0.5`}
               >
                 Download Resume
               </a>
@@ -129,11 +121,11 @@ const Home = () => {
           </div>
 
           {/* Right Image Section */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/2 flex justify-center relative">
             <motion.img
               src={blur}
               alt="Chandrashekhar Singh Kushwaha"
-              className="rounded-full w-52 h-52 md:w-64 md:h-64 object-cover shadow-2xl border-2 border-green-500"
+              className="rounded-full w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-cover shadow-2xl shadow-blue-500/20 border-4 border-white/10 ring-1 ring-blue-500/40"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
@@ -145,10 +137,10 @@ const Home = () => {
       {/* About Section */}
       <section
         id="about"
-        className={`py-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}
+        className={`py-20 md:py-24 ${theme === "dark" ? "bg-slate-900" : "bg-white"}`}
       >
         <div className="container mx-auto px-6">
-  <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+  <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight">About Me</h2>
 
   <div className="flex flex-col-reverse md:flex-row items-center gap-10">
     <motion.div
@@ -219,7 +211,7 @@ const Home = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/chandrashekharsk"
-        className="inline-flex items-center mt-4 text-blue-500 hover:underline"
+        className="inline-flex items-center mt-5 text-blue-500 font-semibold hover:text-cyan-400 transition-colors"
       >
         Visit Github Profile<FiArrowRight className="ml-2" />
       </a>
@@ -231,17 +223,17 @@ const Home = () => {
       {/* Project Section with Card Layout */}
       <section
         id="projects"
-        className={`pt-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}
+        className={`py-20 md:py-24 ${theme === "dark" ? "bg-slate-900" : "bg-white"}`}
       >
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-5 sm:px-6">
           <h2
-            className={`text-3xl font-bold text-center mb-10 ${theme === "dark" ? "text-white" : "text-gray-800"}`}
+            className={`text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight ${theme === "dark" ? "text-white" : "text-slate-900"}`}
           >
             Projects
           </h2>
 
           <motion.div
-            className="flex gap-8 py-4"
+            className="flex gap-6 py-4 px-1"
             style={{
               display: "flex",
               willChange: "transform",
@@ -259,18 +251,18 @@ const Home = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-72 bg-white shadow-lg rounded-lg p-4 overflow-hidden"
+                className="flex-shrink-0 w-72 sm:w-80 rounded-2xl p-4 overflow-hidden border shadow-xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 style={{
-                  backgroundColor: theme === "dark" ? "#2d3748" : "#ffffff",
+                  backgroundColor: theme === "dark" ? "#172033" : "#ffffff",
                 }}
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-40 object-cover rounded-md mb-3"
+                  className="w-full h-44 object-cover rounded-xl mb-4"
                 />
                 <h3
-                  className={`text-xl font-semibold mb-2 ${theme === "dark" ? "text-white" : "text-gray-800"}`}
+                  className={`text-xl font-bold mb-2 ${theme === "dark" ? "text-white" : "text-slate-900"}`}
                 >
                   {project.title}
                 </h3>
@@ -294,17 +286,17 @@ const Home = () => {
       {/* Skills Section with Smooth Circular Animation */}
       <section
         id="skills"
-        className={`py-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}
+        className={`py-20 md:py-24 ${theme === "dark" ? "bg-slate-900" : "bg-white"}`}
       >
         <div className="container mx-auto px-5 overflow-hidden">
           <h2
-            className={`text-3xl font-bold text-center mb-10 ${theme === "dark" ? "text-white" : "text-gray-800"}`}
+            className={`text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight ${theme === "dark" ? "text-white" : "text-slate-900"}`}
           >
             Skills
           </h2>
 
           <motion.div
-            className="flex gap-8 py-4"
+            className="flex gap-6 py-4 px-1"
             style={{
               display: "flex",
               whiteSpace: "nowrap",
@@ -323,12 +315,12 @@ const Home = () => {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-32 h-32 flex flex-col items-center"
+                className={`flex-shrink-0 w-32 h-32 flex flex-col items-center justify-center rounded-2xl border ${theme === "dark" ? "border-slate-700 bg-slate-800/60" : "border-slate-200 bg-slate-50"} transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
               >
                 <img
                   src={skill.image}
                   alt={skill.name}
-                  className="w-12 h-12 mb-2"
+                  className="w-12 h-12 mb-3 object-contain"
                 />
                 <p
                   className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
@@ -344,12 +336,12 @@ const Home = () => {
       {/* Contact Section */}
       <section
         id="contact"
-        className={`pb-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}
+        className={`py-20 md:py-24 ${theme === "dark" ? "bg-slate-900" : "bg-white"}`}
       >
-        <div className="container mx-auto px-5">
-          <h2 className="text-3xl font-bold text-center mb-10">Contact Me</h2>
-          <div className="max-w-lg mx-auto">
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+        <div className="container mx-auto px-5 sm:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight">Contact Me</h2>
+          <div className="max-w-2xl mx-auto">
+            <form ref={formRef} onSubmit={handleSubmit} className={`space-y-6 rounded-3xl border p-6 sm:p-8 shadow-2xl backdrop-blur-sm ${theme === "dark" ? "border-slate-700 bg-slate-950/70" : "border-slate-200 bg-white/90"}`}>
               <div>
                 <label
                   className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
@@ -360,7 +352,7 @@ const Home = () => {
                   type="text"
                   name="user_name"
                   required
-                  className={`w-full mt-2 p-3 border rounded-md focus:outline-none focus:ring ${theme === "dark" ? "bg-gray-700 text-white border-gray-600" : "bg-white text-gray-900 border-gray-300"}`}
+                  className={`w-full mt-2 px-4 py-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all ${theme === "dark" ? "bg-slate-800 text-white border-slate-700 placeholder:text-slate-500" : "bg-slate-50 text-slate-900 border-slate-200 placeholder:text-slate-400"}`}
                   placeholder="Full name"
                 />
               </div>
@@ -375,7 +367,7 @@ const Home = () => {
                   type="email"
                   name="user_email"
                   required
-                  className={`w-full mt-2 p-3 border rounded-md focus:outline-none focus:ring ${theme === "dark" ? "bg-gray-700 text-white border-gray-600" : "bg-white text-gray-900 border-gray-300"}`}
+                  className={`w-full mt-2 px-4 py-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all ${theme === "dark" ? "bg-slate-800 text-white border-slate-700 placeholder:text-slate-500" : "bg-slate-50 text-slate-900 border-slate-200 placeholder:text-slate-400"}`}
                   placeholder="example@gmail.com"
                 />
               </div>
@@ -390,7 +382,7 @@ const Home = () => {
                   name="message"
                   rows={5}
                   required
-                  className={`w-full mt-2 p-3 border rounded-md focus:outline-none focus:ring ${theme === "dark" ? "bg-gray-700 text-white border-gray-600" : "bg-white text-gray-900 border-gray-300"}`}
+                  className={`w-full mt-2 px-4 py-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all ${theme === "dark" ? "bg-slate-800 text-white border-slate-700 placeholder:text-slate-500" : "bg-slate-50 text-slate-900 border-slate-200 placeholder:text-slate-400"}`}
                   placeholder="Drop your message here..."
                 ></textarea>
               </div>
@@ -398,7 +390,7 @@ const Home = () => {
               <button
                 type="submit"
                 disabled={sending}
-                className={`w-full py-3 rounded-full transition ${theme === "dark" ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-blue-500 text-white hover:bg-blue-600"}`}
+                className={`w-full py-3.5 rounded-xl font-semibold shadow-lg transition-all duration-300 ${theme === "dark" ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-blue-600 text-white hover:bg-blue-700"} disabled:opacity-60 disabled:cursor-not-allowed`}
               >
                 {sending ? "Almost shot..." : "Shoot Message"}
               </button>

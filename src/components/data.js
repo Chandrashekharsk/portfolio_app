@@ -2,20 +2,12 @@
 
 export const navLinks = [
   {
-    id: "resume",
-    title: "Resume",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-  },
-  {
     id: "skills",
     title: "Skills",
   },
   {
-    id: "achievements",
-    title: "Achievements",
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "experience",
@@ -26,9 +18,17 @@ export const navLinks = [
     title: "Education",
   },
   {
+    id: "achievements",
+    title: "Achievements",
+  },
+  {
     id: "testimonials",
     title: "Testimonials",
   },
+  {
+    id: "resume",
+    title: "Resume",
+  },  
   {
     id: "feedbacks",
     title: "Feedback",
