@@ -333,7 +333,7 @@ const Home = () => {
                 <label
                   className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
                 >
-                  Name
+                  Your Full Name
                 </label>
                 <input
                   type="text"
@@ -348,7 +348,7 @@ const Home = () => {
                 <label
                   className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
                 >
-                  Email
+                  Your Email
                 </label>
                 <input
                   type="email"
@@ -363,14 +363,14 @@ const Home = () => {
                 <label
                   className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
                 >
-                  Message
+                  Your Message
                 </label>
                 <textarea
                   name="message"
                   rows={5}
                   required
                   className={`w-full mt-2 p-3 border rounded-md focus:outline-none focus:ring ${theme === "dark" ? "bg-gray-700 text-white border-gray-600" : "bg-white text-gray-900 border-gray-300"}`}
-                  placeholder="Type your message here..."
+                  placeholder="Drop your message here..."
                 ></textarea>
               </div>
 
@@ -379,7 +379,7 @@ const Home = () => {
                 disabled={sending}
                 className={`w-full py-3 rounded-full transition ${theme === "dark" ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-blue-500 text-white hover:bg-blue-600"}`}
               >
-                {sending ? "Sending..." : "Send Message"}
+                {sending ? "Almost shot..." : "Shoot Message"}
               </button>
             </form>
           </div>
