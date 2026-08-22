@@ -148,63 +148,84 @@ const Home = () => {
         className={`py-20 ${theme === "dark" ? "bg-gray-800" : "bg-white"}`}
       >
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
-          <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-            {/* Text Block */}
-            <motion.div
-              // className="md:w-2/3 text-center md:text-left"
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <p
-                className={`text-lg mb-4 leading-relaxed ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
-              >
-                I&apos;m a 4th year Computer Science student and a dedicated{" "}
-                <strong>Java Developer</strong>. My expertise lies in{" "}
-                <strong>
-                  Spring Boot, Java-based backend systems, and RESTful services
-                </strong>
-                , while also being skilled in frontend frameworks like{" "}
-                <strong>React</strong> and styling with{" "}
-                <strong>Tailwind CSS</strong>.
-              </p>
+  <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
 
-              <p
-                className={`text-md mb-4 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}
-              >
-                I&apos;ve worked on multiple projects such as{" "}
-                <strong>enterprise-level web apps</strong>,{" "}
-                <strong>social platforms</strong> like <em>Fiestagram</em>, and{" "}
-                <strong>food delivery systems</strong>, integrating Java
-                backends with modern frontends. Alongside development, I
-                actively practice <strong>competitive programming</strong> to
-                strengthen my problem-solving mindset.
-              </p>
+  <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+    <motion.div
+      initial={{ x: -50, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <p
+        className={`text-lg mb-4 leading-relaxed ${
+          theme === "dark" ? "text-gray-300" : "text-gray-700"
+        }`}
+      >
+        I&apos;m a <strong>Java Full Stack Developer</strong> and Computer Science
+        graduate with hands-on internship experience building scalable web
+        applications. My core expertise includes{" "}
+        <strong>
+          Java, Spring Boot, Spring MVC, Spring Data JPA, REST APIs,
+          React.js, and SQL
+        </strong>
+        , along with modern technologies such as{" "}
+        <strong>Next.js, Tailwind CSS, Redux Toolkit, and TypeScript</strong>.
+      </p>
 
-              <p
-                className={`text-md ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}
-              >
-                Beyond Java development, I’m deeply interested in{" "}
-                <strong>
-                  system design, cloud deployment, cybersecurity, and AI-driven
-                  solutions
-                </strong>
-                . My career goal is to become a well-rounded software engineer
-                capable of designing and deploying secure, scalable, and
-                intelligent systems.
-              </p>
-              <a
-                target="_blank"
-                href="https://github.com/Chandrashekharsk"
-                className="inline-flex items-center mt-4 text-blue-500 hover:underline"
-              >
-                Visit GitHub Profile <FiArrowRight className="ml-2" />
-              </a>
-            </motion.div>
-          </div>
-        </div>
+      <p
+        className={`text-md mb-4 leading-relaxed ${
+          theme === "dark" ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
+        During my internships at <strong>CodewebX</strong> and{" "}
+        <strong>Leopardruns Innovation & Technology</strong>, I worked on
+        real-world applications including e-commerce, water-service, and
+        car-rental platforms. I developed reusable React components,
+        integrated RESTful APIs, implemented{" "}
+        <strong>JWT authentication, Firebase, MongoDB, and Redux</strong>,
+        and improved application performance through optimized API calls
+        and database queries.
+      </p>
+
+      <p
+        className={`text-md mb-4 leading-relaxed ${
+          theme === "dark" ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
+        I&apos;ve also built projects such as{" "}
+        <strong>AI Summarizer</strong>, a Spring Boot and Gemini-powered
+        Chrome extension, and <strong>Spring Chat</strong>, a real-time
+        communication platform using <strong>Spring Boot, React.js, and
+        WebSocket</strong>. My social media project,{" "}
+        <strong>Fiestagram</strong>, includes real-time chat, post sharing,
+        likes, comments, and Firebase authentication for 1,000+ users.
+      </p>
+
+      <p
+        className={`text-md mb-4 leading-relaxed ${
+          theme === "dark" ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
+        Beyond development, I enjoy solving challenging problems and
+        continuously improving my problem-solving skills. I&apos;ve solved{" "}
+        <strong>250+ LeetCode problems</strong> and won my college&apos;s{" "}
+        <strong>Codecraft Hackathon</strong>. I&apos;m particularly interested
+        in building <strong>scalable backend systems, enterprise
+        applications, microservices, and AI-powered solutions</strong>.
+      </p>
+
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ichandrashekhar.vercel.app"
+        className="inline-flex items-center mt-4 text-blue-500 hover:underline"
+      >
+        Visit My Portfolio <FiArrowRight className="ml-2" />
+      </a>
+    </motion.div>
+  </div>
+</div>
       </section>
 
       {/* Project Section with Card Layout */}
