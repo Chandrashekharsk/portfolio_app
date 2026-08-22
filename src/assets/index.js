@@ -5,7 +5,7 @@ import fm3 from "./fm3.jpg"
 import fm4 from "./fm4.jpg"
 import fm5 from "./fm5.jpg"
 import fm6 from "./fm6.jpg"
-import blur from "./main.jpg"
+import blur from "./v1.png"
 import completionLetter from "./CompletionLetter.jpg"
 
 export {react, fm1, fm2, fm3, fm4, fm5, fm6, blur, completionLetter}

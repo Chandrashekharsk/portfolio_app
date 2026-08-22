@@ -18,176 +18,412 @@ const ResumePage = () => {
   const iconColor = theme === "dark" ? "white" : "black";
 
   return (
-    <div className={`${theme === "dark" ? "bg-gray-900" : "bg-gray-100"} mt-5 py-6 px-4`}>
-
+    <div
+      className={`${
+        theme === "dark" ? "bg-gray-900" : "bg-gray-100"
+      } mt-5 py-6 px-4`}
+    >
       {/* Floating Resume View Button */}
       <button
-        className={`fixed bottom-16 right-10 ${theme === "dark" ? "bg-blue-700" : "bg-blue-600"} 
-          text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition flex items-center gap-2`}
+        className={`fixed bottom-16 right-10 ${
+          theme === "dark" ? "bg-blue-700" : "bg-blue-600"
+        } text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition flex items-center gap-2 z-50`}
       >
         <a
-          href="https://drive.google.com/file/d/1qWbpYSauH-YFIXBq16_kvfxo_cYcz6pf/view"
+          href="https://drive.google.com/file/d/1k8njR0_k-Vsr5UdQcz2-1k4szHYXvg24/view"
           target="_blank"
           rel="noreferrer"
         >
-          <IoEye />
+          <IoEye size={22} />
         </a>
       </button>
 
-      <PDFExport paperSize="Legal" margin={[20, 15, 20, 15]} scale={0.7} ref={pdfRef}>
-        <div className={`${bgClass} p-6 rounded-lg shadow-lg max-w-2xl mx-auto`}>
-
-          {/* Header */}
-          <header className="text-center mb-4">
-            <h1 className={`${headerClass} text-2xl font-bold mb-2`}>
+      <PDFExport
+        paperSize="Legal"
+        margin={[20, 15, 20, 15]}
+        scale={0.7}
+        ref={pdfRef}
+      >
+        <div
+          className={`${bgClass} p-6 rounded-lg shadow-lg max-w-2xl mx-auto`}
+        >
+          {/* ================= HEADER ================= */}
+          <header className="text-center mb-5">
+            <h1
+              className={`${headerClass} text-2xl font-bold mb-2`}
+            >
               CHANDRASHEKHAR SINGH KUSHWAHA
             </h1>
-            <div className={`flex flex-wrap justify-center gap-3 ${textClass} text-sm`}>
+
+            <div
+              className={`flex flex-wrap justify-center gap-3 ${textClass} text-sm`}
+            >
               <div className="flex items-center gap-2">
                 <MdPhone style={{ color: iconColor }} />
                 <span>(+91) 8103892672</span>
               </div>
+
               <div className="flex items-center gap-2">
                 <MdEmail style={{ color: iconColor }} />
                 <span>cs9981625252@gmail.com</span>
               </div>
+
               <div className="flex items-center gap-2">
                 <HiOutlineHome style={{ color: iconColor }} />
-                <span>Jahangirabad, Bhopal, M.P.</span>
+                <span>Secunderabad, Hyderabad, Telangana</span>
               </div>
+
               <div className="flex items-center gap-2">
                 <FaLinkedin style={{ color: iconColor }} />
-                <a href="https://linkedin.com/in/chandrashekharsk" className={`${linkClass} hover:underline`} target="_blank">LinkedIn</a>
+                <a
+                  href="https://linkedin.com/in/chandrashekharsk"
+                  className={`${linkClass} hover:underline`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>
               </div>
+
               <div className="flex items-center gap-2">
                 <FaGithub style={{ color: iconColor }} />
-                <a href="https://github.com/Chandrashekharsk" className={`${linkClass} hover:underline`} target="_blank">GitHub</a>
+                <a
+                  href="https://github.com/Chandrashekharsk"
+                  className={`${linkClass} hover:underline`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
               </div>
+
               <div className="flex items-center gap-2">
                 <HiOutlineGlobeAlt style={{ color: iconColor }} />
-                <a href="https://ichandrashekhar.vercel.app" className={`${linkClass} hover:underline`} target="_blank">Portfolio</a>
+                <a
+                  href="https://ichandrashekhar.vercel.app"
+                  className={`${linkClass} hover:underline`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Portfolio
+                </a>
               </div>
             </div>
           </header>
 
-          {/* Summary */}
+          {/* ================= OBJECTIVE ================= */}
           <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Summary</h2>
+            <h2
+              className={`text-lg font-semibold mb-2 ${headerClass}`}
+            >
+              Objective
+            </h2>
+
             <p className={`text-sm ${textClass}`}>
-              Motivated Software Developer with hands-on experience building scalable full-stack 
-              applications using MongoDB, Express.js, React, and Node.js. Seeking opportunities 
-              to contribute to high-impact projects while improving system design, performance 
-              optimization, and backend architecture skills.
+              Java Full Stack Developer with internship experience in
+              building scalable web applications. Strong foundation in
+              Core Java, Object-Oriented Programming, Spring Boot,
+              RESTful APIs, SQL, React.js, and modern web technologies.
+              Passionate about building enterprise-grade applications.
             </p>
           </section>
 
-          {/* Internship */}
+          {/* ================= TECHNICAL SKILLS ================= */}
           <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Internship</h2>
+            <h2
+              className={`text-lg font-semibold mb-2 ${headerClass}`}
+            >
+              Technical Skills
+            </h2>
 
-            <div className="mb-3">
-              <h3 className={`text-base font-semibold ${headerClass}`}>
-                Full Stack Developer Intern – CodewebX (45 Days)
+            <div className={`text-sm ${textClass} space-y-1`}>
+              <p>
+                <strong className={headerClass}>Languages:</strong>{" "}
+                Java, JavaScript (ES6+), TypeScript, SQL
+              </p>
+
+              <p>
+                <strong className={headerClass}>Frontend:</strong>{" "}
+                HTML5, CSS3, React.js, Next.js, Tailwind CSS,
+                Bootstrap, Redux Toolkit
+              </p>
+
+              <p>
+                <strong className={headerClass}>Backend:</strong>{" "}
+                Spring Boot, Spring MVC, Spring Data JPA, Hibernate,
+                JWT Authentication, REST APIs, JDBC
+              </p>
+
+              <p>
+                <strong className={headerClass}>Databases:</strong>{" "}
+                MongoDB, MySQL, PostgreSQL
+              </p>
+
+              <p>
+                <strong className={headerClass}>Others:</strong>{" "}
+                DSA, OOP, Git, GitHub, Linux, Postman, Docker,
+                MVC Architecture, Microservices, Collection Frameworks
+              </p>
+            </div>
+          </section>
+
+          {/* ================= INTERNSHIP ================= */}
+          <section className="mb-4">
+            <h2
+              className={`text-lg font-semibold mb-2 ${headerClass}`}
+            >
+              Internship
+            </h2>
+
+            {/* CodewebX */}
+            <div className="mb-4">
+              <h3
+                className={`text-base font-semibold ${headerClass}`}
+              >
+                Full Stack Developer Intern @ CodewebX — 3 Months
               </h3>
-              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-                <li>Developed scalable MERN stack applications with reusable React components.</li>
-                <li>Designed REST APIs using Node.js & Express with JWT authentication and Firebase integration.</li>
-                <li>Improved performance through query optimization and structured backend architecture.</li>
+
+              <p className={`text-sm font-medium ${textClass}`}>
+                Projects: GoNeer — Water Service E-Commerce Platform,
+                Hello 11 — Car Renting & Riding Application
+              </p>
+
+              <ul
+                className={`list-disc ml-5 text-sm ${textClass} mt-1`}
+              >
+                <li>
+                  Developed and maintained scalable full-stack
+                  applications with optimized frontend architecture
+                  and reusable React components.
+                </li>
+
+                <li>
+                  Designed and integrated RESTful APIs, implementing
+                  JWT authentication, Firebase integration, and
+                  efficient MongoDB data models.
+                </li>
+
+                <li>
+                  Improved application performance through query
+                  optimization, structured state management, and
+                  clean backend architecture practices.
+                </li>
               </ul>
             </div>
 
+            {/* Leopardruns */}
             <div>
-              <h3 className={`text-base font-semibold ${headerClass}`}>
-                Jr. Software Developer Intern – Leopardruns Innovation & Technology (45 Days)
+              <h3
+                className={`text-base font-semibold ${headerClass}`}
+              >
+                Jr. Software Developer Intern @ Leopardruns Innovation
+                & Technology — 1.5 Months
               </h3>
-              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-                <li>Developed and optimized 5+ reusable React components.</li>
-                <li>Reduced API fetch time by 30% via refactoring.</li>
-                <li>Implemented Redux state management for scalability.</li>
+
+              <p className={`text-sm font-medium ${textClass}`}>
+                Project: E-Commerce Application
+              </p>
+
+              <ul
+                className={`list-disc ml-5 text-sm ${textClass} mt-1`}
+              >
+                <li>
+                  Developed and optimized 5+ reusable React
+                  components, enhancing UI performance.
+                </li>
+
+                <li>
+                  Refactored API calls, reducing data fetch time by
+                  30% and improving application efficiency.
+                </li>
+
+                <li>
+                  Implemented Redux state management, making the
+                  application more scalable.
+                </li>
               </ul>
             </div>
           </section>
 
-          {/* Projects */}
+          {/* ================= PROJECTS ================= */}
           <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Projects</h2>
+            <h2
+              className={`text-lg font-semibold mb-2 ${headerClass}`}
+            >
+              Projects
+            </h2>
 
-            <div className={`${sectionClass} p-4 rounded-lg shadow mb-3`}>
-              <h3 className={`text-base font-semibold ${headerClass}`}>
-                Civic Reporting System – Smart Complaint Platform
+            {/* AI SUMMARIZER */}
+            <div
+              className={`${sectionClass} p-4 rounded-lg shadow mb-3`}
+            >
+              <h3
+                className={`text-base font-semibold ${headerClass}`}
+              >
+                AI SUMMARIZER – AI Powered Chrome Extension
               </h3>
-              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-                <li>Built complaint submission & tracking system for civic issues.</li>
-                <li>Automated department assignment & priority classification.</li>
-                <li>Implemented real-time tracking via unique report IDs.</li>
+
+              <p className={`text-sm ${textClass} mb-1`}>
+                A Chrome Extension that generates AI-powered summaries
+                of selected webpage content using Spring Boot and
+                Gemini API.
+              </p>
+
+              <ul
+                className={`list-disc ml-5 text-sm ${textClass}`}
+              >
+                <li>
+                  Designed and implemented RESTful APIs for secure
+                  communication between the browser extension and
+                  backend services, enabling fast and reliable summary
+                  generation.
+                </li>
+
+                <li>
+                  Implemented persistent storage for generated
+                  summaries, allowing users to access previously
+                  summarized content while improving productivity and
+                  reading efficiency.
+                </li>
               </ul>
             </div>
 
-            <div className={`${sectionClass} p-4 rounded-lg shadow mb-3`}>
-              <h3 className={`text-base font-semibold ${headerClass}`}>
-                Fiestagram – Social Media Application
+            {/* SPRING CHAT */}
+            <div
+              className={`${sectionClass} p-4 rounded-lg shadow mb-3`}
+            >
+              <h3
+                className={`text-base font-semibold ${headerClass}`}
+              >
+                SPRING CHAT – Real-Time Chat Application
               </h3>
-              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-                <li>Implemented real-time chat and post interactions.</li>
-                <li>Secured 1,000+ users with Firebase Auth.</li>
-                <li>Integrated Cloudinary for optimized image storage.</li>
+
+              <p className={`text-sm ${textClass} mb-1`}>
+                A real-time communication platform enabling users to
+                create and join chat rooms for seamless instant
+                messaging.
+              </p>
+
+              <ul
+                className={`list-disc ml-5 text-sm ${textClass}`}
+              >
+                <li>
+                  Developed a chat application using Spring Boot,
+                  React.js, and WebSocket, enabling users to create
+                  and join multiple chat rooms with instant message
+                  synchronization.
+                </li>
+
+                <li>
+                  Implemented WebSocket-based bidirectional
+                  communication, providing low-latency messaging and
+                  a responsive real-time user experience.
+                </li>
+
+                <li>
+                  Designed scalable backend services and a responsive
+                  React interface, ensuring reliable communication
+                  and efficient handling of multiple concurrent
+                  users.
+                </li>
               </ul>
             </div>
 
-            <div className={`${sectionClass} p-4 rounded-lg shadow`}>
-              <h3 className={`text-base font-semibold ${headerClass}`}>
-                BitLinks – Free URL Shortener
+            {/* FIESTAGRAM */}
+            <div
+              className={`${sectionClass} p-4 rounded-lg shadow`}
+            >
+              <h3
+                className={`text-base font-semibold ${headerClass}`}
+              >
+                FIESTAGRAM – Social Media Application
               </h3>
-              <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-                <li>Handled 2,000+ shortened links with custom aliases.</li>
-                <li>Built using Next.js & Node.js improving SEO and performance.</li>
+
+              <p className={`text-sm ${textClass} mb-1`}>
+                A social media application developed with various
+                interactive features.
+              </p>
+
+              <ul
+                className={`list-disc ml-5 text-sm ${textClass}`}
+              >
+                <li>
+                  Implemented real-time chat and post-sharing with
+                  interactive features like likes and comments,
+                  reducing interaction delays by 50%.
+                </li>
+
+                <li>
+                  Secured authentication for 1,000+ users using
+                  Firebase Auth, ensuring data protection.
+                </li>
               </ul>
             </div>
           </section>
 
-          {/* Skills */}
+          {/* ================= EDUCATION ================= */}
           <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Skills</h2>
-            <p className={`text-sm ${textClass}`}>
-              C++, JavaScript, Java, HTML, CSS, TypeScript, OOP, Data Structures & Algorithms, 
-              SQL, React, Next.js, Node.js, Express.js, Spring Boot, MySQL, MongoDB, REST APIs, 
-              GitHub, Postman, Docker
-            </p>
+            <h2
+              className={`text-lg font-semibold mb-2 ${headerClass}`}
+            >
+              Education
+            </h2>
+
+            <div className={`text-sm ${textClass} space-y-1`}>
+              <p>
+                <strong className={headerClass}>
+                  B.Tech – Computer Science Engineering
+                </strong>{" "}
+                — RGPV University, Bhopal | 7.5 CGPA | 2026
+              </p>
+
+              <p>
+                <strong className={headerClass}>
+                  XII – Madhya Pradesh Board of Secondary Education
+                </strong>{" "}
+                | 81.00% | 2022
+              </p>
+
+              <p>
+                <strong className={headerClass}>
+                  X – Madhya Pradesh Board of Secondary Education
+                </strong>{" "}
+                | 94.75% | 2020
+              </p>
+            </div>
           </section>
 
-          {/* Achievements */}
-          <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Achievements</h2>
-            <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-              <li>Won Codecraft Hackathon organized by college.</li>
-              <li>Solved 250+ LeetCode problems.</li>
-            </ul>
-          </section>
-
-          {/* Certification */}
-          <section className="mb-4">
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Certifications</h2>
-            <ul className={`list-disc ml-4 text-sm ${textClass}`}>
-              <li>Smart India Hackathon 2025 – Internal Hackathon Certificate</li>
-              <li>Full-Stack Web Development & Backend Development – Coursera</li>
-              <li>Spring Boot – IBM</li>
-            </ul>
-          </section>
-
-          {/* Education */}
+          {/* ================= CERTIFICATIONS ================= */}
           <section>
-            <h2 className={`text-lg font-semibold mb-2 ${headerClass}`}>Education</h2>
-            <p className={`text-sm ${textClass}`}>
-              B.Tech – Computer Science Engineering, RGPV Bhopal (2022–2026) | 7.3 CGPA
-            </p>
-            <p className={`text-sm ${textClass}`}>
-              XII – MP Board | 81% (2021–2022)
-            </p>
-            <p className={`text-sm ${textClass}`}>
-              X – MP Board | 94.75% (2019–2020)
-            </p>
-          </section>
+            <h2
+              className={`text-lg font-semibold mb-2 ${headerClass}`}
+            >
+              Certifications & Achievements
+            </h2>
 
+            <ul
+              className={`list-disc ml-5 text-sm ${textClass}`}
+            >
+              <li>Spring Boot – IBM</li>
+              <li>Learn Java – IBM</li>
+              <li>
+                Coding Hackathon Success – Won Codecraft Hackathon
+                organized by college
+              </li>
+              <li>
+                LeetCode Problem Solver – Solved 250+ LeetCode
+                problems
+              </li>
+              <li>
+                Smart India Hackathon 2025 – Internal Hackathon
+                Certificate
+              </li>
+              <li>
+                Full-Stack Web Development and Backend Development –
+                Coursera
+              </li>
+            </ul>
+          </section>
         </div>
       </PDFExport>
     </div>

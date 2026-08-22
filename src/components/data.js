@@ -42,7 +42,7 @@ export const eduData = [
     institute: "Govt.Gyanodaya Vidhyalaya S.C. Excellence H.S. School, Rewa",
     marks: "94.75 %",
     eduBoard: "Madhya Pradesh Board of Secondary Education",
-    completionStatus: "PASSING YEAR 2020",
+    completionStatus: "Completion Year :  2020",
     link: "https://scdevelopmentmp.nic.in/GSchool/SiteDefault.aspx?ty=MTY1",
     linkTitle: "Visit Institite",
   },
@@ -52,7 +52,7 @@ export const eduData = [
     institute: "Govt.Gyanodaya Vidhyalaya S.C. Excellence H.S. School, Rewa",
     marks: "81.00 %",
     eduBoard: "Madhya Pradesh Board of Secondary Education",
-    completionStatus: "PASSING YEAR 2022",
+    completionStatus: "Completion Year :  2022",
     link: "https://scdevelopmentmp.nic.in/GSchool/SiteDefault.aspx?ty=MTY1",
     linkTitle: "Visit Institite",
   },
@@ -60,9 +60,9 @@ export const eduData = [
     id: "college",
     title: "B.Tech - Computer Science Engineering",
     institute: "Rajiv Gandhi Proudyogiki Vishwavidyalaya University",
-    marks: "7.3 CGPA",
+    marks: "7.5 CGPA",
     eduBoard: "Rajiv Gandhi Proudyogiki Vishwavidyalaya University, Bhopal",
-    completionStatus: "EXPECTED 2026",
+    completionStatus: "Completion Year :  2026",
     link: "https://www.rgpv.ac.in",
     linkTitle: "Visit Institite",
   },
@@ -75,7 +75,7 @@ export const ExperienceData = [
     companyName: "CodewebX",
     location: "Bhopal, M.P.",
     companyLink: "https://codewebx-two.vercel.app", 
-    timePeriod: "45 days",
+    timePeriod: "3 months",
     project:
       "Contributed to MERN Stack-based production projects including GoNeer (water service e-commerce platform) and Hello 11 (car renting & riding application), focusing on scalable frontend architecture and secure backend development.",
     achievements:
@@ -93,7 +93,7 @@ export const ExperienceData = [
     companyName: "Leopardruns Innovation & Technology",
     location: "Bhopal, M.P.",
     companyLink: "https://leopardruns.com",
-    timePeriod: "45 days",
+    timePeriod: "1.5 months",
     project:
       "Worked on a MERN Stack e-commerce project, focusing on frontend customization and backend optimization.",
     achievements:
@@ -108,7 +108,6 @@ export const ExperienceData = [
 
 export const skills = {
   Languages: [
-    { name: "C/C++", image: "/images/cpp.svg" },
     { name: "Java", image: "/images/java.svg" },
     { name: "JavaScript", image: "/images/javascript.svg" },
     { name: "TypScript", image: "/images/typescript.svg" },
@@ -119,19 +118,25 @@ export const skills = {
   Development: [
     { name: "React", image: "/images/react.svg" },
     { name: "Next.js", image: "/images/nextjs1.svg" },
-    { name: "Node.js", image: "/images/nodejs.svg" },
-    { name: "Express.js", image: "/images/express1.svg" },
+    { name: "Bootstrap", image: "/images/bootstrap.svg" },
+    { name: "TailwindCSS", image: "/images/tailwind.svg" },
     { name: "Spring Boot", image: "/images/springboot.svg" },
+    { name: "Hibernate", image: "/images/hibernate.svg" },
+    { name: "Node.js", image: "/images/nodejs.svg" },
   ],
   Databases: [
-    { name: "MongoDB", image: "/images/mongodb.svg" },
     { name: "MySQL", image: "/images/mysql.svg" },
     { name: "PostgreSQL", image: "/images/postgresql.svg" },
+    { name: "MongoDB", image: "/images/mongodb.svg" },
+    { name: "Reddis", image: "/images/reddis.svg" },
   ],
   Others: [
     { name: "Docker", image: "/images/docker.svg" },
     { name: "Postman", image: "/images/postman.svg" },
+    { name: "Git", image: "/images/git.svg" },
     { name: "GitHub", image: "/images/github.svg" },
+    { name: "AWS", image: "/images/aws.svg" },
+    { name: "Linux", image: "/images/linux.svg" },
   ],
 };
 

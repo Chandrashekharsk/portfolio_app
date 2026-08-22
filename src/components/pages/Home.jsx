@@ -80,20 +80,22 @@ const Home = () => {
               transition={{ delay: 0.2 }}
             >
               <p
-                className={`text-lg mt-4 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
+                className={`text-lg mt-4 ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-700"
+                }`}
               >
-                A passionate <strong>Java Developer</strong> and{" "}
-                <strong>Software Engineer</strong> with a focus on building
-                reliable, scalable, and user-friendly applications. I specialize
-                in{" "}
+                A <strong>Java Full Stack Developer</strong> specializing in{" "}
                 <strong>
-                  Java, Spring Boot, Hibernate, MySQL, and REST APIs
+                  Java, Spring Boot, JPA, Hibernate, REST APIs, and MySQL
                 </strong>
-                , while also having strong experience with &nbsp;
-                <strong>React, Next.js, Node.js, and MongoDB</strong>. With a
-                solid foundation in{" "}
-                <strong>Data Structures & Algorithms</strong>, I combine
-                performance and clean code to deliver efficient solutions.
+                , with hands-on experience in{" "}
+                <strong>
+                  React.js, TypeScript, and modern web development
+                </strong>
+                . Strong foundation in{" "}
+                <strong>OOP, DSA, SQL, and backend development</strong>,
+                 focused
+                on building scalable, maintainable, and efficient applications.
               </p>
             </motion.p>
 
@@ -117,7 +119,7 @@ const Home = () => {
                 LinkedIn Profile
               </a>
               <a
-                href="https://drive.google.com/file/d/1qWbpYSauH-YFIXBq16_kvfxo_cYcz6pf/view"
+                href="https://drive.google.com/file/d/1k8njR0_k-Vsr5UdQcz2-1k4szHYXvg24/view"
                 download
                 className={`flex items-center px-5 py-2.5 rounded-full border-2 border-blue-500 ${theme === "dark" ? "text-white hover:bg-gray-700" : "text-blue-600 hover:bg-blue-100"} transition`}
               >
