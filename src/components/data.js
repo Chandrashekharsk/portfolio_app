@@ -241,7 +241,6 @@ export const AchievementsData = [
   },
 ];
 
-// const origin = window.location.origin;
 
 export const projects = [
   {
@@ -389,3 +388,5 @@ export const projects = [
       "The Music School app is a vibrant, interactive web application designed to promote the offerings of a music school. Developed with Next.js and Framer Motion for fluid animations, the platform features a responsive, visually engaging UI that showcases available courses and enables prospective students to learn more about the school's offerings. This project prioritizes usability with clean design and captivating animations to provide an exceptional browsing experience.",
   },
 ];
+
+

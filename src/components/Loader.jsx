@@ -1,12 +1,41 @@
-import "./styles/loader.css"; 
+import "./styles/loader.css";
 import { useSelector } from "react-redux";
 
 const Loader = () => {
-  const {theme} = useSelector((state) => state.theme);
+  const { theme } = useSelector((state) => state.theme);
+  const isDark = theme === "dark";
+
   return (
-    <div className={`${theme=="light"?"bg-white text-black": "bg-gray-900 text-white"} loader-container`}>
-      <div className="spinner text-bg-blue-500"></div>
-      <p className="loading-text">Loading...</p>
+    <div
+      className={`loader-container ${
+        isDark
+          ? "bg-slate-950 text-white"
+          : "bg-slate-50 text-slate-900"
+      }`}
+    >
+      {/* Ambient glow */}
+      <div
+        className={`loader-glow ${
+          isDark ? "bg-blue-500/10" : "bg-blue-400/10"
+        }`}
+      />
+
+      {/* Spinner */}
+      <div className="spinner" />
+
+      {/* Loading text */}
+      <p
+        className={`loading-text ${
+          isDark ? "text-slate-400" : "text-slate-600"
+        }`}
+      >
+        Loading
+        <span className="loading-dots">
+          <span>.</span>
+          <span>.</span>
+          <span>.</span>
+        </span>
+      </p>
     </div>
   );
 };
