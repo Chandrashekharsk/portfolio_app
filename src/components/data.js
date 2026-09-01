@@ -1,4 +1,4 @@
-
+export const resumeLink = "https://drive.google.com/file/d/1snUKqrb_xaPWtLk9R6c73KmNtqfDTwsG/view";
 
 export const navLinks = [
   {
@@ -70,41 +70,54 @@ export const eduData = [
 
 export const ExperienceData = [
   {
-    role: "Full Stack Developer Intern",
+    role: "Java Full Stack Developer Intern",
     image: "/images/cwx.png",
     companyName: "CodewebX",
     location: "Bhopal, M.P.",
-    companyLink: "https://codewebx-two.vercel.app", 
+    companyLink: "https://codewebx-two.vercel.app",
     timePeriod: "3 months",
+
     project:
-      "Contributed to MERN Stack-based production projects including GoNeer (water service e-commerce platform) and Hello 11 (car renting & riding application), focusing on scalable frontend architecture and secure backend development.",
+      "Worked on GoNeer, a water service E-commerce platform, and Hello 11, a car renting and riding application, contributing to full-stack application development using Spring Boot, React.js, and MySQL.",
+
     achievements:
-      "Developed modular React components and structured frontend architecture for maintainability. Designed and integrated RESTful APIs with JWT authentication and Firebase integration, while optimizing MongoDB queries for improved performance.",
+      "Developed and maintained full-stack web applications using Spring Boot and React.js. Designed and integrated RESTful APIs, implemented backend business logic and secure authentication, and managed relational data using MySQL. Improved application performance through query optimization and efficient backend architecture.",
+
     skillUtilize:
-      "React, JavaScript, Node.js, Express.js, MongoDB, JWT, Firebase, REST APIs, Git.",
+      "Java, Spring Boot, Spring MVC, Spring Security, REST APIs, Hibernate/JPA, MySQL, React.js, JavaScript, JWT, Git, GitHub.",
+
     contribution:
-      "Implemented authentication workflows, built and integrated backend APIs, structured database models, and improved application performance through query optimization and clean backend architecture practices.",
+      "Developed RESTful backend APIs using Spring Boot, implemented business logic and authentication workflows, designed database schemas and optimized MySQL queries, integrated React.js frontend with backend APIs, and contributed to scalable and maintainable application architecture.",
+
     professionalGrowth:
-      "Strengthened full-stack system design skills, improved understanding of scalable application architecture, and gained hands-on experience working on real-world production-level MERN projects.",
+      "Gained practical experience in Java full-stack development by working with Spring Boot, REST APIs, Hibernate/JPA, MySQL, React.js, authentication, database management, and real-world application architecture.",
   },
+
   {
     role: "Jr. Software Developer Intern",
-    image: "/images/CompletionLetter.jpg", // replace with actual company logo if available
+    image: "/images/CompletionLetter.jpg",
     companyName: "Leopardruns Innovation & Technology",
     location: "Bhopal, M.P.",
     companyLink: "https://leopardruns.com",
     timePeriod: "1.5 months",
+
     project:
-      "Worked on a MERN Stack e-commerce project, focusing on frontend customization and backend optimization.",
+      "Worked on an E-commerce application, contributing to backend development with Spring Boot, frontend development using React.js, REST API integration, database operations, and application performance optimization.",
+
     achievements:
-      "Created reusable React components and customized multiple pages, improving development speed and UI consistency. Optimized existing APIs and developed new REST APIs for better performance and scalability.",
-    skillUtilize: "React, JavaScript, Node.js, Express.js, MongoDB, Git.",
+      "Developed and optimized reusable React.js components and integrated them with Spring Boot REST APIs. Implemented backend functionality and database operations using MySQL, optimized API and data-fetching workflows, and improved application responsiveness and maintainability.",
+
+    skillUtilize:
+      "Java, Spring Boot, Spring MVC, REST APIs, Hibernate/JPA, MySQL, React.js, JavaScript, Redux, Git, GitHub.",
+
     contribution:
-      "Designed and implemented reusable UI components, integrated APIs, and enhanced backend performance by refactoring existing endpoints.",
+      "Implemented Spring Boot REST APIs, developed backend business logic, performed CRUD operations using Hibernate/JPA and MySQL, integrated frontend components with backend services, optimized API communication, and contributed to application scalability and maintainability.",
+
     professionalGrowth:
-      "Gained practical experience in full-stack development and strengthened problem-solving skills by working on real-world projects.",
+      "Strengthened Java full-stack development skills through hands-on experience with Spring Boot, REST API development, Hibernate/JPA, MySQL, React.js, frontend-backend integration, database operations, and performance optimization.",
   },
 ];
+
 
 export const skills = {
   Languages: [
@@ -116,8 +129,7 @@ export const skills = {
     { name: "SQL", image: "/images/sql.svg" },
   ],
   Development: [
-    { name: "React", image: "/images/react.svg" },
-    { name: "Next.js", image: "/images/nextjs1.svg" },
+    { name: "React.js", image: "/images/react.svg" },
     { name: "Bootstrap", image: "/images/bootstrap.svg" },
     { name: "TailwindCSS", image: "/images/tailwind.svg" },
     { name: "Spring Boot", image: "/images/springboot.svg" },
@@ -128,14 +140,14 @@ export const skills = {
     { name: "MySQL", image: "/images/mysql.svg" },
     { name: "PostgreSQL", image: "/images/postgresql.svg" },
     { name: "MongoDB", image: "/images/mongodb.svg" },
-    { name: "Reddis", image: "/images/reddis.svg" },
+    { name: "Redis", image: "/images/reddis.svg" },
   ],
   Others: [
-    { name: "Docker", image: "/images/docker.svg" },
     { name: "Postman", image: "/images/postman.svg" },
+    { name: "AWS", image: "/images/aws.svg" },
     { name: "Git", image: "/images/git.svg" },
     { name: "GitHub", image: "/images/github.svg" },
-    { name: "AWS", image: "/images/aws.svg" },
+    { name: "Docker", image: "/images/docker.svg" },
     { name: "Linux", image: "/images/linux.svg" },
   ],
 };
@@ -244,6 +256,24 @@ export const AchievementsData = [
 
 export const projects = [
   {
+    title: "AI Summarizer",
+    image: "/images/ai_summarizer.png",
+    visitLink: "",
+    githubLink: "https://github.com/Chandrashekharsk/ai_chrome_extension",
+    technologiesUsed: ["chrome-extension", "springboot", "gemini-api"],
+    overview:
+      "AI Summarizer is a utility Chrome Extension designed to help users quickly summarize selected text from any webpage. It uses a Spring Boot backend integrated with Google's Gemini API to generate concise summaries, improving reading efficiency and offering persistent access to summarized content.",
+  },
+  {
+    title: "Spring Chat",
+    image: "/images/spring_chat.png",
+    visitLink: "",
+    githubLink: "https://github.com/Chandrashekharsk/ChatSpring",
+    technologiesUsed: ["springboot", "react", "websockets"],
+    overview:
+      "Spring Chat is a real-time communication platform enabling users to create and join chat rooms for instant messaging. Built with Spring Boot and React, it leverages WebSockets to offer seamless, low-latency communication in a responsive and user-friendly UI.",
+  },
+  {
     title: "Civic Reporting System",
     image: "/images/civic-reporting-sys.png",
     // visitLink: `https://fiestagram.vercel.app`,
@@ -276,24 +306,6 @@ export const projects = [
     ],
     overview:
       "Fiestagram is a dynamic Instagram clone designed for social sharing and engagement. The platform allows users to register, log in, and manage their profiles securely. Key features include the ability to create and upload posts with images and captions, engage with others by liking their posts, and explore a visually appealing feed of shared content. With a responsive design, Fiestagram ensures a seamless user experience across all devices, from mobile to desktop. Hosted with a robust backend and frontend infrastructure, Fiestagram is the perfect platform to foster creativity and community interaction through multimedia content sharing.",
-  },
-  {
-    title: "AI Summarizer",
-    image: "/images/ai_summarizer.png",
-    visitLink: "",
-    githubLink: "https://github.com/Chandrashekharsk/ai_chrome_extension",
-    technologiesUsed: ["chrome-extension", "springboot", "gemini-api"],
-    overview:
-      "AI Summarizer is a utility Chrome Extension designed to help users quickly summarize selected text from any webpage. It uses a Spring Boot backend integrated with Google's Gemini API to generate concise summaries, improving reading efficiency and offering persistent access to summarized content.",
-  },
-  {
-    title: "Spring Chat",
-    image: "/images/spring_chat.png",
-    visitLink: "",
-    githubLink: "https://github.com/Chandrashekharsk/ChatSpring",
-    technologiesUsed: ["springboot", "react", "websockets"],
-    overview:
-      "Spring Chat is a real-time communication platform enabling users to create and join chat rooms for instant messaging. Built with Spring Boot and React, it leverages WebSockets to offer seamless, low-latency communication in a responsive and user-friendly UI.",
   },
   {
     title: "BitLinks",

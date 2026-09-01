@@ -10,6 +10,7 @@ import { flattenSkills } from "../../../utils/flattenSkills";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { resumeLink } from "../data";
 
 const skills = flattenSkills(categorizedSkills);
 
@@ -198,7 +199,7 @@ const Home = () => {
 
               {/* Resume */}
               <a
-                href="https://drive.google.com/file/d/1k8njR0_k-Vsr5UdQcz2-1k4szHYXvg24/view"
+                href={resumeLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`inline-flex items-center rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-1 sm:px-6 ${

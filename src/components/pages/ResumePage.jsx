@@ -5,6 +5,7 @@ import { MdEmail, MdPhone } from "react-icons/md";
 import { HiOutlineGlobeAlt, HiOutlineHome } from "react-icons/hi";
 import { PDFExport } from "@progress/kendo-react-pdf";
 import { useSelector } from "react-redux";
+import { resumeLink } from "../data";
 
 const ResumePage = () => {
   const { theme } = useSelector((state) => state.theme);
@@ -30,7 +31,7 @@ const ResumePage = () => {
         } text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition flex items-center gap-2 z-50`}
       >
         <a
-          href="https://drive.google.com/file/d/1k8njR0_k-Vsr5UdQcz2-1k4szHYXvg24/view"
+          href={resumeLink}
           target="_blank"
           rel="noreferrer"
         >

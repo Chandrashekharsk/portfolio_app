@@ -1,9 +1,8 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { projects } from "../data";
 import { useSelector } from "react-redux";
-
 
 // ============================================================
 // PROJECT SIDEBAR
@@ -38,8 +37,6 @@ const ProjectList = ({
     >
       {/* Heading */}
       <div className="mb-7">
-
-
         <h2
           className={`mt-1 text-xl font-bold ${
             isDark ? "text-white" : "text-slate-900"
@@ -76,27 +73,10 @@ const ProjectList = ({
                   }
                 `}
               >
-                <div className="flex items-center gap-3">
-                  <span
-                    className={`
-                      flex h-7 w-7 shrink-0 items-center justify-center
-                      rounded-lg text-xs font-bold
-                      ${
-                        isSelected
-                          ? "bg-gradient-to-r from-blue-500 to-cyan-400 text-white"
-                          : isDark
-                          ? "bg-slate-800 text-slate-500"
-                          : "bg-slate-200 text-slate-500"
-                      }
-                    `}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
-                  <span className="truncate text-sm font-medium">
-                    {project.title}
-                  </span>
-                </div>
+                {/* Project Name */}
+                <span className="truncate text-sm font-medium">
+                  {project.title}
+                </span>
               </button>
             </li>
           );
@@ -111,7 +91,6 @@ ProjectList.propTypes = {
   selectedProject: PropTypes.object.isRequired,
   onProjectClick: PropTypes.func.isRequired,
 };
-
 
 // ============================================================
 // PROJECT DETAILS
@@ -161,7 +140,6 @@ const ProjectDetails = ({
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400" />
         </div>
 
-
         {/* PROJECT CARDS */}
 
         {projects.map((project, index) => (
@@ -186,7 +164,6 @@ const ProjectDetails = ({
               }
             `}
           >
-
             {/* Top Accent */}
             <div className="h-1 w-full bg-gradient-to-r from-blue-500 to-cyan-400" />
 
@@ -194,10 +171,6 @@ const ProjectDetails = ({
 
               {/* Project Header */}
               <div className="mb-6">
-                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-blue-500">
-                  Project {String(index + 1).padStart(2, "0")}
-                </p>
-
                 <h2
                   className={`text-2xl font-bold sm:text-3xl ${
                     isDark ? "text-white" : "text-slate-900"
@@ -206,7 +179,6 @@ const ProjectDetails = ({
                   {project.title}
                 </h2>
               </div>
-
 
               {/* IMAGE + TECHNOLOGIES */}
 
@@ -245,7 +217,6 @@ const ProjectDetails = ({
                   </div>
                 </div>
 
-
                 {/* Technologies */}
                 <div className="flex w-full flex-col justify-center lg:w-[45%]">
 
@@ -283,7 +254,6 @@ const ProjectDetails = ({
                   </div>
                 </div>
               </div>
-
 
               {/* LINKS */}
 
@@ -361,7 +331,6 @@ const ProjectDetails = ({
                 )}
               </div>
 
-
               {/* Overview */}
 
               <div
@@ -400,7 +369,6 @@ const ProjectDetails = ({
   );
 };
 
-
 // ============================================================
 // MAIN COMPONENT
 // ============================================================
@@ -415,7 +383,6 @@ const Projects = () => {
   const { theme } = useSelector((state) => state.theme);
   const isDark = theme === "dark";
 
-
   // CLICK PROJECT FROM SIDEBAR
   const handleProjectClick = (project, index) => {
     setSelectedProject(project);
@@ -429,7 +396,6 @@ const Projects = () => {
       });
     }
   };
-
 
   return (
     <div
@@ -455,7 +421,6 @@ const Projects = () => {
         onProjectClick={handleProjectClick}
       />
 
-
       {/* ==================================================
           RIGHT PROJECT AREA
           ================================================== */}
@@ -469,5 +434,5 @@ const Projects = () => {
   );
 };
 
-
 export default Projects;
+
