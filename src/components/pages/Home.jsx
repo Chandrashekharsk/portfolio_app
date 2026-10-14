@@ -87,132 +87,139 @@ const Home = () => {
           {/* =================================================
               LEFT CONTENT
           ================================================= */}
-          <div className="w-full text-center md:w-[58%] md:text-left">
-            
-            {/* Small Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-5 flex justify-center md:justify-start"
-            >
-              <span
-                className={`inline-flex items-center rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] ${
-                  isDark
-                    ? "border-cyan-400/20 bg-cyan-400/10 text-cyan-300"
-                    : "border-blue-200 bg-blue-50 text-blue-700"
-                }`}
-              >
-                Java Full Stack Developer
-              </span>
-            </motion.div>
+          
+<div className="w-full text-center md:w-[58%] md:text-left">
+  
+  {/* Small Badge */}
+  <motion.div
+    initial={{ opacity: 0, y: 15 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="mb-5 flex justify-center md:justify-start"
+  >
+    <span
+      className={`inline-flex items-center rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] ${
+        isDark
+          ? "border-cyan-400/20 bg-cyan-400/10 text-cyan-300"
+          : "border-blue-200 bg-blue-50 text-blue-700"
+      }`}
+    >
+      Java Full Stack Developer | 6 Months Experience
+    </span>
+  </motion.div>
 
-            {/* Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className={`text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl ${
-                isDark ? "text-white" : "text-slate-950"
-              }`}
-            >
-              Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
-                Chandrashekhar
-              </span>
-              <br />
-              Singh Kushwaha
-            </motion.h1>
+  {/* Heading */}
+  <motion.h1
+    initial={{ opacity: 0, y: 25 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className={`text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl ${
+      isDark ? "text-white" : "text-slate-950"
+    }`}
+  >
+    Hi, I'm{" "}
+    <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
+      Chandrashekhar
+    </span>
+    <br />
+    Singh Kushwaha
+  </motion.h1>
 
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className={`mx-auto mt-6 max-w-2xl text-sm leading-7 sm:text-base md:mx-0 md:text-lg ${
-                isDark ? "text-slate-300" : "text-slate-600"
-              }`}
-            >
-              I build scalable and maintainable applications using{" "}
-              <strong className={isDark ? "text-white" : "text-slate-900"}>
-                Java, Spring Boot, REST APIs, React.js, SQL
-              </strong>{" "}
-              and modern web technologies, with a strong focus on backend
-              architecture and full-stack development.
-            </motion.p>
+  {/* Description */}
+  <motion.p
+    initial={{ opacity: 0, y: 15 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.15 }}
+    className={`mx-auto mt-6 max-w-2xl text-sm leading-7 sm:text-base md:mx-0 md:text-lg ${
+      isDark ? "text-slate-300" : "text-slate-600"
+    }`}
+  >
+    I'm a Java Full Stack Developer with{" "}
+    <strong className={isDark ? "text-white" : "text-slate-900"}>
+      6 months of professional software development experience
+    </strong>
+    , building real-world web applications using Java, Spring Boot,
+    React.js, REST APIs, and MySQL. At CodewebX, I contributed to
+    projects including GoNeer and Hello11, working on backend
+    development, API integration, authentication, and database
+    management. I'm passionate about building scalable,
+    maintainable applications and delivering reliable software
+    solutions.
+  </motion.p>
 
-            {/* Tech Pills */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="mt-6 flex flex-wrap justify-center gap-2 md:justify-start"
-            >
-              {[
-                "Java",
-                "Spring Boot",
-                "React.js",
-                "REST APIs",
-                "MySQL",
-              ].map((tech) => (
-                <span
-                  key={tech}
-                  className={`rounded-full border px-3 py-1.5 text-xs font-medium sm:text-sm ${
-                    isDark
-                      ? "border-slate-700 bg-slate-900 text-slate-300"
-                      : "border-slate-200 bg-slate-100 text-slate-700"
-                  }`}
-                >
-                  {tech}
-                </span>
-              ))}
-            </motion.div>
+  {/* Tech Pills */}
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.6, delay: 0.25 }}
+    className="mt-6 flex flex-wrap justify-center gap-2 md:justify-start"
+  >
+    {[
+      "Java",
+      "Spring Boot",
+      "React.js",
+      "REST APIs",
+      "MySQL",
+    ].map((tech) => (
+      <span
+        key={tech}
+        className={`rounded-full border px-3 py-1.5 text-xs font-medium sm:text-sm ${
+          isDark
+            ? "border-slate-700 bg-slate-900 text-slate-300"
+            : "border-slate-200 bg-slate-100 text-slate-700"
+        }`}
+      >
+        {tech}
+      </span>
+    ))}
+  </motion.div>
 
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start"
-            >
-              {/* Projects */}
-              <Link
-                to="/projects"
-                className="group inline-flex items-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-blue-500/30 sm:px-6"
-              >
-                View Projects
-                <FiArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+  {/* CTA Buttons */}
+  <motion.div
+    initial={{ opacity: 0, y: 15 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.3 }}
+    className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start"
+  >
+    {/* Projects */}
+    <Link
+      to="/projects"
+      className="group inline-flex items-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-blue-500/30 sm:px-6"
+    >
+      View Projects
+      <FiArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+    </Link>
 
-              {/* Contact */}
-              <button
-                onClick={scrollToContact}
-                className={`inline-flex items-center rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-1 sm:px-6 ${
-                  isDark
-                    ? "border-cyan-400/40 text-cyan-300 hover:bg-cyan-400/10"
-                    : "border-blue-500/50 text-blue-700 hover:bg-blue-50"
-                }`}
-              >
-                <FiMail className="mr-2" />
-                Contact Me
-              </button>
+    {/* Contact */}
+    <button
+      onClick={scrollToContact}
+      className={`inline-flex items-center rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-1 sm:px-6 ${
+        isDark
+          ? "border-cyan-400/40 text-cyan-300 hover:bg-cyan-400/10"
+          : "border-blue-500/50 text-blue-700 hover:bg-blue-50"
+      }`}
+    >
+      <FiMail className="mr-2" />
+      Contact Me
+    </button>
 
-              {/* Resume */}
-              <a
-                href={resumeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`inline-flex items-center rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-1 sm:px-6 ${
-                  isDark
-                    ? "border-slate-700 text-slate-300 hover:border-blue-400 hover:text-blue-400"
-                    : "border-slate-300 text-slate-700 hover:border-blue-500 hover:text-blue-600"
-                }`}
-              >
-                <FiDownload className="mr-2" />
-                Resume
-              </a>
-            </motion.div>
-          </div>
+    {/* Resume */}
+    <a
+      href={resumeLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-1 sm:px-6 ${
+        isDark
+          ? "border-slate-700 text-slate-300 hover:border-blue-400 hover:text-blue-400"
+          : "border-slate-300 text-slate-700 hover:border-blue-500 hover:text-blue-600"
+      }`}
+    >
+      <FiDownload className="mr-2" />
+      Resume
+    </a>
+  </motion.div>
+</div>
+
 
           {/* =================================================
               PROFILE IMAGE

@@ -1,4 +1,4 @@
-export const resumeLink = "https://drive.google.com/file/d/1snUKqrb_xaPWtLk9R6c73KmNtqfDTwsG/view";
+export const resumeLink = "https://drive.google.com/file/d/1twV5xVNmqWH_f16FXL1kbzyfG4tgO2oE/view";
 
 export const navLinks = [
   {
@@ -68,55 +68,33 @@ export const eduData = [
   },
 ];
 
+
 export const ExperienceData = [
   {
-    role: "Java Full Stack Developer Intern",
+    role: "Java Full Stack Developer",
     image: "/images/cwx.png",
     companyName: "CodewebX",
-    location: "Bhopal, M.P.",
+    location: "Bhopal, Madhya Pradesh, India",
     companyLink: "https://codewebx-two.vercel.app",
-    timePeriod: "3 months",
+    timePeriod: "6 months",
 
     project:
-      "Worked on GoNeer, a water service E-commerce platform, and Hello 11, a car renting and riding application, contributing to full-stack application development using Spring Boot, React.js, and MySQL.",
+      "Worked on GoNeer, a water services e-commerce platform, and Hello11, a car rental and ride-booking application. Contributed to full-stack application development, backend API integration, database management, authentication workflows, and responsive user interfaces.",
 
     achievements:
-      "Developed and maintained full-stack web applications using Spring Boot and React.js. Designed and integrated RESTful APIs, implemented backend business logic and secure authentication, and managed relational data using MySQL. Improved application performance through query optimization and efficient backend architecture.",
+      "Developed and maintained full-stack web application features using Java, Spring Boot, React.js, and MySQL. Implemented RESTful APIs, developed backend business logic, integrated frontend components with backend services, and worked on database query optimization and application performance improvements.",
 
     skillUtilize:
-      "Java, Spring Boot, Spring MVC, Spring Security, REST APIs, Hibernate/JPA, MySQL, React.js, JavaScript, JWT, Git, GitHub.",
+      "Java, Spring Boot, Spring MVC, Spring Security, RESTful APIs, Hibernate, JPA, MySQL, React.js, JavaScript, JWT Authentication, Git, GitHub, Postman.",
 
     contribution:
-      "Developed RESTful backend APIs using Spring Boot, implemented business logic and authentication workflows, designed database schemas and optimized MySQL queries, integrated React.js frontend with backend APIs, and contributed to scalable and maintainable application architecture.",
+      "Contributed to backend development using Spring Boot, implemented REST API endpoints and business logic, integrated authentication workflows, designed and managed relational database schemas, optimized SQL queries, and connected React.js interfaces with backend services. Collaborated on building maintainable and responsive application features.",
 
     professionalGrowth:
-      "Gained practical experience in Java full-stack development by working with Spring Boot, REST APIs, Hibernate/JPA, MySQL, React.js, authentication, database management, and real-world application architecture.",
-  },
-
-  {
-    role: "Jr. Software Developer Intern",
-    image: "/images/CompletionLetter.jpg",
-    companyName: "Leopardruns Innovation & Technology",
-    location: "Bhopal, M.P.",
-    companyLink: "https://leopardruns.com",
-    timePeriod: "1.5 months",
-
-    project:
-      "Worked on an E-commerce application, contributing to backend development with Spring Boot, frontend development using React.js, REST API integration, database operations, and application performance optimization.",
-
-    achievements:
-      "Developed and optimized reusable React.js components and integrated them with Spring Boot REST APIs. Implemented backend functionality and database operations using MySQL, optimized API and data-fetching workflows, and improved application responsiveness and maintainability.",
-
-    skillUtilize:
-      "Java, Spring Boot, Spring MVC, REST APIs, Hibernate/JPA, MySQL, React.js, JavaScript, Redux, Git, GitHub.",
-
-    contribution:
-      "Implemented Spring Boot REST APIs, developed backend business logic, performed CRUD operations using Hibernate/JPA and MySQL, integrated frontend components with backend services, optimized API communication, and contributed to application scalability and maintainability.",
-
-    professionalGrowth:
-      "Strengthened Java full-stack development skills through hands-on experience with Spring Boot, REST API development, Hibernate/JPA, MySQL, React.js, frontend-backend integration, database operations, and performance optimization.",
+      "Gained six months of professional software development experience working on real-world application features, backend API development, frontend integration, relational database management, authentication, debugging, and full-stack application architecture. Strengthened practical skills in Java, Spring Boot, React.js, and MySQL.",
   },
 ];
+
 
 
 export const skills = {
