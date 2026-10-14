@@ -1,4 +1,4 @@
-export const resumeLink = "https://drive.google.com/file/d/1twV5xVNmqWH_f16FXL1kbzyfG4tgO2oE/view";
+export const resumeLink = "https://drive.google.com/file/d/1ZsYLfrbvWyEQxeM9dzO7BciKP9tSyrlH/view";
 
 export const navLinks = [
   {
